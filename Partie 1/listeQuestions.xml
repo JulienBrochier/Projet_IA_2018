@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<liste >
+  
+  <question id="1" value =" salut c'est cool" >
+    <answer label="1" true_answer="true"/>
+    <answer label="2" true_answer="false"/>
+    <answer label="3" true_answer="false"/>
+    <answer label="4" true_answer="false"/>
+  </question>
+
+  <question id="2" value ="danakil">
+    <answer label="1" true_answer="false"/>
+    <answer label="2" true_answer="false"/>
+    <answer label="3" true_answer="true"/>
+    <answer label="4" true_answer="false"/>
+  </question>
+  
+  <question id="3" value ="dgjgjh">
+    <answer label="1" true_answer="false"/>
+    <answer label="2" true_answer="true"/>
+    <answer label="3" true_answer="false"/>
+    <answer label="4" true_answer="false"/>
+  </question>
+  
+  <question id="4" value ="tuijmù">
+    <answer label="1" true_answer="false"/>
+    <answer label="2" true_answer="false"/>
+    <answer label="3" true_answer="true"/>
+    <answer label="4" true_answer="false"/>
+  </question>
+
+</liste>
+  
