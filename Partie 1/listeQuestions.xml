@@ -9,7 +9,7 @@
     <answer label="4" true_answer="false"/>
   </question>
 
-  <question id="2" value ="danakil">
+  <question id="2" value ="test">
     <answer label="1" true_answer="false"/>
     <answer label="2" true_answer="false"/>
     <answer label="3" true_answer="true"/>

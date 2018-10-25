@@ -8,3 +8,6 @@ H:\IA\Projet\Partie 1\Partie 1\bin\Debug\Partie 1.exe
 H:\IA\Projet\Partie 1\Partie 1\bin\Debug\Partie 1.pdb
 H:\IA\Projet\Partie 1\Partie 1\obj\Debug\Partie 1.exe
 H:\IA\Projet\Partie 1\Partie 1\obj\Debug\Partie 1.pdb
+H:\IA\Projet\Projet_IA_2018(2)\Partie 1\bin\Debug\Partie 1.exe.config
+H:\IA\Projet\Projet_IA_2018(2)\Partie 1\obj\Debug\Partie 1.exe
+H:\IA\Projet\Projet_IA_2018(2)\Partie 1\obj\Debug\Partie 1.pdb
