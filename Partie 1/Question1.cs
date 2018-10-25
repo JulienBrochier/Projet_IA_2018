@@ -39,7 +39,7 @@ namespace Partie_1
             Bcontinu.Hide();
             Bvalidate.Show();
 
-            XmlReader doc = XmlReader.Create("H:/IA/Projet/Partie 1/Partie 1/listeQuestions.xml");
+            XmlReader doc = XmlReader.Create("../../listeQuestions.xml");
 
             while (doc.Read())
             {
@@ -54,7 +54,7 @@ namespace Partie_1
 
         private void Bvalidate_Click(object sender, EventArgs e)
         {
-            XmlReader doc = XmlReader.Create("H:/IA/Projet/Partie 1/Partie 1/listeQuestions.xml");
+            XmlReader doc = XmlReader.Create("../../listeQuestions.xml");
             bool valide = false;
 
             while (doc.Read())
@@ -125,6 +125,11 @@ namespace Partie_1
             Random rnd = new Random();
             index = rnd.Next(0, 4);
             Affiche();
+        }
+
+        private void Question1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

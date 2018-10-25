@@ -36,6 +36,7 @@
             this.Rep2 = new System.Windows.Forms.RadioButton();
             this.Bvalidate = new System.Windows.Forms.Button();
             this.Bcontinu = new System.Windows.Forms.Button();
+            this.Lcomment = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // NumeroQuest
@@ -123,11 +124,21 @@
             this.Bcontinu.UseVisualStyleBackColor = true;
             this.Bcontinu.Click += new System.EventHandler(this.Bcontinu_Click);
             // 
+            // Lcomment
+            // 
+            this.Lcomment.AutoSize = true;
+            this.Lcomment.Location = new System.Drawing.Point(319, 113);
+            this.Lcomment.Name = "Lcomment";
+            this.Lcomment.Size = new System.Drawing.Size(68, 13);
+            this.Lcomment.TabIndex = 8;
+            this.Lcomment.Text = "Commentaire";
+            // 
             // Question1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(613, 348);
+            this.Controls.Add(this.Lcomment);
             this.Controls.Add(this.Bcontinu);
             this.Controls.Add(this.Bvalidate);
             this.Controls.Add(this.Rep2);
@@ -138,6 +149,7 @@
             this.Controls.Add(this.NumeroQuest);
             this.Name = "Question1";
             this.Text = "Question1";
+            this.Load += new System.EventHandler(this.Question1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,5 +165,6 @@
         private System.Windows.Forms.RadioButton Rep2;
         private System.Windows.Forms.Button Bvalidate;
         private System.Windows.Forms.Button Bcontinu;
+        private System.Windows.Forms.Label Lcomment;
     }
 }
