@@ -18,6 +18,7 @@ H:\IA\Projet\Projet_IA_2018(2)\Partie 1\obj\Debug\Partie_1.Questionnaire.resourc
 H:\IA\Projet\Projet_IA_2018(2)\Partie 1\obj\Debug\Partie_1.Properties.Resources.resources
 H:\IA\Projet\Projet_IA_2018(2)\Partie 1\obj\Debug\Partie_1.Question1.resources
 H:\IA\Projet\Projet_IA_2018(2)\Partie 1\obj\Debug\Partie 1.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.exe.config
 H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.exe
 H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.pdb
@@ -28,3 +29,8 @@ H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Parti
 H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Properties.Resources.resources
 H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Question1.resources
 H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.csproj.GenerateResource.Cache
+=======
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.exe.config
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.exe
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.pdb
+>>>>>>> dad58abac54791cb68220d825686ab1e67be80b2
