@@ -18,3 +18,13 @@ H:\IA\Projet\Projet_IA_2018(2)\Partie 1\obj\Debug\Partie_1.Questionnaire.resourc
 H:\IA\Projet\Projet_IA_2018(2)\Partie 1\obj\Debug\Partie_1.Properties.Resources.resources
 H:\IA\Projet\Projet_IA_2018(2)\Partie 1\obj\Debug\Partie_1.Question1.resources
 H:\IA\Projet\Projet_IA_2018(2)\Partie 1\obj\Debug\Partie 1.csproj.GenerateResource.Cache
+H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.exe.config
+H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.exe
+H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.pdb
+H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.exe
+H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.pdb
+H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.csprojResolveAssemblyReference.cache
+H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Questionnaire.resources
+H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Properties.Resources.resources
+H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Question1.resources
+H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.csproj.GenerateResource.Cache

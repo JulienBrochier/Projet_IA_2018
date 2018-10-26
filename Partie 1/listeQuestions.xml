@@ -2,32 +2,32 @@
 
 <liste >
   
-  <question id="1" value =" salut c'est cool" >
-    <answer label="1" true_answer="true"/>
-    <answer label="2" true_answer="false"/>
-    <answer label="3" true_answer="false"/>
-    <answer label="4" true_answer="false"/>
+  <question id="1" value ="Que comporte une IA forte par rapport à une IA faible ?" >
+    <answer label="1" value ="du deep learning" true_answer="false"/>
+    <answer label="2" value ="une conscience" true_answer="true"/>
+    <answer label="3" value ="du Big Data" true_answer="false"/>
+    <answer label="4" value =" une plus forte puissance" true_answer="false"/>
   </question>
 
-  <question id="2" value ="test">
-    <answer label="1" true_answer="false"/>
-    <answer label="2" true_answer="false"/>
-    <answer label="3" true_answer="true"/>
-    <answer label="4" true_answer="false"/>
+  <question id="2" value ="Quel(s) terme(s) correspond à l’apprentissage automatique ?">
+    <answer label="1" value ="Model based" true_answer="false"/>
+    <answer label="2" value ="Modelling" true_answer="false"/>
+    <answer label="3" value ="Data based" true_answer="true"/>
+    <answer label="4" value ="Multi-agent system" true_answer="false"/>
   </question>
   
-  <question id="3" value ="dgjjh">
-    <answer label="1" true_answer="false"/>
-    <answer label="2" true_answer="true"/>
-    <answer label="3" true_answer="false"/>
-    <answer label="4" true_answer="false"/>
+  <question id="3" value ="La robotique fait intervenir de la planification d’actions et de l’architecture de contrôle. A quoi peut-on comparer ces notions ?">
+    <answer label="1" value ="test" true_answer="false"/>
+    <answer label="2" value ="test1" true_answer="true"/>
+    <answer label="3" value ="test2" true_answer="false"/>
+    <answer label="4" value ="test3" true_answer="false"/>
   </question>
   
   <question id="4" value ="tuijmù">
-    <answer label="1" true_answer="false"/>
-    <answer label="2" true_answer="false"/>
-    <answer label="3" true_answer="true"/>
-    <answer label="4" true_answer="false"/>
+    <answer label="1" value ="test" true_answer="false"/>
+    <answer label="2" value ="test1" true_answer="false"/>
+    <answer label="3" value ="test2" true_answer="true"/>
+    <answer label="4" value ="test3" true_answer="false"/>
   </question>
 
 </liste>

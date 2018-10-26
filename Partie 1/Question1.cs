@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Partie_1
 {
     public partial class Question1 : Form
     {
         int index;
+        int numeroQuestion;
         public Question1(int index)
         {
             InitializeComponent();
             this.index = index;
+            numeroQuestion = 0;
             Affiche();
             
         }
@@ -36,10 +39,15 @@ namespace Partie_1
             XmlElement elem = (XmlElement)doc.GetElementById("question1");
             Rep1.Text = elem.value;*/
 
+            numeroQuestion ++;
+            NumeroQuest.Text = "Question n°" + numeroQuestion;
+
+
             Bcontinu.Hide();
             Bvalidate.Show();
 
             XmlReader doc = XmlReader.Create("../../listeQuestions.xml");
+            XDocument xdoc = XDocument.Load("../../listeQuestions.xml");
 
             while (doc.Read())
             {
@@ -47,6 +55,23 @@ namespace Partie_1
                 if(doc.GetAttribute("id")==""+index)
                 {
                     Intitule.Text = doc.GetAttribute("value");
+
+                    doc.Read();
+                    doc.Read();
+                    Rep1.Text = doc.GetAttribute("value");
+
+                    doc.Read();
+                    doc.Read();
+                    Rep2.Text = doc.GetAttribute("value");
+
+                    doc.Read();
+                    doc.Read();
+                    Rep3.Text = doc.GetAttribute("value");
+
+                    doc.Read();
+                    doc.Read();
+                    Rep4.Text = doc.GetAttribute("value");
+
                 }
             }
 
@@ -78,6 +103,7 @@ namespace Partie_1
                   
                    if (valide)
                     {
+                       
                         Suivant();
                     }
 
@@ -92,8 +118,9 @@ namespace Partie_1
             }
         }
 
-        private bool Verifier(XmlReader doc, RadioButton R)
+        private bool Verifier(XmlReader doc, CheckBox R)
         {
+            doc.Read();
             doc.Read();
             if (Rep1.Checked)
             {
@@ -122,12 +149,23 @@ namespace Partie_1
 
         private void Suivant ()
         {
+            
             Random rnd = new Random();
-            index = rnd.Next(0, 4);
+            index = rnd.Next(1, 4);
             Affiche();
         }
 
         private void Question1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NumeroQuest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Rep1_CheckedChanged_1(object sender, EventArgs e)
         {
 
         }
