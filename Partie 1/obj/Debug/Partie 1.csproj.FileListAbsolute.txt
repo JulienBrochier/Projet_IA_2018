@@ -18,3 +18,6 @@ H:\IA\Projet\Projet_IA_2018(2)\Partie 1\obj\Debug\Partie_1.Questionnaire.resourc
 H:\IA\Projet\Projet_IA_2018(2)\Partie 1\obj\Debug\Partie_1.Properties.Resources.resources
 H:\IA\Projet\Projet_IA_2018(2)\Partie 1\obj\Debug\Partie_1.Question1.resources
 H:\IA\Projet\Projet_IA_2018(2)\Partie 1\obj\Debug\Partie 1.csproj.GenerateResource.Cache
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.exe.config
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.exe
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.pdb
