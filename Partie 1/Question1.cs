@@ -47,7 +47,7 @@ namespace Partie_1
             Bvalidate.Show();
 
             XmlReader doc = XmlReader.Create("../../listeQuestions.xml");
-            XDocument xdoc = XDocument.Load("../../listeQuestions.xml");
+            
 
             while (doc.Read())
             {
@@ -103,13 +103,15 @@ namespace Partie_1
                   
                    if (valide)
                     {
-                       
                         Suivant();
                     }
 
                    else
                     {
                         Bvalidate.Hide();
+                        TextComment.Show();
+                        Lcomment.Show();
+                        TexteExplication.Show();
                         Bcontinu.Show();
 
                     }
@@ -122,7 +124,7 @@ namespace Partie_1
         {
             doc.Read();
             doc.Read();
-            if (Rep1.Checked)
+            if (R.Checked)
             {
                 if (doc.GetAttribute("true_answer") == "false")
                 {
@@ -144,14 +146,20 @@ namespace Partie_1
 
         private void Bcontinu_Click(object sender, EventArgs e)
         {
+            TextComment.Hide();
+            Lcomment.Hide();
+            TexteExplication.Hide();
             Suivant();
         }
 
         private void Suivant ()
         {
-            
+            RemiseZeroCheck(Rep1);
+            RemiseZeroCheck(Rep2);
+            RemiseZeroCheck(Rep3);
+            RemiseZeroCheck(Rep4);
             Random rnd = new Random();
-            index = rnd.Next(1, 4);
+            index = rnd.Next(1,8);
             Affiche();
         }
 
@@ -166,6 +174,22 @@ namespace Partie_1
         }
 
         private void Rep1_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Rep2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RemiseZeroCheck(CheckBox c1)
+        {
+            if (c1.Checked)
+            c1.Checked = false;
+        }
+
+        private void Lcomment_Click(object sender, EventArgs e)
         {
 
         }

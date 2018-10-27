@@ -34,3 +34,15 @@ C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.e
 C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.exe
 C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.pdb
 >>>>>>> dad58abac54791cb68220d825686ab1e67be80b2
+C:\Users\Elise\Documents\GitHub\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.exe.config
+C:\Users\Elise\Documents\GitHub\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.exe
+C:\Users\Elise\Documents\GitHub\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.pdb
+C:\Users\Elise\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.csprojResolveAssemblyReference.cache
+C:\Users\Elise\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Questionnaire.resources
+C:\Users\Elise\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Partie_2.resources
+C:\Users\Elise\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Properties.Resources.resources
+C:\Users\Elise\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Question1.resources
+C:\Users\Elise\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.csproj.GenerateResource.Cache
+C:\Users\Elise\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.csproj.CoreCompileInputs.cache
+C:\Users\Elise\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.exe
+C:\Users\Elise\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.pdb

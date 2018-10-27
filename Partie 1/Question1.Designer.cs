@@ -37,13 +37,16 @@
             this.Rep2 = new System.Windows.Forms.CheckBox();
             this.Rep3 = new System.Windows.Forms.CheckBox();
             this.Rep4 = new System.Windows.Forms.CheckBox();
+            this.TextComment = new System.Windows.Forms.GroupBox();
+            this.TexteExplication = new System.Windows.Forms.Label();
+            this.TextComment.SuspendLayout();
             this.SuspendLayout();
             // 
             // NumeroQuest
             // 
             this.NumeroQuest.AutoSize = true;
             this.NumeroQuest.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumeroQuest.Location = new System.Drawing.Point(255, 45);
+            this.NumeroQuest.Location = new System.Drawing.Point(359, 18);
             this.NumeroQuest.Name = "NumeroQuest";
             this.NumeroQuest.Size = new System.Drawing.Size(96, 19);
             this.NumeroQuest.TabIndex = 0;
@@ -53,16 +56,16 @@
             // Intitule
             // 
             this.Intitule.AutoSize = true;
-            this.Intitule.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Intitule.Location = new System.Drawing.Point(77, 89);
+            this.Intitule.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Intitule.Location = new System.Drawing.Point(84, 70);
             this.Intitule.Name = "Intitule";
-            this.Intitule.Size = new System.Drawing.Size(144, 18);
+            this.Intitule.Size = new System.Drawing.Size(113, 16);
             this.Intitule.TabIndex = 1;
             this.Intitule.Text = "Intitulé de la question";
             // 
             // Bvalidate
             // 
-            this.Bvalidate.Location = new System.Drawing.Point(148, 282);
+            this.Bvalidate.Location = new System.Drawing.Point(254, 359);
             this.Bvalidate.Name = "Bvalidate";
             this.Bvalidate.Size = new System.Drawing.Size(114, 39);
             this.Bvalidate.TabIndex = 6;
@@ -72,7 +75,7 @@
             // 
             // Bcontinu
             // 
-            this.Bcontinu.Location = new System.Drawing.Point(346, 282);
+            this.Bcontinu.Location = new System.Drawing.Point(471, 359);
             this.Bcontinu.Name = "Bcontinu";
             this.Bcontinu.Size = new System.Drawing.Size(114, 39);
             this.Bcontinu.TabIndex = 7;
@@ -83,11 +86,14 @@
             // Lcomment
             // 
             this.Lcomment.AutoSize = true;
-            this.Lcomment.Location = new System.Drawing.Point(367, 112);
+            this.Lcomment.Font = new System.Drawing.Font("Poiret One", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lcomment.Location = new System.Drawing.Point(501, 128);
             this.Lcomment.Name = "Lcomment";
-            this.Lcomment.Size = new System.Drawing.Size(68, 13);
+            this.Lcomment.Size = new System.Drawing.Size(107, 17);
             this.Lcomment.TabIndex = 8;
-            this.Lcomment.Text = "Commentaire";
+            this.Lcomment.Text = "Commentaire:";
+            this.Lcomment.Visible = false;
+            this.Lcomment.Click += new System.EventHandler(this.Lcomment_Click);
             // 
             // Rep1
             // 
@@ -103,17 +109,18 @@
             // Rep2
             // 
             this.Rep2.AutoSize = true;
-            this.Rep2.Location = new System.Drawing.Point(148, 164);
+            this.Rep2.Location = new System.Drawing.Point(148, 174);
             this.Rep2.Name = "Rep2";
             this.Rep2.Size = new System.Drawing.Size(80, 17);
             this.Rep2.TabIndex = 10;
             this.Rep2.Text = "checkBox1";
             this.Rep2.UseVisualStyleBackColor = true;
+            this.Rep2.CheckedChanged += new System.EventHandler(this.Rep2_CheckedChanged);
             // 
             // Rep3
             // 
             this.Rep3.AutoSize = true;
-            this.Rep3.Location = new System.Drawing.Point(148, 199);
+            this.Rep3.Location = new System.Drawing.Point(148, 216);
             this.Rep3.Name = "Rep3";
             this.Rep3.Size = new System.Drawing.Size(80, 17);
             this.Rep3.TabIndex = 11;
@@ -123,18 +130,39 @@
             // Rep4
             // 
             this.Rep4.AutoSize = true;
-            this.Rep4.Location = new System.Drawing.Point(148, 241);
+            this.Rep4.Location = new System.Drawing.Point(148, 262);
             this.Rep4.Name = "Rep4";
             this.Rep4.Size = new System.Drawing.Size(80, 17);
             this.Rep4.TabIndex = 12;
             this.Rep4.Text = "checkBox1";
             this.Rep4.UseVisualStyleBackColor = true;
             // 
+            // TextComment
+            // 
+            this.TextComment.Controls.Add(this.TexteExplication);
+            this.TextComment.Location = new System.Drawing.Point(504, 158);
+            this.TextComment.Name = "TextComment";
+            this.TextComment.Size = new System.Drawing.Size(265, 151);
+            this.TextComment.TabIndex = 13;
+            this.TextComment.TabStop = false;
+            this.TextComment.Visible = false;
+            // 
+            // TexteExplication
+            // 
+            this.TexteExplication.AutoSize = true;
+            this.TexteExplication.Location = new System.Drawing.Point(23, 20);
+            this.TexteExplication.Name = "TexteExplication";
+            this.TexteExplication.Size = new System.Drawing.Size(35, 13);
+            this.TexteExplication.TabIndex = 0;
+            this.TexteExplication.Text = "label1";
+            this.TexteExplication.Visible = false;
+            // 
             // Question1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 348);
+            this.ClientSize = new System.Drawing.Size(799, 447);
+            this.Controls.Add(this.TextComment);
             this.Controls.Add(this.Rep4);
             this.Controls.Add(this.Rep3);
             this.Controls.Add(this.Rep2);
@@ -147,6 +175,8 @@
             this.Name = "Question1";
             this.Text = "Question1";
             this.Load += new System.EventHandler(this.Question1_Load);
+            this.TextComment.ResumeLayout(false);
+            this.TextComment.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,5 +193,7 @@
         private System.Windows.Forms.CheckBox Rep2;
         private System.Windows.Forms.CheckBox Rep3;
         private System.Windows.Forms.CheckBox Rep4;
+        private System.Windows.Forms.GroupBox TextComment;
+        private System.Windows.Forms.Label TexteExplication;
     }
 }
