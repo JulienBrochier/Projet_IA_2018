@@ -98,6 +98,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Commentaires.xml" />
     <Content Include="listeQuestions.xml">
       <SubType>Designer</SubType>
     </Content>

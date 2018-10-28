@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Resolvers;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -16,11 +17,27 @@ namespace Partie_1
     {
         int index;
         int numeroQuestion;
+        XmlDocument document = new XmlDocument();
+        XmlElement root;
+        XmlNodeList elemList;
+        List<int> numeros = new List<int>();
+        
         public Question1(int index)
         {
             InitializeComponent();
             this.index = index;
             numeroQuestion = 0;
+            document.Load("../../listeQuestions.xml");
+
+            //Préparer le tirage au sort
+            root = document.DocumentElement;
+            elemList = root.GetElementsByTagName("question");
+            for (int i = 1; i <= elemList.Count; i++)
+            {
+                numeros.Add(i);
+            }
+
+
             Affiche();
             
         }
@@ -34,11 +51,6 @@ namespace Partie_1
         private void Affiche()
         {
 
-            /*XmlDocument doc = new XmlDocument();
-            doc.Load("H:/IA/Projet/Partie 1/Partie 1/listeQuestions.xml");
-            XmlElement elem = (XmlElement)doc.GetElementById("question1");
-            Rep1.Text = elem.value;*/
-
             numeroQuestion ++;
             NumeroQuest.Text = "Question n°" + numeroQuestion;
 
@@ -47,11 +59,13 @@ namespace Partie_1
             Bvalidate.Show();
 
             XmlReader doc = XmlReader.Create("../../listeQuestions.xml");
-            
+
+           
+
 
             while (doc.Read())
             {
-                //if ((doc.NodeType == XmlNodeType.Element) && (doc.Name == "question"))
+               
                 if(doc.GetAttribute("id")==""+index)
                 {
                     Intitule.Text = doc.GetAttribute("value");
@@ -72,6 +86,9 @@ namespace Partie_1
                     doc.Read();
                     Rep4.Text = doc.GetAttribute("value");
 
+                    doc.Read();
+                    doc.Read();
+                    TexteExplication.Text = doc.GetAttribute("value");
                 }
             }
 
@@ -108,6 +125,7 @@ namespace Partie_1
 
                    else
                     {
+                        
                         Bvalidate.Hide();
                         TextComment.Show();
                         Lcomment.Show();
@@ -146,6 +164,7 @@ namespace Partie_1
 
         private void Bcontinu_Click(object sender, EventArgs e)
         {
+           
             TextComment.Hide();
             Lcomment.Hide();
             TexteExplication.Hide();
@@ -154,12 +173,14 @@ namespace Partie_1
 
         private void Suivant ()
         {
+           
+            //déchocher toutes les cases
             RemiseZeroCheck(Rep1);
             RemiseZeroCheck(Rep2);
             RemiseZeroCheck(Rep3);
             RemiseZeroCheck(Rep4);
-            Random rnd = new Random();
-            index = rnd.Next(1,8);
+
+            TirageAuSort(elemList,numeros);
             Affiche();
         }
 
@@ -193,5 +214,43 @@ namespace Partie_1
         {
 
         }
+
+        private void TexteExplication_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TirageAuSort(XmlNodeList elemList, List<int> numeros)
+        {      
+            Random rnd = new Random();
+            int numero = rnd.Next(1, elemList.Count);
+
+            for (int i = 0; i < numeros.Count; i++)
+            {
+
+                if (numero != numeros[i])
+                {
+                    numero = rnd.Next(1, elemList.Count);
+
+                }
+                else break;
+            }
+
+            index = numero;
+
+            for (int i = 0; i < numeros.Count; i++)
+            {
+
+                if (numero == numeros[i])
+                {
+                    numeros.Remove(numeros[i]);
+                }
+               
+            }
+            
+        }
+        
+
+
     }
 }

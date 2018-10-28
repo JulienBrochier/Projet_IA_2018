@@ -46,7 +46,7 @@
             // 
             this.NumeroQuest.AutoSize = true;
             this.NumeroQuest.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumeroQuest.Location = new System.Drawing.Point(359, 18);
+            this.NumeroQuest.Location = new System.Drawing.Point(384, 9);
             this.NumeroQuest.Name = "NumeroQuest";
             this.NumeroQuest.Size = new System.Drawing.Size(96, 19);
             this.NumeroQuest.TabIndex = 0;
@@ -65,7 +65,7 @@
             // 
             // Bvalidate
             // 
-            this.Bvalidate.Location = new System.Drawing.Point(254, 359);
+            this.Bvalidate.Location = new System.Drawing.Point(388, 306);
             this.Bvalidate.Name = "Bvalidate";
             this.Bvalidate.Size = new System.Drawing.Size(114, 39);
             this.Bvalidate.TabIndex = 6;
@@ -75,7 +75,7 @@
             // 
             // Bcontinu
             // 
-            this.Bcontinu.Location = new System.Drawing.Point(471, 359);
+            this.Bcontinu.Location = new System.Drawing.Point(388, 496);
             this.Bcontinu.Name = "Bcontinu";
             this.Bcontinu.Size = new System.Drawing.Size(114, 39);
             this.Bcontinu.TabIndex = 7;
@@ -87,7 +87,7 @@
             // 
             this.Lcomment.AutoSize = true;
             this.Lcomment.Font = new System.Drawing.Font("Poiret One", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lcomment.Location = new System.Drawing.Point(501, 128);
+            this.Lcomment.Location = new System.Drawing.Point(145, 363);
             this.Lcomment.Name = "Lcomment";
             this.Lcomment.Size = new System.Drawing.Size(107, 17);
             this.Lcomment.TabIndex = 8;
@@ -140,9 +140,9 @@
             // TextComment
             // 
             this.TextComment.Controls.Add(this.TexteExplication);
-            this.TextComment.Location = new System.Drawing.Point(504, 158);
+            this.TextComment.Location = new System.Drawing.Point(291, 363);
             this.TextComment.Name = "TextComment";
-            this.TextComment.Size = new System.Drawing.Size(265, 151);
+            this.TextComment.Size = new System.Drawing.Size(543, 117);
             this.TextComment.TabIndex = 13;
             this.TextComment.TabStop = false;
             this.TextComment.Visible = false;
@@ -156,19 +156,20 @@
             this.TexteExplication.TabIndex = 0;
             this.TexteExplication.Text = "label1";
             this.TexteExplication.Visible = false;
+            this.TexteExplication.Click += new System.EventHandler(this.TexteExplication_Click);
             // 
             // Question1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 447);
+            this.ClientSize = new System.Drawing.Size(884, 547);
             this.Controls.Add(this.TextComment);
+            this.Controls.Add(this.Bcontinu);
             this.Controls.Add(this.Rep4);
             this.Controls.Add(this.Rep3);
             this.Controls.Add(this.Rep2);
             this.Controls.Add(this.Rep1);
             this.Controls.Add(this.Lcomment);
-            this.Controls.Add(this.Bcontinu);
             this.Controls.Add(this.Bvalidate);
             this.Controls.Add(this.Intitule);
             this.Controls.Add(this.NumeroQuest);
