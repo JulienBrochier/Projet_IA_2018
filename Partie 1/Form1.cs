@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Resolvers;
-using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace Partie_1

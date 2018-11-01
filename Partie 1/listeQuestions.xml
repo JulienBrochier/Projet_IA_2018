@@ -74,29 +74,46 @@
    <comment value="hello"/>
  </question>
 
- <question id="10" value ="A quoi sert un “LIDAR” ?">
-    <answer label="1" value ="cartographier l’environnement" true_answer="true"/>
-    <answer label="2" value ="se souvenir des positions de jeu occupées" true_answer="false"/>
-    <answer label="3" value ="détecter les obstacles" true_answer="true"/>
-    <answer label="4" value ="mettre un robot en mouvement" true_answer="false"/>
+ <question id="10" value ="Qu’est ce qu’une matrice d’adjacence ?">
+    <answer label="1" value ="La matrice de Mr Adjacence" true_answer="false"/>
+    <answer label="2" value ="Référence le nombre de liaisons entre chaque noeud" true_answer="true"/>
+    <answer label="3" value ="Indique le chemin suivi par l’algorithme lors d’un parcours d’arbre" true_answer="false"/>
+    <answer label="4" value ="Permet d’obtenir une matrice de gradients par produit de convolution" true_answer="false"/>
    <comment value="hello"></comment>
   </question>
 
- <question id="11" value ="A quoi sert un “LIDAR” ?">
-    <answer label="1" value ="cartographier l’environnement" true_answer="true"/>
-    <answer label="2" value ="se souvenir des positions de jeu occupées" true_answer="false"/>
-    <answer label="3" value ="détecter les obstacles" true_answer="true"/>
-    <answer label="4" value ="mettre un robot en mouvement" true_answer="false"/>
+ <question id="11" value ="Qu’est ce que “l’espace d’états” ?">
+    <answer label="1" value =" l’ensemble des positions atteignables depuis l’état initial, par un nombre d’action illimité" true_answer="true"/>
+    <answer label="2" value ="l’ensemble des positions atteignables à la prochaine étape" true_answer="false"/>
+    <answer label="3" value =" l’ensemble des positions initialement connues" true_answer="false"/>
+    <answer label="4" value ="l’ensemble des positions actuellement connues" true_answer="false"/>
    <comment value="hello"></comment>
   </question>
   
-<question id="12" value ="A quoi sert un “LIDAR” ?">
-    <answer label="1" value ="cartographier l’environnement" true_answer="true"/>
-    <answer label="2" value ="se souvenir des positions de jeu occupées" true_answer="false"/>
-    <answer label="3" value ="détecter les obstacles" true_answer="true"/>
-    <answer label="4" value ="mettre un robot en mouvement" true_answer="false"/>
+<question id="12" value ="De quoi se compose un servo-moteur?">
+    <answer label="1" value ="un moteur" true_answer="true"/>
+    <answer label="2" value ="un microprocesseur" true_answer="false"/>
+    <answer label="3" value ="un capteur" true_answer="true"/>
+    <answer label="4" value ="mettre un robot en mouvement" true_answer="true"/>
   <comment value="hello"></comment>
   </question>
+
+  <question id="13" value ="Quels caractéristiques sont nécessaires pour définir un robot :">
+    <answer label="1" value ="dispositif mécatronique" true_answer="true"/>
+    <answer label="2" value ="abilité proprioceptive" true_answer="false"/>
+    <answer label="3" value ="validation du test de Turing" true_answer="false"/>
+    <answer label="4" value ="accomplissement automatique de tâches reproduisant des actions humaines" true_answer="true"/>
+    <comment value="hello"></comment>
+  </question>
+
+  <question id="14" value ="Nous avons modélisé un chiffre par une matrice d’adjacence selon la méthode vue en TP, retrouver quel chiffre se cache derrière ?">
+    <answer label="1" value ="2" true_answer="false"/>
+    <answer label="2" value ="3" true_answer="false"/>
+    <answer label="3" value ="8" true_answer="true"/>
+    <answer label="4" value ="9" true_answer="false"/>
+    <comment value="hello"></comment>
+  </question>
+
 
 </liste>
   

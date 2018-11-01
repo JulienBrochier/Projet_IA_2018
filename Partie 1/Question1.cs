@@ -32,9 +32,9 @@ namespace Partie_1
             //Préparer le tirage au sort
             root = document.DocumentElement;
             elemList = root.GetElementsByTagName("question");
-            for (int i = 1; i <= elemList.Count; i++)
+            for (int i = 0; i <= elemList.Count; i++)
             {
-                numeros.Add(i);
+                numeros.Add(i+1);
             }
 
 
@@ -59,9 +59,6 @@ namespace Partie_1
             Bvalidate.Show();
 
             XmlReader doc = XmlReader.Create("../../listeQuestions.xml");
-
-           
-
 
             while (doc.Read())
             {
@@ -90,6 +87,15 @@ namespace Partie_1
                     doc.Read();
                     TexteExplication.Text = doc.GetAttribute("value");
                 }
+            }
+
+            if (index==6)
+            {
+                ImageRobot.Show();
+            }
+            if (index == 14)
+            {
+                ImageTab.Show();
             }
 
         }
@@ -173,6 +179,8 @@ namespace Partie_1
 
         private void Suivant ()
         {
+            //enlever les images s'il y en a
+            CacherImages();
            
             //déchocher toutes les cases
             RemiseZeroCheck(Rep1);
@@ -180,8 +188,40 @@ namespace Partie_1
             RemiseZeroCheck(Rep3);
             RemiseZeroCheck(Rep4);
 
-            TirageAuSort(elemList,numeros);
+            Random rnd = new Random();
+            
+            bool NouvelleQuestion = TirageAuSort(rnd);
+            while (NouvelleQuestion == false)
+            {
+                TirageAuSort(rnd);
+            }
+
             Affiche();
+        }
+
+        private bool TirageAuSort(Random rnd)
+        {
+            int numero = rnd.Next(1, elemList.Count);
+            bool present = false;
+            for (int i = 0; i < numeros.Count; i++)
+            {
+                if (numero == numeros[i])
+                {
+                    present = true;
+                    index = numero;
+                    numeros.Remove(numeros[i]);
+                    break;
+                }
+
+            }
+            return present;
+
+        }
+
+        private void CacherImages()
+        {
+            ImageRobot.Hide();
+            ImageTab.Hide();
         }
 
         private void Question1_Load(object sender, EventArgs e)
@@ -220,37 +260,11 @@ namespace Partie_1
 
         }
 
-        private void TirageAuSort(XmlNodeList elemList, List<int> numeros)
-        {      
-            Random rnd = new Random();
-            int numero = rnd.Next(1, elemList.Count);
-
-            for (int i = 0; i < numeros.Count; i++)
-            {
-
-                if (numero != numeros[i])
-                {
-                    numero = rnd.Next(1, elemList.Count);
-
-                }
-                else break;
-            }
-
-            index = numero;
-
-            for (int i = 0; i < numeros.Count; i++)
-            {
-
-                if (numero == numeros[i])
-                {
-                    numeros.Remove(numeros[i]);
-                }
-               
-            }
-            
-        }
         
 
+        private void ImageRobot_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
