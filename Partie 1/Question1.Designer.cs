@@ -40,11 +40,9 @@
             this.Rep4 = new System.Windows.Forms.CheckBox();
             this.TextComment = new System.Windows.Forms.GroupBox();
             this.TexteExplication = new System.Windows.Forms.Label();
-            this.ImageRobot = new System.Windows.Forms.PictureBox();
-            this.ImageTab = new System.Windows.Forms.PictureBox();
+            this.PictureBox = new System.Windows.Forms.PictureBox();
             this.TextComment.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageRobot)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageTab)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // NumeroQuest
@@ -163,34 +161,23 @@
             this.TexteExplication.Visible = false;
             this.TexteExplication.Click += new System.EventHandler(this.TexteExplication_Click);
             // 
-            // ImageRobot
+            // PictureBox
             // 
-            this.ImageRobot.Image = ((System.Drawing.Image)(resources.GetObject("ImageRobot.Image")));
-            this.ImageRobot.Location = new System.Drawing.Point(579, 122);
-            this.ImageRobot.Name = "ImageRobot";
-            this.ImageRobot.Size = new System.Drawing.Size(93, 111);
-            this.ImageRobot.TabIndex = 14;
-            this.ImageRobot.TabStop = false;
-            this.ImageRobot.Visible = false;
-            this.ImageRobot.Click += new System.EventHandler(this.ImageRobot_Click);
-            // 
-            // ImageTab
-            // 
-            this.ImageTab.Image = ((System.Drawing.Image)(resources.GetObject("ImageTab.Image")));
-            this.ImageTab.Location = new System.Drawing.Point(407, 109);
-            this.ImageTab.Name = "ImageTab";
-            this.ImageTab.Size = new System.Drawing.Size(465, 124);
-            this.ImageTab.TabIndex = 15;
-            this.ImageTab.TabStop = false;
-            this.ImageTab.Visible = false;
+            this.PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox.Image")));
+            this.PictureBox.Location = new System.Drawing.Point(579, 122);
+            this.PictureBox.Name = "PictureBox";
+            this.PictureBox.Size = new System.Drawing.Size(93, 111);
+            this.PictureBox.TabIndex = 14;
+            this.PictureBox.TabStop = false;
+            this.PictureBox.Visible = false;
+            this.PictureBox.Click += new System.EventHandler(this.ImageRobot_Click);
             // 
             // Question1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 547);
-            this.Controls.Add(this.ImageTab);
-            this.Controls.Add(this.ImageRobot);
+            this.Controls.Add(this.PictureBox);
             this.Controls.Add(this.TextComment);
             this.Controls.Add(this.Bcontinu);
             this.Controls.Add(this.Rep4);
@@ -206,8 +193,7 @@
             this.Load += new System.EventHandler(this.Question1_Load);
             this.TextComment.ResumeLayout(false);
             this.TextComment.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageRobot)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageTab)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,7 +212,6 @@
         private System.Windows.Forms.CheckBox Rep4;
         private System.Windows.Forms.GroupBox TextComment;
         private System.Windows.Forms.Label TexteExplication;
-        private System.Windows.Forms.PictureBox ImageRobot;
-        private System.Windows.Forms.PictureBox ImageTab;
+        private System.Windows.Forms.PictureBox PictureBox;
     }
 }

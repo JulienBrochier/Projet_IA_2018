@@ -21,6 +21,7 @@ namespace Partie_1
         XmlElement root;
         XmlNodeList elemList;
         List<int> numeros = new List<int>();
+       
         
         public Question1(int index)
         {
@@ -91,12 +92,16 @@ namespace Partie_1
 
             if (index==6)
             {
-                ImageRobot.Show();
+                PictureBox.BackgroundImage = Images.Rotation;
+                PictureBox.Show();
             }
+
             if (index == 14)
             {
-                ImageTab.Show();
+                PictureBox.BackgroundImage = Images.Tableau;
+                PictureBox.Show();
             }
+
 
         }
 
@@ -180,7 +185,7 @@ namespace Partie_1
         private void Suivant ()
         {
             //enlever les images s'il y en a
-            CacherImages();
+            PictureBox.Hide();
            
             //déchocher toutes les cases
             RemiseZeroCheck(Rep1);
@@ -218,12 +223,7 @@ namespace Partie_1
 
         }
 
-        private void CacherImages()
-        {
-            ImageRobot.Hide();
-            ImageTab.Hide();
-        }
-
+    
         private void Question1_Load(object sender, EventArgs e)
         {
 
