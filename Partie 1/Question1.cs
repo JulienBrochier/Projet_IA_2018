@@ -17,27 +17,29 @@ namespace Partie_1
     {
         int index;
         int numeroQuestion;
-        XmlDocument document = new XmlDocument();
+        XmlDocument document;
         XmlElement root;
         XmlNodeList elemList;
-        List<int> numeros = new List<int>();
-       
-        
+        List<int> numListe;
+        ShowImgSupplementaire montrerImage;
+
         public Question1(int index)
         {
             InitializeComponent();
             this.index = index;
+            montrerImage = new ShowImgSupplementaire();
             numeroQuestion = 0;
+            document = new XmlDocument();
             document.Load("../../listeQuestions.xml");
 
             //Préparer le tirage au sort
             root = document.DocumentElement;
             elemList = root.GetElementsByTagName("question");
-            for (int i = 0; i <= elemList.Count; i++)
+            numListe = new List<int>();
+            for (int i = 0; i<elemList.Count-1;i++)
             {
-                numeros.Add(i+1);
+                numListe.Add(i);
             }
-
 
             Affiche();
             
@@ -90,7 +92,15 @@ namespace Partie_1
                 }
             }
 
-            if (index==6)
+           /* if(tableauImages[index-1] != null)
+            {
+                string nom = tableauImages[index - 1];
+                PictureBox.BackgroundImage = Images.nom;
+                PictureBox.Show();
+            }*/
+
+    
+           if (index==6)
             {
                 PictureBox.BackgroundImage = Images.Rotation;
                 PictureBox.Show();
@@ -102,6 +112,31 @@ namespace Partie_1
                 PictureBox.Show();
             }
 
+            if (index == 15 || index == 16)
+            {
+                PictureBox.BackgroundImage = Images.Texte;
+                PictureBox.Show();
+            }
+
+            if (index == 17)
+            {
+                PictureBox.BackgroundImage = Images.TexteAllumette;
+                PictureBox.Show();
+                montrerImage.Show();
+                montrerImage.pictureBox.BackgroundImage = Images.arbre;
+            }
+
+            if (index == 18)
+            {
+                PictureBox.BackgroundImage = Images.ArbreDecision;
+                PictureBox.Show();
+            }
+
+            if (index == 19)
+            {
+                PictureBox.BackgroundImage = Images.ReseauBayesien;
+                PictureBox.Show();
+            }
 
         }
 
@@ -186,41 +221,22 @@ namespace Partie_1
         {
             //enlever les images s'il y en a
             PictureBox.Hide();
-           
+            montrerImage.Hide();
+
             //déchocher toutes les cases
             RemiseZeroCheck(Rep1);
             RemiseZeroCheck(Rep2);
             RemiseZeroCheck(Rep3);
             RemiseZeroCheck(Rep4);
 
+          // Tirage au sort des questions parmis la liste (améliorer encore par rapport à la première question)
             Random rnd = new Random();
-            
-            bool NouvelleQuestion = TirageAuSort(rnd);
-            while (NouvelleQuestion == false)
-            {
-                TirageAuSort(rnd);
-            }
+            int i = rnd.Next(0, numListe.Count);
+            int num = numListe[i];
+            index = num;
+            numListe.Remove(numListe[i]);
 
             Affiche();
-        }
-
-        private bool TirageAuSort(Random rnd)
-        {
-            int numero = rnd.Next(1, elemList.Count);
-            bool present = false;
-            for (int i = 0; i < numeros.Count; i++)
-            {
-                if (numero == numeros[i])
-                {
-                    present = true;
-                    index = numero;
-                    numeros.Remove(numeros[i]);
-                    break;
-                }
-
-            }
-            return present;
-
         }
 
     

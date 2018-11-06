@@ -114,6 +114,53 @@
     <comment value="hello"></comment>
   </question>
 
+  <question id="15" value ="Continuer jusqu’au rang 5  le parcours en largeur effectué par l’IA :">
+    <answer label="1" value ="rang 1: F={} O={AAA}, rang 5: F={AAA,AAB,CAA,CBB}" true_answer="false"/>
+    <answer label="2" value ="rang 1: F={} O={AAA}, rang 5 :F={AAA,CAA, AAB}" true_answer="false"/>
+    <answer label="3" value ="rang 1: F={} O={AAA},rang 5 :  F={AAA,CAA, AAB,CAB}" true_answer="true"/>
+    <answer label="4" value ="rang 1: F={} O={AAA},rang 5: F={AAA,CAA,CAB,CCB}" true_answer="false"/>
+    <comment value="hello"></comment>
+  </question>
+
+  <question id="16" value ="Continuer jusqu’au rang 5  le parcours en profondeur effectué par l’IA :">
+    <answer label="1" value ="rang 1: F={} O={AAA}, rang 5: F={AAA,AAB,CAA,CAB}" true_answer="false"/>
+    <answer label="2" value ="rang 1: F={} O={AAA}, rang 5 F={AAA, CAA, CAB, CCB}" true_answer="true"/>
+    <answer label="3" value ="rang 1: F={} O={AAA},rang 5 :  F={AAA,CAA, AAB,CAB}" true_answer="false"/>
+    <answer label="4" value ="rang 1: F={} O={AAA},rang 5: F={AAA,CAA,CAB,CBC}" true_answer="false"/>
+    <comment value="hello"></comment>
+  </question>
+
+  <question id="17" value ="Le jeu des allumettes">
+    <answer label="1" value ="De gauche à droite 100, 100, -100" true_answer="false"/>
+    <answer label="2" value ="De gauche à droite 100, -100, 100" true_answer="true"/>
+    <answer label="3" value ="De gauche à droite 100, 100, -100" true_answer="false"/>
+    <answer label="4" value ="De gauche à droite 100, -100, -100" true_answer="false"/>
+    <comment value="hello"></comment>
+  </question>
+
+  <question id="18" value ="Associer le noms du réseau à sa représentation visuelle">
+    <answer label="1" value ="réseau de neurones multicouches" true_answer="false"/>
+    <answer label="2" value ="graphe conceptuel" true_answer="false"/>
+    <answer label="3" value ="arbre de décision" true_answer="true"/>
+    <answer label="4" value ="réseau bayésien" true_answer="false"/>
+    <comment value="hello"></comment>
+  </question>
+
+  <question id="19" value ="Associer le noms du réseau à sa représentation visuelle">
+    <answer label="1" value ="graphe conceptuel" true_answer="false"/>
+    <answer label="2" value ="ontologie" true_answer="false"/>
+    <answer label="3" value ="Graphe pour décrire une forme" true_answer="false"/>
+    <answer label="4" value ="réseau bayésien" true_answer="true"/>
+    <comment value="hello"></comment>
+  </question>
+
+  <question id="20" value ="Nous avons modélisé un chiffre par une matrice d’adjacence selon la méthode vue en TP, retrouver quel chiffre se cache derrière ?">
+    <answer label="1" value ="2" true_answer="false"/>
+    <answer label="2" value ="3" true_answer="false"/>
+    <answer label="3" value ="8" true_answer="true"/>
+    <answer label="4" value ="9" true_answer="false"/>
+    <comment value="hello"></comment>
+  </question>
 
 </liste>
   
