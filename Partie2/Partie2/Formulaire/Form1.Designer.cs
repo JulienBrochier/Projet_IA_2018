@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.TreeViewRecherche = new System.Windows.Forms.TreeView();
+            this.LBgraphe = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Bresolve = new System.Windows.Forms.Button();
@@ -41,33 +41,33 @@
             this.TBF1 = new System.Windows.Forms.TextBox();
             this.TBF2 = new System.Windows.Forms.TextBox();
             this.TBF3 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.TBO0 = new System.Windows.Forms.TextBox();
+            this.TBO1 = new System.Windows.Forms.TextBox();
+            this.TBO2 = new System.Windows.Forms.TextBox();
+            this.TBO3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TBF5 = new System.Windows.Forms.TextBox();
+            this.TBO4 = new System.Windows.Forms.TextBox();
+            this.TBO5 = new System.Windows.Forms.TextBox();
+            this.TBO6 = new System.Windows.Forms.TextBox();
+            this.TBF6 = new System.Windows.Forms.TextBox();
+            this.TBF4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // treeView1
+            // TreeViewRecherche
             // 
-            this.treeView1.Location = new System.Drawing.Point(486, 145);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(152, 180);
-            this.treeView1.TabIndex = 17;
+            this.TreeViewRecherche.Location = new System.Drawing.Point(486, 145);
+            this.TreeViewRecherche.Name = "TreeViewRecherche";
+            this.TreeViewRecherche.Size = new System.Drawing.Size(152, 180);
+            this.TreeViewRecherche.TabIndex = 17;
             // 
-            // listBox1
+            // LBgraphe
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(333, 201);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(125, 134);
-            this.listBox1.TabIndex = 16;
+            this.LBgraphe.FormattingEnabled = true;
+            this.LBgraphe.Location = new System.Drawing.Point(333, 201);
+            this.LBgraphe.Name = "LBgraphe";
+            this.LBgraphe.Size = new System.Drawing.Size(125, 134);
+            this.LBgraphe.TabIndex = 16;
             // 
             // label2
             // 
@@ -81,7 +81,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(160, 68);
+            this.label1.Location = new System.Drawing.Point(169, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 14;
@@ -95,6 +95,7 @@
             this.Bresolve.TabIndex = 13;
             this.Bresolve.Text = "Lancer la résolution";
             this.Bresolve.UseVisualStyleBackColor = true;
+            this.Bresolve.Click += new System.EventHandler(this.Bresolve_Click);
             // 
             // TBnoeudFin
             // 
@@ -103,18 +104,20 @@
             this.TBnoeudFin.Size = new System.Drawing.Size(100, 20);
             this.TBnoeudFin.TabIndex = 12;
             this.TBnoeudFin.Text = "6";
+            this.TBnoeudFin.TextChanged += new System.EventHandler(this.TBnoeudFin_TextChanged);
             // 
             // TBnoeudIni
             // 
-            this.TBnoeudIni.Location = new System.Drawing.Point(163, 97);
+            this.TBnoeudIni.Location = new System.Drawing.Point(172, 96);
             this.TBnoeudIni.Name = "TBnoeudIni";
             this.TBnoeudIni.Size = new System.Drawing.Size(100, 20);
             this.TBnoeudIni.TabIndex = 11;
             this.TBnoeudIni.Text = "0";
+            this.TBnoeudIni.TextChanged += new System.EventHandler(this.TBnoeudIni_TextChanged);
             // 
             // Binit
             // 
-            this.Binit.Location = new System.Drawing.Point(27, 81);
+            this.Binit.Location = new System.Drawing.Point(44, 68);
             this.Binit.Name = "Binit";
             this.Binit.Size = new System.Drawing.Size(75, 23);
             this.Binit.TabIndex = 10;
@@ -159,33 +162,33 @@
             this.TBF3.Size = new System.Drawing.Size(100, 20);
             this.TBF3.TabIndex = 22;
             // 
-            // textBox7
+            // TBO0
             // 
-            this.textBox7.Location = new System.Drawing.Point(193, 175);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 23;
+            this.TBO0.Location = new System.Drawing.Point(193, 175);
+            this.TBO0.Name = "TBO0";
+            this.TBO0.Size = new System.Drawing.Size(100, 20);
+            this.TBO0.TabIndex = 23;
             // 
-            // textBox8
+            // TBO1
             // 
-            this.textBox8.Location = new System.Drawing.Point(193, 201);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 24;
+            this.TBO1.Location = new System.Drawing.Point(193, 201);
+            this.TBO1.Name = "TBO1";
+            this.TBO1.Size = new System.Drawing.Size(100, 20);
+            this.TBO1.TabIndex = 24;
             // 
-            // textBox9
+            // TBO2
             // 
-            this.textBox9.Location = new System.Drawing.Point(193, 227);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 25;
+            this.TBO2.Location = new System.Drawing.Point(193, 227);
+            this.TBO2.Name = "TBO2";
+            this.TBO2.Size = new System.Drawing.Size(100, 20);
+            this.TBO2.TabIndex = 25;
             // 
-            // textBox10
+            // TBO3
             // 
-            this.textBox10.Location = new System.Drawing.Point(193, 253);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 26;
+            this.TBO3.Location = new System.Drawing.Point(193, 253);
+            this.TBO3.Name = "TBO3";
+            this.TBO3.Size = new System.Drawing.Size(100, 20);
+            this.TBO3.TabIndex = 26;
             // 
             // label4
             // 
@@ -196,71 +199,71 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Graphe";
             // 
-            // textBox2
+            // TBF5
             // 
-            this.textBox2.Location = new System.Drawing.Point(44, 305);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 29;
+            this.TBF5.Location = new System.Drawing.Point(44, 305);
+            this.TBF5.Name = "TBF5";
+            this.TBF5.Size = new System.Drawing.Size(100, 20);
+            this.TBF5.TabIndex = 29;
             // 
-            // textBox3
+            // TBO4
             // 
-            this.textBox3.Location = new System.Drawing.Point(193, 279);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 30;
+            this.TBO4.Location = new System.Drawing.Point(193, 279);
+            this.TBO4.Name = "TBO4";
+            this.TBO4.Size = new System.Drawing.Size(100, 20);
+            this.TBO4.TabIndex = 30;
             // 
-            // textBox4
+            // TBO5
             // 
-            this.textBox4.Location = new System.Drawing.Point(193, 305);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 31;
+            this.TBO5.Location = new System.Drawing.Point(193, 305);
+            this.TBO5.Name = "TBO5";
+            this.TBO5.Size = new System.Drawing.Size(100, 20);
+            this.TBO5.TabIndex = 31;
             // 
-            // textBox5
+            // TBO6
             // 
-            this.textBox5.Location = new System.Drawing.Point(193, 331);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 32;
+            this.TBO6.Location = new System.Drawing.Point(193, 331);
+            this.TBO6.Name = "TBO6";
+            this.TBO6.Size = new System.Drawing.Size(100, 20);
+            this.TBO6.TabIndex = 32;
             // 
-            // textBox6
+            // TBF6
             // 
-            this.textBox6.Location = new System.Drawing.Point(44, 331);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 33;
+            this.TBF6.Location = new System.Drawing.Point(44, 331);
+            this.TBF6.Name = "TBF6";
+            this.TBF6.Size = new System.Drawing.Size(100, 20);
+            this.TBF6.TabIndex = 33;
             // 
-            // textBox1
+            // TBF4
             // 
-            this.textBox1.Location = new System.Drawing.Point(44, 279);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 34;
+            this.TBF4.Location = new System.Drawing.Point(44, 279);
+            this.TBF4.Name = "TBF4";
+            this.TBF4.Size = new System.Drawing.Size(100, 20);
+            this.TBF4.TabIndex = 34;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 385);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TBF4);
+            this.Controls.Add(this.TBF6);
+            this.Controls.Add(this.TBO6);
+            this.Controls.Add(this.TBO5);
+            this.Controls.Add(this.TBO4);
+            this.Controls.Add(this.TBF5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.TBO3);
+            this.Controls.Add(this.TBO2);
+            this.Controls.Add(this.TBO1);
+            this.Controls.Add(this.TBO0);
             this.Controls.Add(this.TBF3);
             this.Controls.Add(this.TBF2);
             this.Controls.Add(this.TBF1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TBF0);
-            this.Controls.Add(this.treeView1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.TreeViewRecherche);
+            this.Controls.Add(this.LBgraphe);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Bresolve);
@@ -276,8 +279,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TreeView TreeViewRecherche;
+        private System.Windows.Forms.ListBox LBgraphe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Bresolve;
@@ -289,17 +292,17 @@
         private System.Windows.Forms.TextBox TBF1;
         private System.Windows.Forms.TextBox TBF2;
         private System.Windows.Forms.TextBox TBF3;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox TBO0;
+        private System.Windows.Forms.TextBox TBO1;
+        private System.Windows.Forms.TextBox TBO2;
+        private System.Windows.Forms.TextBox TBO3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TBF5;
+        private System.Windows.Forms.TextBox TBO4;
+        private System.Windows.Forms.TextBox TBO5;
+        private System.Windows.Forms.TextBox TBO6;
+        private System.Windows.Forms.TextBox TBF6;
+        private System.Windows.Forms.TextBox TBF4;
     }
 }
 

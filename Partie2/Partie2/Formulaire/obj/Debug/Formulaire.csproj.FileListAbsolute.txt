@@ -1,1 +1,9 @@
 C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie2\Partie2\Formulaire\bin\Debug\Formulaire.exe.config
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie2\Partie2\Formulaire\bin\Debug\Formulaire.exe
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie2\Partie2\Formulaire\bin\Debug\Formulaire.pdb
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie2\Partie2\Formulaire\obj\Debug\Formulaire.csprojResolveAssemblyReference.cache
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie2\Partie2\Formulaire\obj\Debug\Formulaire.Form1.resources
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie2\Partie2\Formulaire\obj\Debug\Formulaire.Properties.Resources.resources
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie2\Partie2\Formulaire\obj\Debug\Formulaire.csproj.GenerateResource.Cache
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie2\Partie2\Formulaire\obj\Debug\Formulaire.exe
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie2\Partie2\Formulaire\obj\Debug\Formulaire.pdb
