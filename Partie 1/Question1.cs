@@ -25,11 +25,19 @@ namespace Partie_1
 
         public Question1(int index)
         {
+            
             InitializeComponent();
+
             this.index = index;
+
+   
+
             montrerImage = new ShowImgSupplementaire();
+
             numeroQuestion = 0;
+
             document = new XmlDocument();
+
             document.Load("../../listeQuestions.xml");
 
             //Préparer le tirage au sort
@@ -53,54 +61,44 @@ namespace Partie_1
 
         private void Affiche()
         {
+            XmlReader doc = XmlReader.Create("../../listeQuestions.xml");
 
             numeroQuestion ++;
             NumeroQuest.Text = "Question n°" + numeroQuestion;
 
-
             Bcontinu.Hide();
             Bvalidate.Show();
 
-            XmlReader doc = XmlReader.Create("../../listeQuestions.xml");
-
             while (doc.Read())
-            {
-               
-                if(doc.GetAttribute("id")==""+index)
-                {
-                    Intitule.Text = doc.GetAttribute("value");
+             {
 
-                    doc.Read();
-                    doc.Read();
-                    Rep1.Text = doc.GetAttribute("value");
+                 if(doc.GetAttribute("id")==""+index)
+                 {
+                     Intitule.Text = doc.GetAttribute("value");
 
-                    doc.Read();
-                    doc.Read();
-                    Rep2.Text = doc.GetAttribute("value");
+                     doc.Read();
+                     doc.Read();
+                     Rep1.Text = doc.GetAttribute("value");
 
-                    doc.Read();
-                    doc.Read();
-                    Rep3.Text = doc.GetAttribute("value");
+                     doc.Read();
+                     doc.Read();
+                     Rep2.Text = doc.GetAttribute("value");
 
-                    doc.Read();
-                    doc.Read();
-                    Rep4.Text = doc.GetAttribute("value");
+                     doc.Read();
+                     doc.Read();
+                     Rep3.Text = doc.GetAttribute("value");
 
-                    doc.Read();
-                    doc.Read();
+                     doc.Read();
+                     doc.Read();
+                     Rep4.Text = doc.GetAttribute("value");
+
+                     doc.Read();
+                     doc.Read();
                     TexteExplication.Text = doc.GetAttribute("value");
                 }
-            }
+             }
 
-           /* if(tableauImages[index-1] != null)
-            {
-                string nom = tableauImages[index - 1];
-                PictureBox.BackgroundImage = Images.nom;
-                PictureBox.Show();
-            }*/
-
-    
-           if (index==6)
+            if (index == 6)
             {
                 PictureBox.BackgroundImage = Images.Rotation;
                 PictureBox.Show();
@@ -143,6 +141,7 @@ namespace Partie_1
         private void Bvalidate_Click(object sender, EventArgs e)
         {
             XmlReader doc = XmlReader.Create("../../listeQuestions.xml");
+
             bool valide = false;
 
             while (doc.Read())
@@ -170,8 +169,7 @@ namespace Partie_1
                     }
 
                    else
-                    {
-                        
+                    {                       
                         Bvalidate.Hide();
                         TextComment.Show();
                         Lcomment.Show();
@@ -239,6 +237,46 @@ namespace Partie_1
             Affiche();
         }
 
+        private void AfficherImage()
+        {
+            if (index == 6)
+            {
+                PictureBox.BackgroundImage = Images.Rotation;
+                PictureBox.Show();
+            }
+
+            if (index == 14)
+            {
+                PictureBox.BackgroundImage = Images.Tableau;
+                PictureBox.Show();
+            }
+
+            if (index == 15 || index == 16)
+            {
+                PictureBox.BackgroundImage = Images.Texte;
+                PictureBox.Show();
+            }
+
+            if (index == 17)
+            {
+                PictureBox.BackgroundImage = Images.TexteAllumette;
+                PictureBox.Show();
+                montrerImage.Show();
+                montrerImage.pictureBox.BackgroundImage = Images.arbre;
+            }
+
+            if (index == 18)
+            {
+                PictureBox.BackgroundImage = Images.ArbreDecision;
+                PictureBox.Show();
+            }
+
+            if (index == 19)
+            {
+                PictureBox.BackgroundImage = Images.ReseauBayesien;
+                PictureBox.Show();
+            }
+        }
     
         private void Question1_Load(object sender, EventArgs e)
         {

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Question1));
             this.NumeroQuest = new System.Windows.Forms.Label();
             this.Intitule = new System.Windows.Forms.Label();
             this.Bvalidate = new System.Windows.Forms.Button();
@@ -163,7 +162,6 @@
             // 
             // PictureBox
             // 
-            this.PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox.Image")));
             this.PictureBox.Location = new System.Drawing.Point(346, 119);
             this.PictureBox.Name = "PictureBox";
             this.PictureBox.Size = new System.Drawing.Size(526, 238);
