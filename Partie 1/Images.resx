@@ -121,12 +121,6 @@
   <data name="arbre" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\arbre.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ArbreDecision" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ArbreDecision.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ReseauBayesien" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ReseauBayesien.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Rotation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Capture.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -138,5 +132,11 @@
   </data>
   <data name="TexteAllumette" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\TexteAllumette.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArbreDecision" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ArbreDecision.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReseauBayesien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ReseauBayesien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

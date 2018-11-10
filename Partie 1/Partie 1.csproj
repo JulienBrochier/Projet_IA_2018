@@ -122,8 +122,8 @@
     <Content Include="listeQuestions.xml">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Resources\ReseauBayesien.PNG" />
-    <None Include="Resources\ArbreDecision.PNG" />
+    <None Include="Resources\ArbreDecision.png" />
+    <None Include="Resources\ReseauBayesien.png" />
     <None Include="Resources\TexteAllumette.PNG" />
     <None Include="Resources\arbre.PNG" />
     <None Include="Resources\Texte.PNG" />

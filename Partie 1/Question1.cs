@@ -30,8 +30,6 @@ namespace Partie_1
 
             this.index = index;
 
-   
-
             montrerImage = new ShowImgSupplementaire();
 
             numeroQuestion = 0;
@@ -68,6 +66,7 @@ namespace Partie_1
 
             Bcontinu.Hide();
             Bvalidate.Show();
+            PictureBox.SendToBack();
 
             while (doc.Read())
              {
@@ -100,41 +99,41 @@ namespace Partie_1
 
             if (index == 6)
             {
-                PictureBox.BackgroundImage = Images.Rotation;
+                PictureBox.Image = Images.Rotation;
                 PictureBox.Show();
             }
 
             if (index == 14)
             {
-                PictureBox.BackgroundImage = Images.Tableau;
+                PictureBox.Image = Images.Tableau;
                 PictureBox.Show();
             }
 
             if (index == 15 || index == 16)
             {
-                PictureBox.BackgroundImage = Images.Texte;
-                PictureBox.Show();
+                montrerImage.Show();
+                montrerImage.pictureBox.Image = Images.Texte;
             }
 
             if (index == 17)
             {
-                PictureBox.BackgroundImage = Images.TexteAllumette;
+                PictureBox.Image = Images.TexteAllumette;
                 PictureBox.Show();
                 montrerImage.Show();
-                montrerImage.pictureBox.BackgroundImage = Images.arbre;
+                montrerImage.pictureBox.Image = Images.arbre;
             }
 
             if (index == 18)
             {
-                PictureBox.BackgroundImage = Images.ArbreDecision;
-                PictureBox.Show();
+                montrerImage.Show();
+                montrerImage.pictureBox.Image = Images.ArbreDecision;
             }
 
             if (index == 19)
             {
-                PictureBox.BackgroundImage = Images.ReseauBayesien;
-                PictureBox.Show();
-            }
+                montrerImage.Show();
+                montrerImage.pictureBox.Image = Images.ReseauBayesien;
+            }  
 
         }
 
@@ -207,8 +206,7 @@ namespace Partie_1
         }
 
         private void Bcontinu_Click(object sender, EventArgs e)
-        {
-           
+        {          
             TextComment.Hide();
             Lcomment.Hide();
             TexteExplication.Hide();
@@ -219,7 +217,8 @@ namespace Partie_1
         {
             //enlever les images s'il y en a
             PictureBox.Hide();
-            montrerImage.Hide();
+            if (index==17 || index == 15 || index == 16)
+            {montrerImage.Close(); }
 
             //déchocher toutes les cases
             RemiseZeroCheck(Rep1);
@@ -227,7 +226,7 @@ namespace Partie_1
             RemiseZeroCheck(Rep3);
             RemiseZeroCheck(Rep4);
 
-          // Tirage au sort des questions parmis la liste (améliorer encore par rapport à la première question)
+            // Tirage au sort des questions parmis la liste (améliorer encore par rapport à la première question) 
             Random rnd = new Random();
             int i = rnd.Next(0, numListe.Count);
             int num = numListe[i];
@@ -237,46 +236,7 @@ namespace Partie_1
             Affiche();
         }
 
-        private void AfficherImage()
-        {
-            if (index == 6)
-            {
-                PictureBox.BackgroundImage = Images.Rotation;
-                PictureBox.Show();
-            }
-
-            if (index == 14)
-            {
-                PictureBox.BackgroundImage = Images.Tableau;
-                PictureBox.Show();
-            }
-
-            if (index == 15 || index == 16)
-            {
-                PictureBox.BackgroundImage = Images.Texte;
-                PictureBox.Show();
-            }
-
-            if (index == 17)
-            {
-                PictureBox.BackgroundImage = Images.TexteAllumette;
-                PictureBox.Show();
-                montrerImage.Show();
-                montrerImage.pictureBox.BackgroundImage = Images.arbre;
-            }
-
-            if (index == 18)
-            {
-                PictureBox.BackgroundImage = Images.ArbreDecision;
-                PictureBox.Show();
-            }
-
-            if (index == 19)
-            {
-                PictureBox.BackgroundImage = Images.ReseauBayesien;
-                PictureBox.Show();
-            }
-        }
+        
     
         private void Question1_Load(object sender, EventArgs e)
         {

@@ -60,3 +60,4 @@ C:\Users\egrevet\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Pro
 C:\Users\egrevet\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Question1.resources
 C:\Users\egrevet\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.csproj.GenerateResource.Cache
 C:\Users\egrevet\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.ShowImgSupplementaire.resources
+C:\Users\Elise\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.ShowImgSupplementaire.resources

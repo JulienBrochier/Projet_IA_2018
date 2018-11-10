@@ -67,7 +67,7 @@
             // 
             // Bvalidate
             // 
-            this.Bvalidate.Location = new System.Drawing.Point(388, 306);
+            this.Bvalidate.Location = new System.Drawing.Point(388, 342);
             this.Bvalidate.Name = "Bvalidate";
             this.Bvalidate.Size = new System.Drawing.Size(114, 39);
             this.Bvalidate.TabIndex = 6;
@@ -89,7 +89,7 @@
             // 
             this.Lcomment.AutoSize = true;
             this.Lcomment.Font = new System.Drawing.Font("Poiret One", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lcomment.Location = new System.Drawing.Point(145, 363);
+            this.Lcomment.Location = new System.Drawing.Point(158, 367);
             this.Lcomment.Name = "Lcomment";
             this.Lcomment.Size = new System.Drawing.Size(107, 17);
             this.Lcomment.TabIndex = 8;
@@ -100,7 +100,7 @@
             // Rep1
             // 
             this.Rep1.AutoSize = true;
-            this.Rep1.Location = new System.Drawing.Point(148, 128);
+            this.Rep1.Location = new System.Drawing.Point(148, 120);
             this.Rep1.Name = "Rep1";
             this.Rep1.Size = new System.Drawing.Size(80, 17);
             this.Rep1.TabIndex = 9;
@@ -111,7 +111,7 @@
             // Rep2
             // 
             this.Rep2.AutoSize = true;
-            this.Rep2.Location = new System.Drawing.Point(148, 174);
+            this.Rep2.Location = new System.Drawing.Point(148, 169);
             this.Rep2.Name = "Rep2";
             this.Rep2.Size = new System.Drawing.Size(80, 17);
             this.Rep2.TabIndex = 10;
@@ -142,9 +142,9 @@
             // TextComment
             // 
             this.TextComment.Controls.Add(this.TexteExplication);
-            this.TextComment.Location = new System.Drawing.Point(291, 363);
+            this.TextComment.Location = new System.Drawing.Point(161, 387);
             this.TextComment.Name = "TextComment";
-            this.TextComment.Size = new System.Drawing.Size(543, 117);
+            this.TextComment.Size = new System.Drawing.Size(644, 103);
             this.TextComment.TabIndex = 13;
             this.TextComment.TabStop = false;
             this.TextComment.Visible = false;
@@ -153,21 +153,22 @@
             // 
             this.TexteExplication.AutoSize = true;
             this.TexteExplication.Location = new System.Drawing.Point(23, 20);
+            this.TexteExplication.MaximumSize = new System.Drawing.Size(640, 0);
             this.TexteExplication.Name = "TexteExplication";
             this.TexteExplication.Size = new System.Drawing.Size(35, 13);
             this.TexteExplication.TabIndex = 0;
             this.TexteExplication.Text = "label1";
+            this.TexteExplication.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.TexteExplication.Visible = false;
             this.TexteExplication.Click += new System.EventHandler(this.TexteExplication_Click);
             // 
             // PictureBox
             // 
-            this.PictureBox.Location = new System.Drawing.Point(346, 119);
+            this.PictureBox.Location = new System.Drawing.Point(346, 98);
             this.PictureBox.Name = "PictureBox";
             this.PictureBox.Size = new System.Drawing.Size(526, 238);
             this.PictureBox.TabIndex = 14;
             this.PictureBox.TabStop = false;
-            this.PictureBox.Visible = false;
             this.PictureBox.Click += new System.EventHandler(this.ImageRobot_Click);
             // 
             // Question1
@@ -209,7 +210,7 @@
         private System.Windows.Forms.CheckBox Rep3;
         private System.Windows.Forms.CheckBox Rep4;
         private System.Windows.Forms.GroupBox TextComment;
-        private System.Windows.Forms.Label TexteExplication;
         private System.Windows.Forms.PictureBox PictureBox;
+        internal System.Windows.Forms.Label TexteExplication;
     }
 }
