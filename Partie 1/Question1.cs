@@ -21,28 +21,50 @@ namespace Partie_1
         XmlElement root;
         XmlNodeList elemList;
         List<int> numListe;
+        Random rnd;
+        //XmlDocument document;
+        //XmlElement root;
+        // XmlNodeList elemList;
+        //List<int> numListe;
         ShowImgSupplementaire montrerImage;
 
-        public Question1(int index)
+        public Question1()
         {
             
             InitializeComponent();
 
-            this.index = index;
+           // this.index = index;
 
-            montrerImage = new ShowImgSupplementaire();
+            index = 0;
+
+           // montrerImage = new ShowImgSupplementaire();
 
             numeroQuestion = 0;
 
-            document = new XmlDocument();
+            //document = new XmlDocument();
 
-            document.Load("../../listeQuestions.xml");
+            //document.Load("../../listeQuestions.xml");
 
             //Préparer le tirage au sort
+            
+
+            /* root = document.DocumentElement;
+             elemList = root.GetElementsByTagName("question");
+             numListe = new List<int>();
+             for (int i = 0; i<elemList.Count-1;i++)
+             {
+                 numListe.Add(i);
+             }*/
+
+            document = new XmlDocument();
+            document.Load("../../listeQuestions.xml");
             root = document.DocumentElement;
             elemList = root.GetElementsByTagName("question");
+
+            rnd = new Random();
+
             numListe = new List<int>();
-            for (int i = 0; i<elemList.Count-1;i++)
+            for (int i = 0; i < elemList.Count - 1; i++)
             {
                 numListe.Add(i);
             }
@@ -63,6 +85,8 @@ namespace Partie_1
 
             numeroQuestion ++;
             NumeroQuest.Text = "Question n°" + numeroQuestion;
+
+           index =  NumeroQuestion();
 
             Bcontinu.Hide();
             Bvalidate.Show();
@@ -111,28 +135,39 @@ namespace Partie_1
 
             if (index == 15 || index == 16)
             {
+
+                /*montrerImage = new ShowImgSupplementaire();
                 montrerImage.Show();
-                montrerImage.pictureBox.Image = Images.Texte;
+                montrerImage.pictureBox.Image = Images.Texte;*/
+                PictureBox.Image = Images.Texte;
+                PictureBox.Show();
             }
 
             if (index == 17)
             {
                 PictureBox.Image = Images.TexteAllumette;
                 PictureBox.Show();
+                montrerImage = new ShowImgSupplementaire();
                 montrerImage.Show();
                 montrerImage.pictureBox.Image = Images.arbre;
             }
 
             if (index == 18)
             {
+                /*montrerImage = new ShowImgSupplementaire();
                 montrerImage.Show();
-                montrerImage.pictureBox.Image = Images.ArbreDecision;
+                montrerImage.pictureBox.Image = Images.ArbreDecision;*/
+                PictureBox.Image = Images.ArbreDecision;
+                PictureBox.Show();
             }
 
             if (index == 19)
             {
+                /*montrerImage = new ShowImgSupplementaire();
                 montrerImage.Show();
-                montrerImage.pictureBox.Image = Images.ReseauBayesien;
+                montrerImage.pictureBox.Image = Images.ReseauBayesien;*/
+                PictureBox.Image = Images.ReseauBayesien;
+                PictureBox.Show();
             }  
 
         }
@@ -213,11 +248,11 @@ namespace Partie_1
             Suivant();
         }
 
-        private void Suivant ()
+        internal void Suivant ()
         {
             //enlever les images s'il y en a
             PictureBox.Hide();
-            if (index==17 || index == 15 || index == 16)
+            if (index==17 )
             {montrerImage.Close(); }
 
             //déchocher toutes les cases
@@ -226,18 +261,27 @@ namespace Partie_1
             RemiseZeroCheck(Rep3);
             RemiseZeroCheck(Rep4);
 
-            // Tirage au sort des questions parmis la liste (améliorer encore par rapport à la première question) 
-            Random rnd = new Random();
-            int i = rnd.Next(0, numListe.Count);
-            int num = numListe[i];
+            // Tirage au sort des questions parmis la liste (améliorer encore par rapport à la première question)  
+            index = NumeroQuestion();
+            /*Random rnd = new Random();
+            int j = rnd.Next(0, numListe.Count);
+            int num = numListe[j];
             index = num;
-            numListe.Remove(numListe[i]);
+            numListe.Remove(numListe[j]);*/
 
             Affiche();
         }
 
-        
-    
+        internal int NumeroQuestion()
+        {
+            int j = rnd.Next(0, numListe.Count);
+            int num = numListe[j];
+            index = num;
+            numListe.Remove(numListe[j]);
+
+            return index;
+        }
+
         private void Question1_Load(object sender, EventArgs e)
         {
 

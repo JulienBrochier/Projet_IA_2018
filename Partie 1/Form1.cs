@@ -15,22 +15,34 @@ namespace Partie_1
 {
     public partial class Questionnaire : Form
     {
+
+        XmlDocument document;
+        XmlElement root;
+        XmlNodeList elemList;
+        List<int> numListe;
+        Random rnd;
+        int index;
+
+
         public Questionnaire()
         {
             InitializeComponent();
+           
         }
 
         private void BoutonCommencer_Click(object sender, EventArgs e)
         {
-            XmlDocument document = new XmlDocument();
-            document.Load("../../listeQuestions.xml");
-            XmlElement root=document.DocumentElement;
-            XmlNodeList elemList= root.GetElementsByTagName("question"); 
-            Random rnd = new Random();
-            int index = rnd.Next(1, elemList.Count);
-            Question1 question = new Question1(index);
-            question.Show();
+            //int index = NumeroQuestion();
+            Question1 questionnaire = new Question1();
+            questionnaire.Show();
             
+        }
+
+       
+    
+        private void Titre_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
