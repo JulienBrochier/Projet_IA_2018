@@ -18,14 +18,10 @@ namespace Partie_1
         int index;
         int numeroQuestion;
         XmlDocument document;
-        XmlElement root;
+        //XmlElement root;
         XmlNodeList elemList;
         List<int> numListe;
         Random rnd;
-        //XmlDocument document;
-        //XmlElement root;
-        // XmlNodeList elemList;
-        //List<int> numListe;
         ShowImgSupplementaire montrerImage;
 
         public Question1()
@@ -33,38 +29,20 @@ namespace Partie_1
             
             InitializeComponent();
 
-           // this.index = index;
 
             index = 0;
 
-           // montrerImage = new ShowImgSupplementaire();
-
             numeroQuestion = 0;
-
-            //document = new XmlDocument();
-
-            //document.Load("../../listeQuestions.xml");
-
-            //Préparer le tirage au sort
-            
-
-            /* root = document.DocumentElement;
-             elemList = root.GetElementsByTagName("question");
-             numListe = new List<int>();
-             for (int i = 0; i<elemList.Count-1;i++)
-             {
-                 numListe.Add(i);
-             }*/
-
+         
             document = new XmlDocument();
             document.Load("../../listeQuestions.xml");
-            root = document.DocumentElement;
-            elemList = root.GetElementsByTagName("question");
+            //root = document.DocumentElement;
+            elemList = document.GetElementsByTagName("question");
 
             rnd = new Random();
 
             numListe = new List<int>();
-            for (int i = 0; i < elemList.Count - 1; i++)
+            for (int i = 0; i < elemList.Count ; i++)
             {
                 numListe.Add(i);
             }
@@ -81,12 +59,14 @@ namespace Partie_1
 
         private void Affiche()
         {
+
+            if (numeroQuestion == 0)
+            { index = NumeroQuestion(); }
+
             XmlReader doc = XmlReader.Create("../../listeQuestions.xml");
 
             numeroQuestion ++;
-            NumeroQuest.Text = "Question n°" + numeroQuestion;
-
-           index =  NumeroQuestion();
+            NumeroQuest.Text =  "Question n°" + numeroQuestion ;
 
             Bcontinu.Hide();
             Bvalidate.Show();
@@ -180,7 +160,7 @@ namespace Partie_1
 
             while (doc.Read())
             {
-                //if ((doc.NodeType == XmlNodeType.Element) && (doc.Name == "question"))
+                
                 if (doc.GetAttribute("id") == "" + index)
                 {
                     if (Verifier(doc, Rep1))
@@ -263,11 +243,6 @@ namespace Partie_1
 
             // Tirage au sort des questions parmis la liste (améliorer encore par rapport à la première question)  
             index = NumeroQuestion();
-            /*Random rnd = new Random();
-            int j = rnd.Next(0, numListe.Count);
-            int num = numListe[j];
-            index = num;
-            numListe.Remove(numListe[j]);*/
 
             Affiche();
         }
@@ -324,5 +299,7 @@ namespace Partie_1
         {
 
         }
+
+      
     }
 }

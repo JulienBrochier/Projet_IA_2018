@@ -37,9 +37,9 @@
             this.TextComment = new System.Windows.Forms.GroupBox();
             this.TexteExplication = new System.Windows.Forms.Label();
             this.PictureBox = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.Rep2 = new System.Windows.Forms.CheckBox();
+            this.Rep3 = new System.Windows.Forms.CheckBox();
+            this.Rep4 = new System.Windows.Forms.CheckBox();
             this.TextComment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.SuspendLayout();
@@ -101,8 +101,8 @@
             // Rep1
             // 
             this.Rep1.AutoSize = true;
-            this.Rep1.Location = new System.Drawing.Point(148, 109);
-            this.Rep1.MaximumSize = new System.Drawing.Size(281, 0);
+            this.Rep1.Location = new System.Drawing.Point(26, 106);
+            this.Rep1.MaximumSize = new System.Drawing.Size(270, 0);
             this.Rep1.Name = "Rep1";
             this.Rep1.Size = new System.Drawing.Size(80, 17);
             this.Rep1.TabIndex = 9;
@@ -143,38 +143,39 @@
             this.PictureBox.TabStop = false;
             this.PictureBox.Click += new System.EventHandler(this.ImageRobot_Click);
             // 
-            // checkBox1
+            // Rep2
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(148, 170);
-            this.checkBox1.MaximumSize = new System.Drawing.Size(281, 0);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 15;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.Rep2.AutoSize = true;
+            this.Rep2.Location = new System.Drawing.Point(26, 158);
+            this.Rep2.MaximumSize = new System.Drawing.Size(281, 0);
+            this.Rep2.Name = "Rep2";
+            this.Rep2.Size = new System.Drawing.Size(80, 17);
+            this.Rep2.TabIndex = 15;
+            this.Rep2.Text = "checkBox1";
+            this.Rep2.UseVisualStyleBackColor = true;
+            this.Rep2.CheckedChanged += new System.EventHandler(this.Rep2_CheckedChanged);
             // 
-            // checkBox2
+            // Rep3
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(148, 235);
-            this.checkBox2.MaximumSize = new System.Drawing.Size(281, 0);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 16;
-            this.checkBox2.Text = "checkBox1";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.Rep3.AutoSize = true;
+            this.Rep3.Location = new System.Drawing.Point(26, 213);
+            this.Rep3.MaximumSize = new System.Drawing.Size(281, 0);
+            this.Rep3.Name = "Rep3";
+            this.Rep3.Size = new System.Drawing.Size(80, 17);
+            this.Rep3.TabIndex = 16;
+            this.Rep3.Text = "checkBox1";
+            this.Rep3.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // Rep4
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(148, 291);
-            this.checkBox3.MaximumSize = new System.Drawing.Size(281, 0);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 17;
-            this.checkBox3.Text = "checkBox1";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.Rep4.AutoSize = true;
+            this.Rep4.Location = new System.Drawing.Point(26, 277);
+            this.Rep4.MaximumSize = new System.Drawing.Size(281, 0);
+            this.Rep4.Name = "Rep4";
+            this.Rep4.Size = new System.Drawing.Size(80, 17);
+            this.Rep4.TabIndex = 17;
+            this.Rep4.Text = "checkBox1";
+            this.Rep4.UseVisualStyleBackColor = true;
             // 
             // Question1
             // 
@@ -182,9 +183,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(976, 659);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.Rep4);
+            this.Controls.Add(this.Rep3);
+            this.Controls.Add(this.Rep2);
             this.Controls.Add(this.PictureBox);
             this.Controls.Add(this.TextComment);
             this.Controls.Add(this.Bcontinu);
@@ -215,8 +216,8 @@
         private System.Windows.Forms.GroupBox TextComment;
         private System.Windows.Forms.PictureBox PictureBox;
         internal System.Windows.Forms.Label TexteExplication;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox Rep2;
+        private System.Windows.Forms.CheckBox Rep3;
+        private System.Windows.Forms.CheckBox Rep4;
     }
 }
