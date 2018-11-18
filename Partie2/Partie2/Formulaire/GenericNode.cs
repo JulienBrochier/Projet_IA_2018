@@ -8,7 +8,8 @@ namespace Formulaire
 {
     abstract public class GenericNode
     {
-        // protected string Name;              // DOIT ETRE UNIQUE POUR CHAQUE genericnode !!
+        public int Name;             // DOIT ETRE UNIQUE POUR CHAQUE genericnode !!
+        static public int classement = 0;
         protected double GCost;               //coût du chemin du noeud initial jusqu'à ce noeud
         protected double HCost;               //estimation heuristique du coût pour atteindre le noeud final
         protected double TotalCost;           //coût total (g+h)
@@ -19,6 +20,9 @@ namespace Formulaire
         {
             ParentNode = null;
             Enfants = new List<GenericNode>();
+
+            Name = classement;
+            classement++;
         }
 
 
