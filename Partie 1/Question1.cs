@@ -33,7 +33,8 @@ namespace Partie_1
             index = 0;
 
             numeroQuestion = 0;
-         
+            montrerImage = new ShowImgSupplementaire();
+
             document = new XmlDocument();
             document.Load("../../listeQuestions.xml");
             //root = document.DocumentElement;
@@ -127,7 +128,7 @@ namespace Partie_1
             {
                 PictureBox.Image = Images.TexteAllumette;
                 PictureBox.Show();
-                montrerImage = new ShowImgSupplementaire();
+                
                 montrerImage.Show();
                 montrerImage.pictureBox.Image = Images.arbre;
             }
