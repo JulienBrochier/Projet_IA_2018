@@ -70,6 +70,7 @@
             this.Titre.Size = new System.Drawing.Size(180, 15);
             this.Titre.TabIndex = 2;
             this.Titre.Text = "Questionnaire Intelligence Articifielle";
+            this.Titre.Click += new System.EventHandler(this.Titre_Click);
             // 
             // Intro2
             // 

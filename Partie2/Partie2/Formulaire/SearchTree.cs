@@ -7,10 +7,12 @@ using System.Windows.Forms;
 
 namespace Formulaire
 {
-    class SearchTree
+    public class SearchTree
     {
         public List<GenericNode> L_Ouverts;
         public List<GenericNode> L_Fermes;
+        public List<List<GenericNode>> L_L_Ouverts;
+        public List<List<GenericNode>> L_L_Fermes;
 
         public int CountInOpenList()
         {
@@ -58,6 +60,9 @@ namespace Formulaire
             // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
             while (L_Ouverts.Count != 0 && N.EndState() == false)
             {
+                L_L_Ouverts.Add(L_Ouverts);
+                L_L_Fermes.Add(L_Fermes);
+
                 // Le meilleur noeud des ouverts est supposé placé en tête de liste
                 // On le place dans les fermés
                 L_Ouverts.Remove(N);
@@ -97,6 +102,7 @@ namespace Formulaire
             return _LN;
         }
 
+        //Met à jour la liste des ouverts suite à l'ajout d'un fermé
         private void MAJSuccesseurs(GenericNode N)
         {
             // On fait appel à GetListSucc, méthode abstraite qu'on doit réécrire pour chaque
