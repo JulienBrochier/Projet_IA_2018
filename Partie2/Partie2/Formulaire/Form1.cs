@@ -99,55 +99,52 @@ namespace Formulaire
             N0.numero = numinitial;
             List<GenericNode> solution = g.RechercheSolutionAEtoile(N0);
 
-            //
             Node2 N1 = N0;
             for (int i = 1; i < solution.Count; i++)
             {
                 Node2 N2 = (Node2)solution[i];
                 N1 = N2;
             }
-            //
 
             g.GetSearchTree(TreeViewRecherche);
+
+            if (CorrigeLignes(g.L_L_Ouverts, L_TextBoxs_Ouverts) == false)
+            {
+                Lcommentaire.Text = "Vous vous êtes trompé dans les ouverts";
+            }
+
         }
 
 
-        public void CorrigeLigne()
+        public bool CorrigeLignes(List<List<GenericNode>> listeDeListe, List<TextBox> L_TB)
         {
-            int indexEtapeOuverts = 0;
-            int indexEtapeFermes = 0;
-            bool ReussiteOuverts = true;
+            int indexEtape = 0;
+            bool Reussite = true;
 
-           //
-
-            foreach (TextBox tb in L_TextBoxs_Ouverts)
+                foreach (List<GenericNode> L_ in listeDeListe)
             {
-                //comment attribuer les noms aux noeuds ?
-                if (tb.Text==null)
-                { }
+
+                if (L_TB[indexEtape].Text == null)
+                {
+                    Reussite = false;
+                }
 
                 else
                 {
-                    for (int indexCaratere = 0; indexCaratere < tb.Text.Length%2; indexCaratere++) //division euclidienne, sert à ignorer les virgules
+                    for (int indexCaractere = 0; indexCaractere < L_TB[indexEtape].Text.Length%2; indexCaractere++) //division euclidienne, sert à ignorer les virgules
                     {
+                        char LettreSaisie = L_TB[indexEtape].Text[indexCaractere * 2];
 
+                        if(Convert.ToChar(LettreSaisie) - 65 != L_[indexCaractere].Name)
+                            { Reussite = false; }
                     }
                 }
-
-                //TBF0.Text += node.Name;
-                indexEtapeOuverts++;
+                
+                indexEtape++;
             }
 
+            return Reussite;
 
-            foreach (GenericNode node in Form1.g.L_Fermes)
-            {
-
-            }
-
-            numLigne++;
-
-            
-            //
         }
 
 

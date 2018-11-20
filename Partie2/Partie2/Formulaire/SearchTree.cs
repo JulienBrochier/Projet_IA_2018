@@ -53,6 +53,9 @@ namespace Formulaire
         {
             L_Ouverts = new List<GenericNode>();
             L_Fermes = new List<GenericNode>();
+            L_L_Ouverts = new List<List<GenericNode>>();
+            L_L_Fermes = new List<List<GenericNode>>();
+
             // Le noeud passé en paramètre est supposé être le noeud initial
             GenericNode N = N0;
             L_Ouverts.Add(N0);
