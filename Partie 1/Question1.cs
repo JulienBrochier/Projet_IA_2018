@@ -70,6 +70,7 @@ namespace Partie_1
             XmlReader doc = XmlReader.Create("../../listeQuestions.xml");
 
             numeroQuestion ++;
+
             NumeroQuest.Text =  "Question n°" + numeroQuestion ;
 
             Bcontinu.Hide();
@@ -119,10 +120,6 @@ namespace Partie_1
 
             if (index == 15 || index == 16)
             {
-
-                /*montrerImage = new ShowImgSupplementaire();
-                montrerImage.Show();
-                montrerImage.pictureBox.Image = Images.Texte;*/
                 PictureBox.Image = Images.Texte;
                 PictureBox.Show();
             }
@@ -138,18 +135,14 @@ namespace Partie_1
 
             if (index == 18)
             {
-                /*montrerImage = new ShowImgSupplementaire();
-                montrerImage.Show();
-                montrerImage.pictureBox.Image = Images.ArbreDecision;*/
+              
                 PictureBox.Image = Images.ArbreDecision;
                 PictureBox.Show();
             }
 
             if (index == 19)
             {
-                /*montrerImage = new ShowImgSupplementaire();
-                montrerImage.Show();
-                montrerImage.pictureBox.Image = Images.ReseauBayesien;*/
+
                 PictureBox.Image = Images.ReseauBayesien;
                 PictureBox.Show();
             }  
@@ -277,10 +270,6 @@ namespace Partie_1
             return index;
         }
 
-        private void CalculPoint()
-        {
-
-        }
 
         private void Question1_Load(object sender, EventArgs e)
         {
