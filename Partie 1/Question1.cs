@@ -23,6 +23,8 @@ namespace Partie_1
         List<int> numListe;
         Random rnd;
         ShowImgSupplementaire montrerImage;
+        Resultats resultats;
+        int points;
 
         public Question1()
         {
@@ -31,8 +33,8 @@ namespace Partie_1
 
 
             index = 0;
-
             numeroQuestion = 0;
+            points = 0;
          
             document = new XmlDocument();
             document.Load("../../listeQuestions.xml");
@@ -46,6 +48,8 @@ namespace Partie_1
             {
                 numListe.Add(i);
             }
+
+            resultats = new Resultats();
 
             Affiche();
             
@@ -198,13 +202,15 @@ namespace Partie_1
 
         private bool Verifier(XmlReader doc, CheckBox R)
         {
+            bool reponse = true;
+
             doc.Read();
             doc.Read();
             if (R.Checked)
             {
                 if (doc.GetAttribute("true_answer") == "false")
                 {
-                    return false;
+                    reponse = false;
                 }
             }
 
@@ -212,11 +218,16 @@ namespace Partie_1
             {
                 if (doc.GetAttribute("true_answer") == "true")
                 {
-                    return false;
+                    reponse = false;
                 }
             }
 
-            return true;
+            if (reponse)
+            {
+                points++;
+            }
+
+            return reponse;
 
         }
 
@@ -230,6 +241,15 @@ namespace Partie_1
 
         internal void Suivant ()
         {
+           
+            if(numListe.Count == 0)
+            {
+                resultats.Show();
+                resultats.Total.Text = ""+points+"/20";
+                Close();
+            }
+         
+
             //enlever les images s'il y en a
             PictureBox.Hide();
             if (index==17 )
@@ -255,6 +275,11 @@ namespace Partie_1
             numListe.Remove(numListe[j]);
 
             return index;
+        }
+
+        private void CalculPoint()
+        {
+
         }
 
         private void Question1_Load(object sender, EventArgs e)
