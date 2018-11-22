@@ -245,8 +245,8 @@ namespace Partie_1
 
             //enlever les images s'il y en a
             PictureBox.Hide();
-            if (index==17 )
-            {montrerImage.Close(); }
+            if (index==17)
+            {montrerImage.SendToBack();}
 
             //déchocher toutes les cases
             RemiseZeroCheck(Rep1);
