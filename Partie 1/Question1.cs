@@ -157,7 +157,7 @@ namespace Partie_1
 
             while (doc.Read())
             {
-                
+
                 if (doc.GetAttribute("id") == "" + index)
                 {
                     if (Verifier(doc, Rep1))
@@ -169,11 +169,13 @@ namespace Partie_1
                                 if (Verifier(doc, Rep4))
                                 {
                                     valide = true;
+                                    points++;
                                 }
                             }
                         }
-                    } 
-                  
+                    }
+                }
+            }
                    if (valide)
                     {
                         Suivant();
@@ -187,10 +189,8 @@ namespace Partie_1
                         TexteExplication.Show();
                         Bcontinu.Show();
 
+
                     }
-                    
-                }
-            }
         }
 
         private bool Verifier(XmlReader doc, CheckBox R)
@@ -215,10 +215,7 @@ namespace Partie_1
                 }
             }
 
-            if (reponse)
-            {
-                points++;
-            }
+            
 
             return reponse;
 
