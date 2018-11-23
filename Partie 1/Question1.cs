@@ -231,34 +231,38 @@ namespace Partie_1
 
         internal void Suivant ()
         {
-           
-            if(numListe.Count == 0)
+
+            if (numListe.Count == 0)
             {
-                resultats.Show();
-                resultats.Total.Text = ""+points+"/20";
                 Close();
+                resultats.Show();
+                resultats.Total.Text = "" + points + "/20";
             }
-         
+            else
+            {
 
-            //enlever les images s'il y en a
-            PictureBox.Hide();
-            if (index==17 )
-            {montrerImage.Close(); }
 
-            //déchocher toutes les cases
-            RemiseZeroCheck(Rep1);
-            RemiseZeroCheck(Rep2);
-            RemiseZeroCheck(Rep3);
-            RemiseZeroCheck(Rep4);
+                //enlever les images s'il y en a
+                PictureBox.Hide();
+                if (index == 17)
+                { montrerImage.Close(); }
 
-            // Tirage au sort des questions parmis la liste (améliorer encore par rapport à la première question)  
-            index = NumeroQuestion();
+                //déchocher toutes les cases
+                RemiseZeroCheck(Rep1);
+                RemiseZeroCheck(Rep2);
+                RemiseZeroCheck(Rep3);
+                RemiseZeroCheck(Rep4);
 
-            Affiche();
+                // Tirage au sort des questions parmis la liste (améliorer encore par rapport à la première question)  
+                index = NumeroQuestion();
+
+                Affiche();
+            }
         }
 
         internal int NumeroQuestion()
         {
+        
             int j = rnd.Next(0, numListe.Count);
             int num = numListe[j];
             index = num;

@@ -26,6 +26,7 @@ namespace Partie_1
         {
             Question1 questionnaire = new Question1();
             questionnaire.Show();
+           
             
         }
 
