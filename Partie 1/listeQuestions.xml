@@ -7,6 +7,7 @@
     <answer label="2" value ="une conscience" true_answer="true"/>
     <answer label="3" value ="du Big Data" true_answer="false"/>
     <answer label="4" value =" une plus forte puissance" true_answer="false"/>
+    <comment id="comment1" value="La conscience est la principale notion qui permet de passer d’une IA faible ou mixte à une IA forte"></comment>
   </question>
 
   <question id="2" value ="Quel(s) terme(s) correspond à l’apprentissage automatique ?">
@@ -14,20 +15,151 @@
     <answer label="2" value ="Modelling" true_answer="false"/>
     <answer label="3" value ="Data based" true_answer="true"/>
     <answer label="4" value ="Multi-agent system" true_answer="false"/>
+    <comment id="comment1" value="L’apprentissage automatique correspond à l’élaboration de modèle par la prise en compte de nombreux jeux de données, ce qu’on appelle anglais “data” d’où “data based”"></comment>
   </question>
   
   <question id="3" value ="La robotique fait intervenir de la planification d’actions et de l’architecture de contrôle. A quoi peut-on comparer ces notions ?">
-    <answer label="1" value ="test" true_answer="false"/>
-    <answer label="2" value ="test1" true_answer="true"/>
-    <answer label="3" value ="test2" true_answer="false"/>
-    <answer label="4" value ="test3" true_answer="false"/>
+    <answer label="1" value ="Model based" true_answer="true"/>
+    <answer label="2" value =" internal model" true_answer="true"/>
+    <answer label="3" value ="Modelling" true_answer="false"/>
+    <answer label="4" value ="Data based" true_answer="false"/>
+    <comment id="comment1" value="La planification d’actions et l'architecture de contrôle sont des sous domaines de l’IA assimilables à des modèles."></comment>
   </question>
   
-  <question id="4" value ="tuijmù">
-    <answer label="1" value ="test" true_answer="false"/>
-    <answer label="2" value ="test1" true_answer="false"/>
-    <answer label="3" value ="test2" true_answer="true"/>
-    <answer label="4" value ="test3" true_answer="false"/>
+  <question id="4" value ="Quelle(s) est/sont la/les matrice(s) la/les plus appropriée(s) pour étudier un graphe ?">
+    <answer label="1" value ="matrice diagonale" true_answer="false"/>
+    <answer label="2" value ="matrice d’adjacence" true_answer="true"/>
+    <answer label="3" value ="matrice d’incidence" true_answer="true"/>
+    <answer label="4" value ="matrice identité" true_answer="false"/>
+    <comment id="comment1" value="La matrice d’adjacence est couramment utilisée pour connaître les liens entre les différents noeuds d’un graphe."></comment>
+  </question>
+
+  <question id="5" value ="Dans quel cas utiliser l’algorithme MinMax ?">
+    <answer label="1" value ="Recherche du chemin le plus court" true_answer="false"/>
+    <answer label="2" value ="dames" true_answer="true"/>
+    <answer label="3" value ="monopoly" true_answer="false"/>
+    <answer label="4" value ="Échecs" true_answer="true"/>
+    <comment id="comment1" value="L’algorithme MinMax permet d’obtenir le meilleur coup pour le joueur (recherche du score maximisé) et le pire pour l’adversaire (score minimisé) dans le cas d’un jeu à 2 joueurs. Cet algorithme est donc adapté aux jeux de type échecs, dames..."></comment>
+  </question>
+
+  <question id="6" value ="Ce robot possède 6 axes de rotation, combien de degrés de liberté a t-il ?">
+    <answer label="1" value ="3" true_answer="false"/>
+    <answer label="2" value ="6" true_answer="true"/>
+    <answer label="3" value ="7" true_answer="false"/>
+    <answer label="4" value ="12" true_answer="false"/>
+    <comment id="comment1" value="Le nombre de degrés de liberté d’un robot dépend du nombre d’axes de rotation. Ici 6 axes de rotation donc 6 degrés de liberté."></comment>
+  </question>
+
+  <question id="7" value ="Qu’est ce que “LIDAR” ?">
+    <answer label="1" value ="un algorithme d'IA" true_answer="false"/>
+    <answer label="2" value ="un robot" true_answer="false"/>
+    <answer label="3" value ="un sous domaine de l’IA" true_answer="false"/>
+    <answer label="4" value ="une technique de télédétection par laser" true_answer="true"/>
+    <comment  value="C'est une technique de mesure à distance fondée sur l'analyse des propriétés d'un faisceau de lumière renvoyé vers son émetteur."></comment>
+  </question>
+
+  <question id="8" value ="A quoi sert un “LIDAR” ?">
+    <answer label="1" value ="cartographier l’environnement" true_answer="true"/>
+    <answer label="2" value ="se souvenir des positions de jeu occupées" true_answer="false"/>
+    <answer label="3" value ="détecter les obstacles" true_answer="true"/>
+    <answer label="4" value ="mettre un robot en mouvement" true_answer="false"/>
+    <comment value="Le LIDAR a de nombreuses utilisations comme le guidage automatique des véhicules, applications en topographie ou géosciences entre autre. SNCF Réseau l’utilise pour cartographier l’environnement des voies en 3D par exemple."></comment>
+  </question>
+  
+ <question id="9" value ="Qu’est ce que la navigation métrique ?">
+    <answer label="1" value ="Trouver un chemin plus direct par la prédiction du positionnement 2D/3D relatif de l’objet" true_answer="false"/>
+    <answer label="2" value ="Estimation d’un chemin moins direct par analyse du positionnement 2D/3D relatif de l’objet" true_answer="false"/>
+    <answer label="3" value ="Estimation d’un chemin plus direct par analyse du positionnement 2D/3D relatif de l’objet" true_answer="false"/>
+    <answer label="4" value ="Trouver un chemin plus direct par connaissance du positionnement 2D/3D relatif de l’objet" true_answer="true"/>
+   <comment value="La navigation métrique consiste à trouver le chemin le plus court en ayant connaissance du positionnement d’objet 2D/3D."/>
+ </question>
+
+ <question id="10" value ="Qu’est ce qu’une matrice d’adjacence ?">
+    <answer label="1" value ="La matrice de Mr Adjacence" true_answer="false"/>
+    <answer label="2" value ="Référence le nombre de liaisons entre chaque noeud" true_answer="true"/>
+    <answer label="3" value ="Indique le chemin suivi par l’algorithme lors d’un parcours d’arbre" true_answer="false"/>
+    <answer label="4" value ="Permet d’obtenir une matrice de gradients par produit de convolution" true_answer="false"/>
+   <comment value="Une matrice d’adjacence permet de connaître l’organisation des noeuds dans le graphe"></comment>
+  </question>
+
+ <question id="11" value ="Qu’est ce que “l’espace d’états” ?">
+    <answer label="1" value =" l’ensemble des positions atteignables depuis l’état initial, par un nombre d’action illimité" true_answer="true"/>
+    <answer label="2" value ="l’ensemble des positions atteignables à la prochaine étape" true_answer="false"/>
+    <answer label="3" value =" l’ensemble des positions initialement connues" true_answer="false"/>
+    <answer label="4" value ="l’ensemble des positions actuellement connues" true_answer="false"/>
+   <comment value="hello"></comment>
+  </question>
+  
+<question id="12" value ="De quoi se compose un servo-moteur?">
+    <answer label="1" value ="un moteur" true_answer="true"/>
+    <answer label="2" value ="un microprocesseur" true_answer="false"/>
+    <answer label="3" value ="un capteur" true_answer="true"/>
+    <answer label="4" value ="mettre un robot en mouvement" true_answer="true"/>
+  <comment value="hello"></comment>
+  </question>
+
+  <question id="13" value ="Quels caractéristiques sont nécessaires pour définir un robot :">
+    <answer label="1" value ="dispositif mécatronique" true_answer="true"/>
+    <answer label="2" value ="abilité proprioceptive" true_answer="false"/>
+    <answer label="3" value ="validation du test de Turing" true_answer="false"/>
+    <answer label="4" value ="accomplissement automatique de tâches reproduisant des actions humaines" true_answer="true"/>
+    <comment value="L'habileté proprioceptive et la validation du test de Turing ne sont pas requis pour un robot. La première notion désigne la perception, consciente ou non, de la position des différentes parties du corps. La seconde la capacité à se faire passer pour un humain."></comment>
+  </question>
+
+  <question id="14" value ="Nous avons modélisé un chiffre par une matrice d’adjacence selon la méthode vue en TP, retrouver quel chiffre se cache derrière ?">
+    <answer label="1" value ="2" true_answer="false"/>
+    <answer label="2" value ="3" true_answer="false"/>
+    <answer label="3" value ="8" true_answer="true"/>
+    <answer label="4" value ="9" true_answer="false"/>
+    <comment value="hello"></comment>
+  </question>
+
+  <question id="15" value ="Continuer jusqu’au rang 5  le parcours en largeur effectué par l’IA :">
+    <answer label="1" value ="rang 1: F={} O={AAA}, rang 5: F={AAA,AAB,CAA,CBB}" true_answer="false"/>
+    <answer label="2" value ="rang 1: F={} O={AAA}, rang 5 :F={AAA,CAA, AAB}" true_answer="false"/>
+    <answer label="3" value ="rang 1: F={} O={AAA},rang 5 :  F={AAA,CAA, AAB,CAB}" true_answer="true"/>
+    <answer label="4" value ="rang 1: F={} O={AAA},rang 5: F={AAA,CAA,CAB,CCB}" true_answer="false"/>
+    <comment value="rang 2: F={AAA} O= {CAA, AAB}, rang 3 : F={AAA,CAA} O={AAB, CAB}, rang 4 :  F={AAA,CAA, AAB} O={CAB, ACB}, rang 5 :  F={AAA,CAA, AAB,CAB}"></comment>
+  </question>
+
+  <question id="16" value ="Continuer jusqu’au rang 5  le parcours en profondeur effectué par l’IA :">
+    <answer label="1" value ="rang 1: F={} O={AAA}, rang 5: F={AAA,AAB,CAA,CAB}" true_answer="false"/>
+    <answer label="2" value ="rang 1: F={} O={AAA}, rang 5 F={AAA, CAA, CAB, CCB}" true_answer="true"/>
+    <answer label="3" value ="rang 1: F={} O={AAA},rang 5 :  F={AAA,CAA, AAB,CAB}" true_answer="false"/>
+    <answer label="4" value ="rang 1: F={} O={AAA},rang 5: F={AAA,CAA,CAB,CBC}" true_answer="false"/>
+    <comment value="rang 2:  F={AAA] O={CAA, AAB}, rang 2:  F={AAA] O={CAA, AAB}, rang 3: F={AAA, CAA} O={CAB, AAB}, rang 4: F={AAA, CAA, CAB} O={CCB, AAB}, rang 5 F={AAA, CAA, CAB, CCB}"></comment>
+  </question>
+
+  <question id="17" value ="Le jeu des allumettes">
+    <answer label="1" value ="De gauche à droite 100, 100, -100" true_answer="false"/>
+    <answer label="2" value ="De gauche à droite 100, -100, 100" true_answer="true"/>
+    <answer label="3" value ="De gauche à droite 100, 100, -100" true_answer="false"/>
+    <answer label="4" value ="De gauche à droite 100, -100, -100" true_answer="false"/>
+    <comment value="De gauche à droite 100, -100, 100"></comment>
+  </question>
+
+  <question id="18" value ="Associer le noms du réseau à sa représentation visuelle">
+    <answer label="1" value ="réseau de neurones multicouches" true_answer="false"/>
+    <answer label="2" value ="graphe conceptuel" true_answer="false"/>
+    <answer label="3" value ="arbre de décision" true_answer="true"/>
+    <answer label="4" value ="réseau bayésien" true_answer="false"/>
+    <comment value="Ces représentations visuelles ont étés vues en cours. Rappelez-vous ! ;)"></comment>
+  </question>
+
+  <question id="19" value ="Associer le noms du réseau à sa représentation visuelle">
+    <answer label="1" value ="graphe conceptuel" true_answer="false"/>
+    <answer label="2" value ="ontologie" true_answer="false"/>
+    <answer label="3" value ="Graphe pour décrire une forme" true_answer="false"/>
+    <answer label="4" value ="réseau bayésien" true_answer="true"/>
+    <comment value="Ces représentations visuelles ont étés vues en cours. Rappelez-vous ! ;)"></comment>
+  </question>
+
+  <question id="20" value ="Nous avons modélisé un chiffre par une matrice d’adjacence selon la méthode vue en TP, retrouver quel chiffre se cache derrière ?">
+    <answer label="1" value ="2" true_answer="false"/>
+    <answer label="2" value ="3" true_answer="false"/>
+    <answer label="3" value ="8" true_answer="true"/>
+    <answer label="4" value ="9" true_answer="false"/>
+    <comment value="Il s'agit du chiffre 8"></comment>
   </question>
 
 </liste>

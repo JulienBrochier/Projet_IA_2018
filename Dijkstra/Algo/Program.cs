@@ -8,8 +8,7 @@ namespace Algo
 {
     class Program
     {
-        static void Main(string[] args)
-        {
+
              private static int MinimumDistance(int[] distance, bool[] shortestPathTreeSet, int verticesCount)
         {
             int min = int.MaxValue;
@@ -52,6 +51,9 @@ namespace Algo
             {
                 int u = MinimumDistance(distance, shortestPathTreeSet, verticesCount);
                 shortestPathTreeSet[u] = true;
+                Console.WriteLine(u);
+                Console.ReadKey();
+
 
                 for (int v = 0; v < verticesCount; ++v)
                     if (!shortestPathTreeSet[v] && Convert.ToBoolean(graph[u, v]) && distance[u] != int.MaxValue && distance[u] + graph[u, v] < distance[v])
@@ -76,7 +78,8 @@ namespace Algo
                             };
 
             DijkstraAlgo(graph, 0, 9);
+            Console.Read();
         }
-    }
+    
     }
 }

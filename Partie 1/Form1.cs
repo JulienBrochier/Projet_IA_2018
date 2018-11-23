@@ -7,23 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Resolvers;
+using System.Xml.Linq;
 
 namespace Partie_1
 {
     public partial class Questionnaire : Form
     {
+
         public Questionnaire()
         {
             InitializeComponent();
+           
         }
 
         private void BoutonCommencer_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-            int index = rnd.Next(0, 4);
-            Question1 question = new Question1(index);
-            question.Show();
+            Question1 questionnaire = new Question1();
+            questionnaire.Show();
             
+        }
+
+       
+    
+        private void Titre_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

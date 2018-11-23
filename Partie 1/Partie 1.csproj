@@ -52,6 +52,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Images.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images.resx</DependentUpon>
+    </Compile>
     <Compile Include="Partie 2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,8 +71,24 @@
     <Compile Include="Question1.Designer.cs">
       <DependentUpon>Question1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resultats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resultats.Designer.cs">
+      <DependentUpon>Resultats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowImgSupplementaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowImgSupplementaire.Designer.cs">
+      <DependentUpon>ShowImgSupplementaire.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Partie 2.resx">
       <DependentUpon>Partie 2.cs</DependentUpon>
@@ -84,6 +105,12 @@
     <EmbeddedResource Include="Question1.resx">
       <DependentUpon>Question1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resultats.resx">
+      <DependentUpon>Resultats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowImgSupplementaire.resx">
+      <DependentUpon>ShowImgSupplementaire.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,9 +125,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Commentaires.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="listeQuestions.xml">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Resources\ArbreDecision.png" />
+    <None Include="Resources\ReseauBayesien.png" />
+    <None Include="Resources\TexteAllumette.PNG" />
+    <None Include="Resources\arbre.PNG" />
+    <None Include="Resources\Texte.PNG" />
+    <None Include="Resources\Capture2.PNG" />
+    <None Include="Resources\Tableau.png" />
+    <None Include="Resources\Capture.PNG" />
+    <None Include="Resources\Rotation.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
