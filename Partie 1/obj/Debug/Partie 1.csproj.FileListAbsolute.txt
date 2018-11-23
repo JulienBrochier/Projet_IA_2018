@@ -61,3 +61,23 @@ C:\Users\egrevet\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Que
 C:\Users\egrevet\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.csproj.GenerateResource.Cache
 C:\Users\egrevet\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.ShowImgSupplementaire.resources
 C:\Users\Elise\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.ShowImgSupplementaire.resources
+C:\Users\egrevet\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Resultats.resources
+C:\Users\Julien\Documents\GitHub\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.exe.config
+C:\Users\Julien\Documents\GitHub\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.exe
+C:\Users\Julien\Documents\GitHub\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.pdb
+C:\Users\Julien\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.csprojResolveAssemblyReference.cache
+C:\Users\Julien\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Questionnaire.resources
+C:\Users\Julien\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Images.resources
+C:\Users\Julien\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Partie_2.resources
+C:\Users\Julien\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Properties.Resources.resources
+C:\Users\Julien\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Question1.resources
+C:\Users\Julien\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Resultats.resources
+C:\Users\Julien\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.ShowImgSupplementaire.resources
+C:\Users\Julien\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.csproj.GenerateResource.cache
+C:\Users\Julien\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.csproj.CoreCompileInputs.cache
+C:\Users\Julien\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.exe
+C:\Users\Julien\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.pdb
+H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Images.resources
+H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Partie_2.resources
+H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Resultats.resources
+H:\ENSC2\IntelligenceArtificielle\PROJET\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.ShowImgSupplementaire.resources

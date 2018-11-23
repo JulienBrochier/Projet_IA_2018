@@ -23,6 +23,8 @@ namespace Partie_1
         List<int> numListe;
         Random rnd;
         ShowImgSupplementaire montrerImage;
+        Resultats resultats;
+        int points;
 
         public Question1()
         {
@@ -31,10 +33,9 @@ namespace Partie_1
 
 
             index = 0;
-
             numeroQuestion = 0;
-            montrerImage = new ShowImgSupplementaire();
-
+            points = 0;
+         
             document = new XmlDocument();
             document.Load("../../listeQuestions.xml");
             //root = document.DocumentElement;
@@ -47,6 +48,8 @@ namespace Partie_1
             {
                 numListe.Add(i);
             }
+
+            resultats = new Resultats();
 
             Affiche();
             
@@ -67,6 +70,7 @@ namespace Partie_1
             XmlReader doc = XmlReader.Create("../../listeQuestions.xml");
 
             numeroQuestion ++;
+
             NumeroQuest.Text =  "Question n°" + numeroQuestion ;
 
             Bcontinu.Hide();
@@ -116,10 +120,6 @@ namespace Partie_1
 
             if (index == 15 || index == 16)
             {
-
-                /*montrerImage = new ShowImgSupplementaire();
-                montrerImage.Show();
-                montrerImage.pictureBox.Image = Images.Texte;*/
                 PictureBox.Image = Images.Texte;
                 PictureBox.Show();
             }
@@ -128,25 +128,21 @@ namespace Partie_1
             {
                 PictureBox.Image = Images.TexteAllumette;
                 PictureBox.Show();
-                
+                montrerImage = new ShowImgSupplementaire();
                 montrerImage.Show();
                 montrerImage.pictureBox.Image = Images.arbre;
             }
 
             if (index == 18)
             {
-                /*montrerImage = new ShowImgSupplementaire();
-                montrerImage.Show();
-                montrerImage.pictureBox.Image = Images.ArbreDecision;*/
+              
                 PictureBox.Image = Images.ArbreDecision;
                 PictureBox.Show();
             }
 
             if (index == 19)
             {
-                /*montrerImage = new ShowImgSupplementaire();
-                montrerImage.Show();
-                montrerImage.pictureBox.Image = Images.ReseauBayesien;*/
+
                 PictureBox.Image = Images.ReseauBayesien;
                 PictureBox.Show();
             }  
@@ -161,7 +157,7 @@ namespace Partie_1
 
             while (doc.Read())
             {
-                
+
                 if (doc.GetAttribute("id") == "" + index)
                 {
                     if (Verifier(doc, Rep1))
@@ -173,11 +169,13 @@ namespace Partie_1
                                 if (Verifier(doc, Rep4))
                                 {
                                     valide = true;
+                                    points++;
                                 }
                             }
                         }
-                    } 
-                  
+                    }
+                }
+            }
                    if (valide)
                     {
                         Suivant();
@@ -191,21 +189,21 @@ namespace Partie_1
                         TexteExplication.Show();
                         Bcontinu.Show();
 
+
                     }
-                    
-                }
-            }
         }
 
         private bool Verifier(XmlReader doc, CheckBox R)
         {
+            bool reponse = true;
+
             doc.Read();
             doc.Read();
             if (R.Checked)
             {
                 if (doc.GetAttribute("true_answer") == "false")
                 {
-                    return false;
+                    reponse = false;
                 }
             }
 
@@ -213,11 +211,13 @@ namespace Partie_1
             {
                 if (doc.GetAttribute("true_answer") == "true")
                 {
-                    return false;
+                    reponse = false;
                 }
             }
 
-            return true;
+            
+
+            return reponse;
 
         }
 
@@ -231,25 +231,38 @@ namespace Partie_1
 
         internal void Suivant ()
         {
-            //enlever les images s'il y en a
-            PictureBox.Hide();
-            if (index==17 )
-            {montrerImage.Close(); }
 
-            //déchocher toutes les cases
-            RemiseZeroCheck(Rep1);
-            RemiseZeroCheck(Rep2);
-            RemiseZeroCheck(Rep3);
-            RemiseZeroCheck(Rep4);
+            if (numListe.Count == 0)
+            {
+                Close();
+                resultats.Show();
+                resultats.Total.Text = "" + points + "/20";
+            }
+            else
+            {
 
-            // Tirage au sort des questions parmis la liste (améliorer encore par rapport à la première question)  
-            index = NumeroQuestion();
 
-            Affiche();
+                //enlever les images s'il y en a
+                PictureBox.Hide();
+                if (index == 17)
+                { montrerImage.Close(); }
+
+                //déchocher toutes les cases
+                RemiseZeroCheck(Rep1);
+                RemiseZeroCheck(Rep2);
+                RemiseZeroCheck(Rep3);
+                RemiseZeroCheck(Rep4);
+
+                // Tirage au sort des questions parmis la liste (améliorer encore par rapport à la première question)  
+                index = NumeroQuestion();
+
+                Affiche();
+            }
         }
 
         internal int NumeroQuestion()
         {
+        
             int j = rnd.Next(0, numListe.Count);
             int num = numListe[j];
             index = num;
@@ -257,6 +270,7 @@ namespace Partie_1
 
             return index;
         }
+
 
         private void Question1_Load(object sender, EventArgs e)
         {

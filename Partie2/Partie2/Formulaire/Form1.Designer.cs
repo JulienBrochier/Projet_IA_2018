@@ -55,6 +55,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.Lcommentaire = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -280,11 +282,32 @@
             this.label7.TabIndex = 38;
             this.label7.Text = "}";
             // 
+            // Lcommentaire
+            // 
+            this.Lcommentaire.AutoSize = true;
+            this.Lcommentaire.Location = new System.Drawing.Point(465, 387);
+            this.Lcommentaire.Name = "Lcommentaire";
+            this.Lcommentaire.Size = new System.Drawing.Size(10, 13);
+            this.Lcommentaire.TabIndex = 39;
+            this.Lcommentaire.Text = " ";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(573, 68);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(158, 64);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(990, 457);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Lcommentaire);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
@@ -349,6 +372,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Lcommentaire;
+        private System.Windows.Forms.Button button1;
     }
 }
 

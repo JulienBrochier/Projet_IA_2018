@@ -10,28 +10,28 @@
     <comment id="comment1" value="La conscience est la principale notion qui permet de passer d’une IA faible ou mixte à une IA forte"></comment>
   </question>
 
-  <question id="2" value ="Quel(s) terme(s) correspond à l’apprentissage automatique ?">
+  <question id="2" value ="Parmis ces deux propositions, indiquez le(s) type(s) de raisonnement de l’apprentissage automatique :">
     <answer label="1" value ="Model based" true_answer="false"/>
-    <answer label="2" value ="Modelling" true_answer="false"/>
+    <answer label="2" value ="les deux" true_answer="false"/>
     <answer label="3" value ="Data based" true_answer="true"/>
-    <answer label="4" value ="Multi-agent system" true_answer="false"/>
-    <comment id="comment1" value="L’apprentissage automatique correspond à l’élaboration de modèle par la prise en compte de nombreux jeux de données, ce qu’on appelle anglais “data” d’où “data based”"></comment>
+    <answer label="4" value ="aucune des deux" true_answer="false"/>
+    <comment id="comment1" value="L’apprentissage automatique correspond à l’élaboration de modèles par la prise en compte de nombreux jeux de données (data). A la différence des raisonnements basés sur des models (model-based), l’apprentissage automatique fabrique ses propres méthodes de raisonnement."></comment>
   </question>
   
-  <question id="3" value ="La robotique fait intervenir de la planification d’actions et de l’architecture de contrôle. A quoi peut-on comparer ces notions ?">
+  <question id="3" value ="Deux des applications de l’IA sont : les algorithmes génétiques et les arbres de décision.  Dans quelle(s) catégorie(s) se situent-elles ?">
     <answer label="1" value ="Model based" true_answer="true"/>
-    <answer label="2" value =" internal model" true_answer="true"/>
-    <answer label="3" value ="Modelling" true_answer="false"/>
+    <answer label="2" value =" Les deux" true_answer="false"/>
+    <answer label="3" value ="Aucune des deux" true_answer="false"/>
     <answer label="4" value ="Data based" true_answer="false"/>
-    <comment id="comment1" value="La planification d’actions et l'architecture de contrôle sont des sous domaines de l’IA assimilables à des modèles."></comment>
+    <comment id="comment1" value="Les algorithmes génétiques et les arbres de décision ont leur raisonnement basé sur des modèles (model based reasoning). C’est à dire que leurs fonctionnements s’inspirent du monde physique : des fonctionnements observables chez l’Homme ou dans la nature."></comment>
   </question>
   
-  <question id="4" value ="Quelle(s) est/sont la/les matrice(s) la/les plus appropriée(s) pour étudier un graphe ?">
+  <question id="4" value ="Quelle est la matrice la plus appropriée(s) pour étudier la structure d’un graphe ?">
     <answer label="1" value ="matrice diagonale" true_answer="false"/>
     <answer label="2" value ="matrice d’adjacence" true_answer="true"/>
-    <answer label="3" value ="matrice d’incidence" true_answer="true"/>
+    <answer label="3" value ="matrice pivot" true_answer="false"/>
     <answer label="4" value ="matrice identité" true_answer="false"/>
-    <comment id="comment1" value="La matrice d’adjacence est couramment utilisée pour connaître les liens entre les différents noeuds d’un graphe."></comment>
+    <comment id="comment1" value="La matrice d’adjacence est couramment utilisée pour répertorier les liens entre les différents noeuds d’un graphe."></comment>
   </question>
 
   <question id="5" value ="Dans quel cas utiliser l’algorithme MinMax ?">
@@ -87,15 +87,15 @@
     <answer label="2" value ="l’ensemble des positions atteignables à la prochaine étape" true_answer="false"/>
     <answer label="3" value =" l’ensemble des positions initialement connues" true_answer="false"/>
     <answer label="4" value ="l’ensemble des positions actuellement connues" true_answer="false"/>
-   <comment value="hello"></comment>
+   <comment value="L’espace d’états renseigne sur les positions atteignables depuis l’état initial en un nombre fini de coup."></comment>
   </question>
   
 <question id="12" value ="De quoi se compose un servo-moteur?">
     <answer label="1" value ="un moteur" true_answer="true"/>
     <answer label="2" value ="un microprocesseur" true_answer="false"/>
     <answer label="3" value ="un capteur" true_answer="true"/>
-    <answer label="4" value ="mettre un robot en mouvement" true_answer="true"/>
-  <comment value="hello"></comment>
+    <answer label="4" value ="un asservissement électronique" true_answer="true"/>
+  <comment value="Un microprocesseur est la partie d’un ordinateur qui exécute les instructions et traite les données des programmes"></comment>
   </question>
 
   <question id="13" value ="Quels caractéristiques sont nécessaires pour définir un robot :">
@@ -111,7 +111,7 @@
     <answer label="2" value ="3" true_answer="false"/>
     <answer label="3" value ="8" true_answer="true"/>
     <answer label="4" value ="9" true_answer="false"/>
-    <comment value="hello"></comment>
+    <comment value="Analysons ce graphe : Il existe des liaisons verticales entre les noeuds 0-4, 2-1, 3-2, 4-5 et des liaisons horizontales entre les noeuds 0-3, 4-2, 5-1. Prenez une feuille, positionnez les noeuds en fonction des liaisons ci-dessus, puis tracez les. Vous obtiendrez le chiffre huit."></comment>
   </question>
 
   <question id="15" value ="Continuer jusqu’au rang 5  le parcours en largeur effectué par l’IA :">
@@ -131,10 +131,10 @@
   </question>
 
   <question id="17" value ="Le jeu des allumettes">
-    <answer label="1" value ="De gauche à droite 100, 100, -100" true_answer="false"/>
-    <answer label="2" value ="De gauche à droite 100, -100, 100" true_answer="true"/>
-    <answer label="3" value ="De gauche à droite 100, 100, -100" true_answer="false"/>
-    <answer label="4" value ="De gauche à droite 100, -100, -100" true_answer="false"/>
+    <answer label="1" value ="De gauche à droite 100, -100, 100" true_answer="false"/>
+    <answer label="2" value ="De gauche à droite 100, 100, -100" true_answer="true"/>
+    <answer label="3" value ="De gauche à droite 100, -100, -100" true_answer="false"/>
+    <answer label="4" value ="De gauche à droite -100, -100, 100" true_answer="false"/>
     <comment value="De gauche à droite 100, -100, 100"></comment>
   </question>
 
