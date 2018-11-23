@@ -106,7 +106,7 @@ namespace Formulaire
                 N1 = N2;
             }
 
-            g.GetSearchTree(TreeViewRecherche);
+            //g.GetSearchTree(TreeViewRecherche);
 
             if (CorrigeLignes(g.L_L_Ouverts, L_TextBoxs_Ouverts) == false)
             {
@@ -119,14 +119,14 @@ namespace Formulaire
         public bool CorrigeLignes(List<List<GenericNode>> listeDeListe, List<TextBox> L_TB)
         {
             int indexEtape = 0;
-            bool Reussite = true;
+            bool reussite = true;
 
                 foreach (List<GenericNode> L_ in listeDeListe)
             {
 
                 if (L_TB[indexEtape].Text == null)
                 {
-                    Reussite = false;
+                    reussite = false;
                 }
 
                 else
@@ -136,16 +136,17 @@ namespace Formulaire
                         char LettreSaisie = L_TB[indexEtape].Text[indexCaractere * 2];
 
                         if(Convert.ToChar(LettreSaisie) - 65 != L_[indexCaractere].Name)
-                            { Reussite = false; }
+                            { reussite = false; }
                     }
                 }
                 
                 indexEtape++;
             }
 
-            return Reussite;
+            return reussite;
 
         }
+
 
 
         private void TBnoeudIni_TextChanged(object sender, EventArgs e)
@@ -161,6 +162,43 @@ namespace Formulaire
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Test CorrigeLigne()
+
+                //Création des variables
+
+                List<TextBox> L_TB = L_TextBoxs_Ouverts;
+
+
+            GenericNode G0 = new Node2();
+            GenericNode G1 = new Node2();
+            GenericNode G2 = new Node2();
+
+            List < GenericNode > L_G0 = new List<GenericNode>();
+            L_G0.Add(G0);
+
+            List<GenericNode> L_G1 = new List<GenericNode>();
+            L_G1.Add(G0);
+            L_G1.Add(G1);
+
+            List<GenericNode> L_G2 = new List<GenericNode>();
+            L_G1.Add(G2);
+            L_G1.Add(G1);
+
+
+            List<List<GenericNode>> listeDeListe = new List<List<GenericNode>>();
+            listeDeListe.Add(L_G0);
+            listeDeListe.Add(L_G1);
+            listeDeListe.Add(L_G2);
+
+
+
+            //Execution
+            CorrigeLignes(listeDeListe, L_TB);
+            
         }
     }
 }

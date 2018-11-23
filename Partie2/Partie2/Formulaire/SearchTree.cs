@@ -87,6 +87,9 @@ namespace Formulaire
                 }
             }
 
+            L_L_Ouverts.Add(L_Ouverts);
+            L_L_Fermes.Add(L_Fermes);
+
             // A* terminé
             // On retourne le chemin qui va du noeud initial au noeud final sous forme de liste
             // Le chemin est retrouvé en partant du noeud final et en accédant aux parents de manière
