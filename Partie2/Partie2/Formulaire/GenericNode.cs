@@ -21,8 +21,9 @@ namespace Formulaire
             ParentNode = null;
             Enfants = new List<GenericNode>();
 
-            Name = classement;
             classement++;
+            Name = classement;
+            
         }
 
 

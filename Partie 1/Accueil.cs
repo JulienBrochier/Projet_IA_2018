@@ -13,10 +13,10 @@ using System.Xml.Linq;
 
 namespace Partie_1
 {
-    public partial class Questionnaire : Form
+    public partial class Accueil : Form
     {
 
-        public Questionnaire()
+        public Accueil()
         {
             InitializeComponent();
            
@@ -24,7 +24,7 @@ namespace Partie_1
 
         private void BoutonCommencer_Click(object sender, EventArgs e)
         {
-            Question1 questionnaire = new Question1();
+            Questionnaire questionnaire = new Questionnaire();
             questionnaire.Show();
            
             
@@ -33,6 +33,11 @@ namespace Partie_1
        
     
         private void Titre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Intro1_Click(object sender, EventArgs e)
         {
 
         }
