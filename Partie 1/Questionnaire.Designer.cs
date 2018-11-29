@@ -1,6 +1,6 @@
 ﻿namespace Partie_1
 {
-    partial class Question1
+    partial class Questionnaire
     {
         /// <summary>
         /// Required designer variable.
@@ -178,7 +178,7 @@
             this.Rep4.Text = "checkBox1";
             this.Rep4.UseVisualStyleBackColor = true;
             // 
-            // Question1
+            // Questionnaire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -195,8 +195,8 @@
             this.Controls.Add(this.Bvalidate);
             this.Controls.Add(this.Intitule);
             this.Controls.Add(this.NumeroQuest);
-            this.Name = "Question1";
-            this.Text = "Question1";
+            this.Name = "Questionnaire";
+            this.Text = "Questionnaire";
             this.Load += new System.EventHandler(this.Question1_Load);
             this.TextComment.ResumeLayout(false);
             this.TextComment.PerformLayout();

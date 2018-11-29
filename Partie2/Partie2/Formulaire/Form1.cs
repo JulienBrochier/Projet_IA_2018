@@ -19,7 +19,6 @@ namespace Formulaire
         static public int numinitial;
         static public int numfinal;
         static public SearchTree g;
-        static int numLigne;
         public List<TextBox> L_TextBoxs_Ouverts;
         public List<TextBox> L_TextBoxs_Fermes;
 
@@ -85,7 +84,6 @@ namespace Formulaire
 
 
             file.Close();
-
     
         }
 
@@ -99,19 +97,22 @@ namespace Formulaire
             N0.numero = numinitial;
             List<GenericNode> solution = g.RechercheSolutionAEtoile(N0);
 
-            Node2 N1 = N0;
-            for (int i = 1; i < solution.Count; i++)
-            {
-                Node2 N2 = (Node2)solution[i];
-                N1 = N2;
-            }
+            
 
-            //g.GetSearchTree(TreeViewRecherche);
-
+            
             if (CorrigeLignes(g.L_L_Ouverts, L_TextBoxs_Ouverts) == false)
             {
                 Lcommentaire.Text = "Vous vous êtes trompé dans les ouverts";
             }
+
+            else
+            { Lcommentaire.Text = "Bravo vous avez réussi toutes les étapes"; }
+            
+
+            TBdebug.Text = "A* effectué";
+            
+            //TBcontenu.Text = L_TextBoxs_Ouverts[0].Text;
+            //Lcommentaire.Text = TBnoeudIni.Text;
 
         }
 
@@ -121,16 +122,40 @@ namespace Formulaire
             int indexEtape = 0;
             bool reussite = true;
 
-                foreach (List<GenericNode> L_ in listeDeListe)
-            {
+            //pour debug
+            string solution = "";
 
-                if (L_TB[indexEtape].Text == null)
+            foreach (List<GenericNode> L_ in listeDeListe)
+            {
+                //TBcorrection.Text = Convert.ToString(L_TB[0].Text.Length % 2);
+
+                /*
+                if (L_TB[indexEtape].Text == "")
                 {
-                    reussite = false;
+                    
                 }
+                
 
                 else
                 {
+                */
+
+                
+
+                for(int indexCaractere = 0; indexCaractere <L_.Count; indexCaractere++)
+                {
+                    char LettreSaisie = L_TB[indexEtape].Text[indexCaractere * 2];
+
+
+                    if (Convert.ToChar(LettreSaisie) - 65 != L_[indexCaractere].Name)
+                    { reussite = false; }
+
+                    //pour debug
+                    solution += Convert.ToChar(L_[indexCaractere].Name)-65; 
+
+                }
+
+                    /*
                     for (int indexCaractere = 0; indexCaractere < L_TB[indexEtape].Text.Length%2; indexCaractere++) //division euclidienne, sert à ignorer les virgules
                     {
                         char LettreSaisie = L_TB[indexEtape].Text[indexCaractere * 2];
@@ -138,10 +163,16 @@ namespace Formulaire
                         if(Convert.ToChar(LettreSaisie) - 65 != L_[indexCaractere].Name)
                             { reussite = false; }
                     }
-                }
+                    */
+
+
+                //}
                 
                 indexEtape++;
             }
+
+            //pour debug
+            TBcorrection.Text = solution;
 
             return reussite;
 
@@ -199,6 +230,21 @@ namespace Formulaire
             //Execution
             CorrigeLignes(listeDeListe, L_TB);
             
+        }
+
+        private void TBdebug_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBF0_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Partie_1
 {
-    partial class Questionnaire
+    partial class Accueil
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -100,8 +100,9 @@
             this.Intro1.TabIndex = 5;
             this.Intro1.Text = "Bienvenue sur notre questionnaire! Une série de 20 questions de formes diverses v" +
     "ous attend";
+            this.Intro1.Click += new System.EventHandler(this.Intro1_Click);
             // 
-            // Questionnaire
+            // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,9 +113,9 @@
             this.Controls.Add(this.Titre);
             this.Controls.Add(this.Module);
             this.Controls.Add(this.BoutonCommencer);
-            this.Name = "Questionnaire";
+            this.Name = "Accueil";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "Form1";
+            this.Text = "Accueil";
             this.ResumeLayout(false);
             this.PerformLayout();
 

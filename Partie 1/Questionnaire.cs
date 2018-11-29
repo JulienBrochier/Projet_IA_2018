@@ -13,7 +13,7 @@ using System.Xml.Linq;
 
 namespace Partie_1
 {
-    public partial class Question1 : Form
+    public partial class Questionnaire : Form
     {
         int index;
         int numeroQuestion;
@@ -26,7 +26,7 @@ namespace Partie_1
         Resultats resultats;
         int points;
 
-        public Question1()
+        public Questionnaire()
         {
             
             InitializeComponent();
