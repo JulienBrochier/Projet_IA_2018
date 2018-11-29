@@ -55,6 +55,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.TBdebug = new System.Windows.Forms.TextBox();
+            this.TBcorrection = new System.Windows.Forms.TextBox();
+            this.TBcontenu = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Lcommentaire = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,6 +135,7 @@
             this.TBF0.Size = new System.Drawing.Size(108, 20);
             this.TBF0.TabIndex = 18;
             this.TBF0.Text = "A,B,C...";
+            this.TBF0.TextChanged += new System.EventHandler(this.TBF0_TextChanged);
             // 
             // label3
             // 
@@ -280,11 +288,77 @@
             this.label7.TabIndex = 38;
             this.label7.Text = "}";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(573, 68);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(158, 64);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // TBdebug
+            // 
+            this.TBdebug.Location = new System.Drawing.Point(771, 41);
+            this.TBdebug.Name = "TBdebug";
+            this.TBdebug.Size = new System.Drawing.Size(161, 20);
+            this.TBdebug.TabIndex = 42;
+            this.TBdebug.TextChanged += new System.EventHandler(this.TBdebug_TextChanged);
+            // 
+            // TBcorrection
+            // 
+            this.TBcorrection.Location = new System.Drawing.Point(771, 70);
+            this.TBcorrection.Name = "TBcorrection";
+            this.TBcorrection.Size = new System.Drawing.Size(161, 20);
+            this.TBcorrection.TabIndex = 43;
+            // 
+            // TBcontenu
+            // 
+            this.TBcontenu.Location = new System.Drawing.Point(771, 96);
+            this.TBcontenu.Name = "TBcontenu";
+            this.TBcontenu.Size = new System.Drawing.Size(161, 20);
+            this.TBcontenu.TabIndex = 44;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(390, 204);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(26, 13);
+            this.label8.TabIndex = 45;
+            this.label8.Text = "F1 {";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(536, 204);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(11, 13);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "}";
+            // 
+            // Lcommentaire
+            // 
+            this.Lcommentaire.AutoSize = true;
+            this.Lcommentaire.Location = new System.Drawing.Point(489, 387);
+            this.Lcommentaire.Name = "Lcommentaire";
+            this.Lcommentaire.Size = new System.Drawing.Size(0, 13);
+            this.Lcommentaire.TabIndex = 47;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(990, 457);
+            this.Controls.Add(this.Lcommentaire);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.TBcontenu);
+            this.Controls.Add(this.TBcorrection);
+            this.Controls.Add(this.TBdebug);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
@@ -349,6 +423,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox TBdebug;
+        private System.Windows.Forms.TextBox TBcorrection;
+        private System.Windows.Forms.TextBox TBcontenu;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label Lcommentaire;
     }
 }
 

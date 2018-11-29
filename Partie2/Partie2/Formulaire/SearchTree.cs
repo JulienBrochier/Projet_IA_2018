@@ -53,6 +53,9 @@ namespace Formulaire
         {
             L_Ouverts = new List<GenericNode>();
             L_Fermes = new List<GenericNode>();
+            L_L_Ouverts = new List<List<GenericNode>>();
+            L_L_Fermes = new List<List<GenericNode>>();
+
             // Le noeud passé en paramètre est supposé être le noeud initial
             GenericNode N = N0;
             L_Ouverts.Add(N0);
@@ -83,6 +86,9 @@ namespace Formulaire
                     N = null;
                 }
             }
+
+            L_L_Ouverts.Add(L_Ouverts);
+            L_L_Fermes.Add(L_Fermes);
 
             // A* terminé
             // On retourne le chemin qui va du noeud initial au noeud final sous forme de liste

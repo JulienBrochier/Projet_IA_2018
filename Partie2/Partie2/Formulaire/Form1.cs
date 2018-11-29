@@ -19,7 +19,6 @@ namespace Formulaire
         static public int numinitial;
         static public int numfinal;
         static public SearchTree g;
-        static int numLigne;
         public List<TextBox> L_TextBoxs_Ouverts;
         public List<TextBox> L_TextBoxs_Fermes;
 
@@ -85,7 +84,6 @@ namespace Formulaire
 
 
             file.Close();
-
     
         }
 
@@ -99,56 +97,87 @@ namespace Formulaire
             N0.numero = numinitial;
             List<GenericNode> solution = g.RechercheSolutionAEtoile(N0);
 
-            //
-            Node2 N1 = N0;
-            for (int i = 1; i < solution.Count; i++)
-            {
-                Node2 N2 = (Node2)solution[i];
-                N1 = N2;
-            }
-            //
+            
 
-            g.GetSearchTree(TreeViewRecherche);
+            
+            if (CorrigeLignes(g.L_L_Ouverts, L_TextBoxs_Ouverts) == false)
+            {
+                Lcommentaire.Text = "Vous vous êtes trompé dans les ouverts";
+            }
+
+            else
+            { Lcommentaire.Text = "Bravo vous avez réussi toutes les étapes"; }
+            
+
+            TBdebug.Text = "A* effectué";
+            
+            //TBcontenu.Text = L_TextBoxs_Ouverts[0].Text;
+            //Lcommentaire.Text = TBnoeudIni.Text;
+
         }
 
 
-        public void CorrigeLigne()
+        public bool CorrigeLignes(List<List<GenericNode>> listeDeListe, List<TextBox> L_TB)
         {
-            int indexEtapeOuverts = 0;
-            int indexEtapeFermes = 0;
-            bool ReussiteOuverts = true;
+            int indexEtape = 0;
+            bool reussite = true;
 
-           //
+            //pour debug
+            string solution = "";
 
-            foreach (TextBox tb in L_TextBoxs_Ouverts)
+            foreach (List<GenericNode> L_ in listeDeListe)
             {
-                //comment attribuer les noms aux noeuds ?
-                if (tb.Text==null)
-                { }
+                //TBcorrection.Text = Convert.ToString(L_TB[0].Text.Length % 2);
+
+                /*
+                if (L_TB[indexEtape].Text == "")
+                {
+                    
+                }
+                
 
                 else
                 {
-                    for (int indexCaratere = 0; indexCaratere < tb.Text.Length%2; indexCaratere++) //division euclidienne, sert à ignorer les virgules
-                    {
+                */
 
-                    }
+                
+
+                for(int indexCaractere = 0; indexCaractere <L_.Count; indexCaractere++)
+                {
+                    char LettreSaisie = L_TB[indexEtape].Text[indexCaractere * 2];
+
+
+                    if (Convert.ToChar(LettreSaisie) - 65 != L_[indexCaractere].Name)
+                    { reussite = false; }
+
+                    //pour debug
+                    solution += Convert.ToChar(L_[indexCaractere].Name)-65; 
+
                 }
 
-                //TBF0.Text += node.Name;
-                indexEtapeOuverts++;
+                    /*
+                    for (int indexCaractere = 0; indexCaractere < L_TB[indexEtape].Text.Length%2; indexCaractere++) //division euclidienne, sert à ignorer les virgules
+                    {
+                        char LettreSaisie = L_TB[indexEtape].Text[indexCaractere * 2];
+
+                        if(Convert.ToChar(LettreSaisie) - 65 != L_[indexCaractere].Name)
+                            { reussite = false; }
+                    }
+                    */
+
+
+                //}
+                
+                indexEtape++;
             }
 
+            //pour debug
+            TBcorrection.Text = solution;
 
-            foreach (GenericNode node in Form1.g.L_Fermes)
-            {
+            return reussite;
 
-            }
-
-            numLigne++;
-
-            
-            //
         }
+
 
 
         private void TBnoeudIni_TextChanged(object sender, EventArgs e)
@@ -162,6 +191,58 @@ namespace Formulaire
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Test CorrigeLigne()
+
+                //Création des variables
+
+                List<TextBox> L_TB = L_TextBoxs_Ouverts;
+
+
+            GenericNode G0 = new Node2();
+            GenericNode G1 = new Node2();
+            GenericNode G2 = new Node2();
+
+            List < GenericNode > L_G0 = new List<GenericNode>();
+            L_G0.Add(G0);
+
+            List<GenericNode> L_G1 = new List<GenericNode>();
+            L_G1.Add(G0);
+            L_G1.Add(G1);
+
+            List<GenericNode> L_G2 = new List<GenericNode>();
+            L_G1.Add(G2);
+            L_G1.Add(G1);
+
+
+            List<List<GenericNode>> listeDeListe = new List<List<GenericNode>>();
+            listeDeListe.Add(L_G0);
+            listeDeListe.Add(L_G1);
+            listeDeListe.Add(L_G2);
+
+
+
+            //Execution
+            CorrigeLignes(listeDeListe, L_TB);
+            
+        }
+
+        private void TBdebug_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBF0_TextChanged(object sender, EventArgs e)
         {
 
         }
