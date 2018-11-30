@@ -19,8 +19,10 @@ namespace Formulaire
         static public int numinitial;
         static public int numfinal;
         static public SearchTree g;
+
         public List<TextBox> L_TextBoxs_Ouverts;
         public List<TextBox> L_TextBoxs_Fermes;
+        char[] alphabet;
 
         public Form1()
         {
@@ -43,6 +45,8 @@ namespace Formulaire
             L_TextBoxs_Fermes.Add(TBF4);
             L_TextBoxs_Fermes.Add(TBF5);
             L_TextBoxs_Fermes.Add(TBF6);
+
+            alphabet = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J' };
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -89,7 +93,7 @@ namespace Formulaire
 
         private void Bresolve_Click(object sender, EventArgs e)
         {
-
+            
             numinitial = Convert.ToInt32(TBnoeudIni.Text);
             numfinal = Convert.ToInt32(TBnoeudFin.Text);
             g = new SearchTree();
@@ -100,7 +104,7 @@ namespace Formulaire
             
 
             
-            if (CorrigeLignes(g.L_L_Ouverts, L_TextBoxs_Ouverts) == false)
+            if (CorrigeLignes(g.L_MaListe_Ouverts, L_TextBoxs_Ouverts) == false)
             {
                 Lcommentaire.Text = "Vous vous êtes trompé dans les ouverts";
             }
@@ -122,39 +126,50 @@ namespace Formulaire
             int indexEtape = 0;
             bool reussite = true;
 
-            //pour debug
-            string solution = "";
+            //!! pour debug
+            //string solution = "";
 
-            foreach (List<GenericNode> L_ in listeDeListe)
+            foreach (List<GenericNode> MaListe_Ouverts in listeDeListe)
             {
-                //TBcorrection.Text = Convert.ToString(L_TB[0].Text.Length % 2);
+                foreach (GenericNode G in MaListe_Ouverts)
+                {
+                    TBcorrection.Text += G.Name;
 
-                /*
-                if (L_TB[indexEtape].Text == "")
+                }
+
+                //!! A supprimer
+                int L_Count = 0;
+
+                
+
+                //!! remplacer L_Count par L_.Count
+                if ((L_TB[indexEtape].Text.Length + 1) / 2 == MaListe_Ouverts.Count) //Vérifier que le nombre d'élément dans chaque liste correspond, 
+                //cette étape est nécessaire car comparer les contenus de 2 listes de tailles différentes amène à un out of range.
+                //on rajoute 1 puis divise par 2 pour ne pas tenir compte des virgules séparant chaque lettre
                 {
                     
-                }
-                
 
-                else
-                {
-                */
+                    if (MaListe_Ouverts.Count != 0) //on ne compare pas les listes dans le cas où elles sont toutes les deux vides
+                    {
+                        //!!
+                        TBcorrection.Text = "On est passé par là";
 
-                
+                        //!! remplacer L_Count par L_.Count
+                        for (int indexCaractere = 0; indexCaractere < MaListe_Ouverts.Count; indexCaractere++)
+                        {
+                            char LettreSaisie = L_TB[indexEtape].Text[indexCaractere * 2];
 
-                for(int indexCaractere = 0; indexCaractere <L_.Count; indexCaractere++)
-                {
-                    char LettreSaisie = L_TB[indexEtape].Text[indexCaractere * 2];
+                            //!!
+                            TBcorrection.Text += alphabet[MaListe_Ouverts[indexCaractere].Name];
 
+                            if (LettreSaisie != alphabet[MaListe_Ouverts[indexCaractere].Name])
+                            { return false; }
 
-                    if (Convert.ToChar(LettreSaisie) - 65 != L_[indexCaractere].Name)
-                    { reussite = false; }
+                            //!! pour debug
+                            //solution += LettreSaisie;
 
-                    //pour debug
-                    solution += Convert.ToChar(L_[indexCaractere].Name)-65; 
-
-                }
-
+                        }
+                    }
                     /*
                     for (int indexCaractere = 0; indexCaractere < L_TB[indexEtape].Text.Length%2; indexCaractere++) //division euclidienne, sert à ignorer les virgules
                     {
@@ -166,13 +181,16 @@ namespace Formulaire
                     */
 
 
-                //}
-                
+                    //}
+                }
+
+                else { return false; }
+
                 indexEtape++;
             }
 
-            //pour debug
-            TBcorrection.Text = solution;
+            //!! pour debug
+            //TBcorrection.Text = solution;
 
             return reussite;
 

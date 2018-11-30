@@ -19,9 +19,35 @@ namespace Pluscourtchemin
         static public int numinitial;
         static public int numfinal;
 
+        //new
+        public List<TextBox> L_TextBoxs_Ouverts;
+        public List<TextBox> L_TextBoxs_Fermes;
+        char[] alphabet;
+
         public Form1()
         {
             InitializeComponent();
+
+            //new
+            L_TextBoxs_Ouverts = new List<TextBox>();
+            L_TextBoxs_Ouverts.Add(TBO0);
+            L_TextBoxs_Ouverts.Add(TBO1);
+            L_TextBoxs_Ouverts.Add(TBO2);
+            L_TextBoxs_Ouverts.Add(TBO3);
+            L_TextBoxs_Ouverts.Add(TBO4);
+            L_TextBoxs_Ouverts.Add(TBO5);
+            L_TextBoxs_Ouverts.Add(TBO6);
+
+            L_TextBoxs_Fermes = new List<TextBox>();
+            L_TextBoxs_Fermes.Add(TBF0);
+            L_TextBoxs_Fermes.Add(TBF1);
+            L_TextBoxs_Fermes.Add(TBF2);
+            L_TextBoxs_Fermes.Add(TBF3);
+            L_TextBoxs_Fermes.Add(TBF4);
+            L_TextBoxs_Fermes.Add(TBF5);
+            L_TextBoxs_Fermes.Add(TBF6);
+
+            alphabet = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J' };
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -61,6 +87,32 @@ namespace Pluscourtchemin
             }
 
             g.GetSearchTree(treeView1);
+
+
+            /*
+            foreach (char c in g.fermes)
+            {
+                TBtests.Text += c;
+                
+            }
+            */
+
+            /*
+            foreach (TextBox TB in L_TextBoxs_Ouverts)
+            {
+                TBtests.Text += TB.Text;
+            }
+            */
+
+
+            
+            Correcteur c = new Correcteur();
+            int resultat = c.Corrige(L_TextBoxs_Ouverts, g.ouverts, alphabet);
+            if(resultat == -1)
+            { resultat = c.Corrige(L_TextBoxs_Fermes, g.fermes, alphabet); }
+
+            AfficheCorrection(resultat);
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -136,6 +188,24 @@ namespace Pluscourtchemin
             monStreamReader.Close();
 
 
+
+        }
+
+        private void TBtests_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AfficheCorrection(int resultat)
+        {
+            if (resultat == -1)
+            { Lcorrection.Text = "Bravo !! Vous avez réussi !"; }
+
+            else { Lcorrection.Text = "Vous avez fait une erreur à l'étape"+resultat; }
+        }
+
+        private void TBF0_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
