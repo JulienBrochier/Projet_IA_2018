@@ -39,6 +39,7 @@ namespace Pluscourtchemin
                 {
                     Node2 newnode2 = new Node2();
                     newnode2.numero = i;
+                    newnode2.Name = i;
                     lsucc.Add(newnode2);
                 }
             }

@@ -11,8 +11,12 @@ namespace Formulaire
     {
         public List<GenericNode> L_Ouverts;
         public List<GenericNode> L_Fermes;
-        public List<List<GenericNode>> L_L_Ouverts;
+
+        public List<GenericNode> MaListe_Ouverts;
+
+        public List<List<GenericNode>> L_MaListe_Ouverts;
         public List<List<GenericNode>> L_L_Fermes;
+        public string debug;
 
         public int CountInOpenList()
         {
@@ -53,17 +57,21 @@ namespace Formulaire
         {
             L_Ouverts = new List<GenericNode>();
             L_Fermes = new List<GenericNode>();
-            L_L_Ouverts = new List<List<GenericNode>>();
+
+            MaListe_Ouverts = new List<GenericNode>();
+            L_MaListe_Ouverts = new List<List<GenericNode>>();
             L_L_Fermes = new List<List<GenericNode>>();
 
             // Le noeud passé en paramètre est supposé être le noeud initial
             GenericNode N = N0;
             L_Ouverts.Add(N0);
 
+            MaListe_Ouverts.Add(N0);
+
             // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
             while (L_Ouverts.Count != 0 && N.EndState() == false)
             {
-                L_L_Ouverts.Add(L_Ouverts);
+                L_MaListe_Ouverts.Add(MaListe_Ouverts);
                 L_L_Fermes.Add(L_Fermes);
 
                 // Le meilleur noeud des ouverts est supposé placé en tête de liste
@@ -80,6 +88,7 @@ namespace Formulaire
                 if (L_Ouverts.Count > 0)
                 {
                     N = L_Ouverts[0];
+                    MaListe_Ouverts.Add(L_Ouverts[0]);
                 }
                 else
                 {
@@ -87,7 +96,7 @@ namespace Formulaire
                 }
             }
 
-            L_L_Ouverts.Add(L_Ouverts);
+            L_MaListe_Ouverts.Add(MaListe_Ouverts);
             L_L_Fermes.Add(L_Fermes);
 
             // A* terminé

@@ -11,6 +11,9 @@ namespace Pluscourtchemin
         public List<GenericNode> L_Ouverts;
         public List<GenericNode> L_Fermes;
 
+        public string ouverts;
+        public string fermes;
+
         public int CountInOpenList()
         {
             return L_Ouverts.Count;
@@ -50,17 +53,26 @@ namespace Pluscourtchemin
         {
             L_Ouverts = new List<GenericNode>();
             L_Fermes = new List<GenericNode>();
+
             // Le noeud passé en paramètre est supposé être le noeud initial
             GenericNode N = N0;
             L_Ouverts.Add(N0);
+            ouverts += N.Name;
+
 
             // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
             while (L_Ouverts.Count != 0 && N.EndState() == false)
             {
+
+                //!!
+                //L_L_Fermes.Add(L_Fermes);
+
+
                 // Le meilleur noeud des ouverts est supposé placé en tête de liste
                 // On le place dans les fermés
                 L_Ouverts.Remove(N);
                 L_Fermes.Add(N);
+                fermes += N.Name +"S";
 
                 // Il faut trouver les noeuds successeurs de N
                 this.MAJSuccesseurs(N);
@@ -71,12 +83,17 @@ namespace Pluscourtchemin
                 if (L_Ouverts.Count > 0)
                 {
                     N = L_Ouverts[0];
+
+                    ouverts += "S";
+                    foreach (GenericNode G in L_Ouverts)
+                    { ouverts += G.Name; }
                 }
                 else
                 {
                     N = null;
                 }
             }
+
 
             // A* terminé
             // On retourne le chemin qui va du noeud initial au noeud final sous forme de liste
@@ -199,7 +216,6 @@ namespace Pluscourtchemin
                 TN.Nodes.Add(TNfils);
                 if (GNfils.GetEnfants().Count > 0) AjouteBranche(GNfils, TNfils); 
             }
-        }
-  
+        }  
     }
 }

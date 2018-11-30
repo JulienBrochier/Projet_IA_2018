@@ -9,7 +9,7 @@ namespace Pluscourtchemin
     // pour résoudre un problème particulier en y ajoutant des infos liées au contexte du problème
     abstract public class GenericNode
     {
-       // protected string Name;              // DOIT ETRE UNIQUE POUR CHAQUE genericnode !!
+        public int Name;             //est unique pour chaque genericnode
         protected double GCost;               //coût du chemin du noeud initial jusqu'à ce noeud
         protected double HCost;               //estimation heuristique du coût pour atteindre le noeud final
         protected double TotalCost;           //coût total (g+h)
