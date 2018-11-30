@@ -34,9 +34,9 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(25, 26);
+            this.pictureBox.Location = new System.Drawing.Point(25, 8);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(587, 441);
+            this.pictureBox.Size = new System.Drawing.Size(475, 459);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
@@ -45,7 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 493);
+            this.ClientSize = new System.Drawing.Size(518, 493);
             this.Controls.Add(this.pictureBox);
             this.Name = "ShowImgSupplementaire";
             this.Text = "Image";

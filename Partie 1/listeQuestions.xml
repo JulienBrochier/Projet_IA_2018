@@ -106,12 +106,12 @@
     <comment value="L'habileté proprioceptive et la validation du test de Turing ne sont pas requis pour un robot. La première notion désigne la perception, consciente ou non, de la position des différentes parties du corps. La seconde la capacité à se faire passer pour un humain."></comment>
   </question>
 
-  <question id="14" value ="Nous avons modélisé un chiffre par une matrice d’adjacence selon la méthode vue en TP, retrouver quel chiffre se cache derrière ?">
-    <answer label="1" value ="2" true_answer="false"/>
-    <answer label="2" value ="3" true_answer="false"/>
-    <answer label="3" value ="8" true_answer="true"/>
+  <question id="14" value ="Un algorithme de reconnaissance de forme cherche à reconnaître un chiffre écrit selon les données suivantes (méthode vue en TP), quel est le chiffre de sortie ?">
+    <answer label="1" value ="5" true_answer="false"/>
+    <answer label="2" value ="6" true_answer="true"/>
+    <answer label="3" value ="8" true_answer="false"/>
     <answer label="4" value ="9" true_answer="false"/>
-    <comment value="Analysons ce graphe : Il existe des liaisons verticales entre les noeuds 0-4, 2-1, 3-2, 4-5 et des liaisons horizontales entre les noeuds 0-3, 4-2, 5-1. Prenez une feuille, positionnez les noeuds en fonction des liaisons ci-dessus, puis tracez les. Vous obtiendrez le chiffre huit."></comment>
+    <comment value=" “b” désigne une liaison vers le bas et “d” vers la droite, ce sont les seules directions dans lesquelles les liaisons peuvent s’établir. Analysons ce graphe : Il existe des liaisons verticales entre les noeuds 0-1, 2-5, 3-4 et des liaisons horizontales entre les noeuds 0-2, 2-3, 5-4. Prenez une feuille, positionnez les noeuds en fonction des liaisons ci-dessus, puis tracez les. Vous obtiendrez le chiffre six."></comment>
   </question>
 
   <question id="15" value ="Continuer jusqu’au rang 5  le parcours en largeur effectué par l’IA :">
@@ -143,23 +143,48 @@
     <answer label="2" value ="graphe conceptuel" true_answer="false"/>
     <answer label="3" value ="arbre de décision" true_answer="true"/>
     <answer label="4" value ="réseau bayésien" true_answer="false"/>
-    <comment value="Ces représentations visuelles ont étés vues en cours. Rappelez-vous ! ;)"></comment>
+    <comment value="Il s'agit d'un arbre de décision."></comment>
   </question>
 
-  <question id="19" value ="Associer le noms du réseau à sa représentation visuelle">
-    <answer label="1" value ="graphe conceptuel" true_answer="false"/>
-    <answer label="2" value ="ontologie" true_answer="false"/>
-    <answer label="3" value ="Graphe pour décrire une forme" true_answer="false"/>
-    <answer label="4" value ="réseau bayésien" true_answer="true"/>
-    <comment value="Ces représentations visuelles ont étés vues en cours. Rappelez-vous ! ;)"></comment>
+  <question id="19" value ="Associer le réseau présenté sur l’image à ses caractéristiques">
+    <answer label="1" value ="Ce graph est schématiquement inspiré du fonctionnement des neurones biologiques" true_answer="false"/>
+    <answer label="2" value ="L’absence d’arc signifie une indépendance conditionnelle" true_answer="true"/>
+    <answer label="3" value ="Pour construire ce graphique il est nécessaire de déterminer des agents passifs ou actifs" true_answer="false"/>
+    <answer label="4" value ="Les nœuds sont les variables aléatoires et les arcs sont les relations (si possibles) causales entre ces variables" true_answer="true"/>
+    <comment value="Ce graph représente un réseau bayésien. Or, c’est dans le cadre d’une ontologie que la détermination des agents passifs ou actifs est nécessaire. Et ce sont les réseaux de neurones multicouches qui s’inspirent du fonctionnement des neurones biologiques"></comment>
   </question>
 
-  <question id="20" value ="Nous avons modélisé un chiffre par une matrice d’adjacence selon la méthode vue en TP, retrouver quel chiffre se cache derrière ?">
-    <answer label="1" value ="2" true_answer="false"/>
-    <answer label="2" value ="3" true_answer="false"/>
-    <answer label="3" value ="8" true_answer="true"/>
-    <answer label="4" value ="9" true_answer="false"/>
-    <comment value="Il s'agit du chiffre 8"></comment>
+
+  <question id="20" value ="Trouvez le nom de cette matrice et dites si oui ou non celle-ci représente le graphe présenté">
+    <answer label="1" value ="nom: matrice d’incidence non orientée" true_answer="false"/>
+    <answer label="2" value ="nom: matrice d’adjacence" true_answer="true"/>
+    <answer label="3" value ="Oui cette matrice est une représentation du graphe" true_answer="true"/>
+    <answer label="4" value ="Non cette matrice n’est pas une représentation du graphe" true_answer="false"/>
+    <comment value="Il s’agit d’une matrice d’adjacence car les matrices d’incidences non orientées contiennent les valeurs 0, 1 ou 2 (si l’arête est une boucle). "></comment>
+  </question>
+
+  <question id="21" value ="On considère que le nombre moyen de coups potentiels à chaque position est de 8 à Othello et soit d la profondeur de l’arbre de jeu. Dans le cadre d’un algorithme MinMax, combien de positions terminales nécessitent d’être générées ?">
+    <answer label="1" value ="8*d positions terminales" true_answer="false"/>
+    <answer label="2" value ="d^8 positions terminales" true_answer="false"/>
+    <answer label="3" value ="8^d positions terminales" true_answer="true"/>
+    <answer label="4" value ="On ne peut pas savoir" true_answer="false"/>
+    <comment value=" 8^d est la bonne réponse, la limite majeure de MinMax est ainsi que le nombre de branches que cet algorithme amène à développer est extrêmement important"></comment>
+  </question>
+
+  <question id="22" value ="Voici l’algorithme Negamax, que constatez vous par rapport à l’algorithme MinMax ?">
+    <answer label="1" value ="L’algorithme retourne le meilleur coup alors que le MinMax ne renvoie que le score" true_answer="false"/>
+    <answer label="2" value ="Son principe est tout à fait différent que celui du MinMax" true_answer="false"/>
+    <answer label="3" value ="L’algorithme ne distingue pas explicitement les nœuds Max et les nœuds Min" true_answer="true"/>
+    <answer label="4" value ="L’algorithme repose sur le constat que minimiser une valeur revient à maximiser l’opposé de cette valeur" true_answer="true"/>
+    <comment value="Cette version compacte du MinMax repose sur le constat du fait que minimiser une valeur revient à maximiser l’opposé de cette valeur, il n’est donc pas nécessaire de distinguer explicitement les nœuds Max et les nœuds Min. "></comment>
+  </question>
+
+  <question id="23" value ="Quelle(s) caractéristique(s) sur l’algorithme Alpha-Beta sont fausses ?">
+    <answer label="1" value ="β est une approximation par défaut de la vraie valeur du sommet" true_answer="true"/>
+    <answer label="2" value ="α = valeur minimale que le joueur peut espérer obtenir pour le coup à jouer étant donné la position où il se trouve" true_answer="false"/>
+    <answer label="3" value ="l’algorithme ne nécessite pas le développement de tous les sommets de l’arbre" true_answer="false"/>
+    <answer label="4" value ="β = valeur maximale que le joueur peut espérer obtenir pour le coup à jouer étant donné la position où il se trouve" true_answer="false"/>
+    <comment value="β est une approximation par excès de la vraie valeur du sommet. Le principe de l’algorithme AlphaBeta, est d’éviter la génération de feuilles et de parties de l’arbre qui sont inutiles"></comment>
   </question>
 
 </liste>

@@ -38,11 +38,11 @@
             // 
             this.score.AutoSize = true;
             this.score.BackColor = System.Drawing.SystemColors.Window;
-            this.score.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.score.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.score.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.score.Location = new System.Drawing.Point(208, 123);
             this.score.Name = "score";
-            this.score.Size = new System.Drawing.Size(85, 16);
+            this.score.Size = new System.Drawing.Size(63, 20);
             this.score.TabIndex = 3;
             this.score.Text = "SCORE :";
             this.score.Click += new System.EventHandler(this.Titre_Click);
@@ -50,30 +50,31 @@
             // Texte1
             // 
             this.Texte1.AutoSize = true;
-            this.Texte1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Texte1.Location = new System.Drawing.Point(125, 50);
+            this.Texte1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Texte1.Location = new System.Drawing.Point(147, 51);
             this.Texte1.Name = "Texte1";
-            this.Texte1.Size = new System.Drawing.Size(353, 20);
+            this.Texte1.Size = new System.Drawing.Size(302, 20);
             this.Texte1.TabIndex = 6;
             this.Texte1.Text = "Le questionnaire est terminé! Voici vos résultats :";
             // 
             // Total
             // 
             this.Total.AutoSize = true;
+            this.Total.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Total.Location = new System.Drawing.Point(310, 123);
             this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(35, 13);
+            this.Total.Size = new System.Drawing.Size(52, 17);
             this.Total.TabIndex = 7;
             this.Total.Text = "points";
             // 
             // BtnQuitter
             // 
             this.BtnQuitter.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnQuitter.Font = new System.Drawing.Font("Gabriola", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnQuitter.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnQuitter.ForeColor = System.Drawing.SystemColors.Desktop;
             this.BtnQuitter.Location = new System.Drawing.Point(464, 208);
             this.BtnQuitter.Name = "BtnQuitter";
-            this.BtnQuitter.Size = new System.Drawing.Size(95, 31);
+            this.BtnQuitter.Size = new System.Drawing.Size(95, 37);
             this.BtnQuitter.TabIndex = 8;
             this.BtnQuitter.Text = "Quitter";
             this.BtnQuitter.UseVisualStyleBackColor = false;

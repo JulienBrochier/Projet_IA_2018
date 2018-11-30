@@ -128,13 +128,16 @@
     <Content Include="listeQuestions.xml">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Resources\MatriceAdj.PNG" />
+    <None Include="Resources\Graphe.PNG" />
+    <None Include="Resources\Negamax.PNG" />
+    <None Include="Resources\Tableau.PNG" />
     <None Include="Resources\ArbreDecision.png" />
     <None Include="Resources\ReseauBayesien.png" />
     <None Include="Resources\TexteAllumette.PNG" />
     <None Include="Resources\arbre.PNG" />
     <None Include="Resources\Texte.PNG" />
     <None Include="Resources\Capture2.PNG" />
-    <None Include="Resources\Tableau.png" />
     <None Include="Resources\Capture.PNG" />
     <None Include="Resources\Rotation.png" />
   </ItemGroup>

@@ -145,7 +145,23 @@ namespace Partie_1
 
                 PictureBox.Image = Images.ReseauBayesien;
                 PictureBox.Show();
-            }  
+            }
+
+            if (index == 20)
+            {
+                PictureBox.Image = Images.MatriceAdj;
+                PictureBox.Show();
+                montrerImage = new ShowImgSupplementaire();
+                montrerImage.Show();
+                montrerImage.pictureBox.Image = Images.Graphe;
+            }
+
+            if (index == 23)
+            {
+
+                PictureBox.Image = Images.Negamax;
+                PictureBox.Show();
+            }
 
         }
 
@@ -182,7 +198,8 @@ namespace Partie_1
                     }
 
                    else
-                    {                       
+                    {
+                        AlerteFaux.Show();
                         Bvalidate.Hide();
                         TextComment.Show();
                         Lcomment.Show();
@@ -224,6 +241,7 @@ namespace Partie_1
         private void Bcontinu_Click(object sender, EventArgs e)
         {          
             TextComment.Hide();
+            AlerteFaux.Hide();
             Lcomment.Hide();
             TexteExplication.Hide();
             Suivant();
@@ -232,7 +250,7 @@ namespace Partie_1
         internal void Suivant ()
         {
 
-            if (numListe.Count == 0)
+            if (numeroQuestion == 20)
             {
                 Close();
                 resultats.Show();
@@ -244,7 +262,7 @@ namespace Partie_1
 
                 //enlever les images s'il y en a
                 PictureBox.Hide();
-                if (index == 17)
+                if (index == 17 || index ==20 )
                 { montrerImage.Close(); }
 
                 //déchocher toutes les cases
@@ -271,6 +289,12 @@ namespace Partie_1
             return index;
         }
 
+        private void RemiseZeroCheck(CheckBox c1)
+        {
+            if (c1.Checked)
+                c1.Checked = false;
+        }
+
 
         private void Question1_Load(object sender, EventArgs e)
         {
@@ -292,11 +316,7 @@ namespace Partie_1
 
         }
 
-        private void RemiseZeroCheck(CheckBox c1)
-        {
-            if (c1.Checked)
-            c1.Checked = false;
-        }
+       
 
         private void Lcomment_Click(object sender, EventArgs e)
         {
@@ -315,6 +335,12 @@ namespace Partie_1
 
         }
 
-      
+        private void BtnSortie_Click(object sender, EventArgs e)
+        {
+            var sortie = MessageBox.Show("Vous quittez le questionnaire !");
+
+            Close();
+         
+        }
     }
 }
