@@ -92,7 +92,7 @@ namespace Pluscourtchemin
 
             AfficheCorrectionOuverts(resultat);
 
-            //resultat = c.CorrigeFermes(L_TextBoxs_Fermes, g.fermes, alphabet);
+            resultat = c.CorrigeFermes(L_TextBoxs_Fermes, g.fermes, alphabet);
 
             AfficheCorrectionFermes(resultat);
             TBtests.Text = c.debug;
@@ -206,7 +206,7 @@ namespace Pluscourtchemin
         private void AfficheCorrectionFermes(int resultat)
         {
             if (resultat == -1)
-            { LcorrectionOuverts.Text = "Bravo !! Vous avez réussi tous les fermes !"; }
+            { LcorrectionFermes.Text = "Bravo !! Vous avez réussi tous les fermes !"; }
 
             else { LcorrectionFermes.Text = "Vous avez fait une erreur à l'étape" + resultat + " dans les fermes"; }
         }
