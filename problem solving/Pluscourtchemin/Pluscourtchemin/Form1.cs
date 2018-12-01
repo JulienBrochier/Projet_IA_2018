@@ -105,14 +105,19 @@ namespace Pluscourtchemin
             */
 
             //TBtests.Text = g.ouverts;
-
-            
+            bool continuer = true;
             Correcteur c = new Correcteur();
-            int resultat = c.Corrige(L_TextBoxs_Ouverts, g.ouverts, alphabet);
 
 
-            if (resultat == -1)
-            { resultat = c.Corrige(L_TextBoxs_Fermes, g.fermes, alphabet); }
+            while (continuer)
+            {
+
+                int resultat = c.CorrigeOuverts(L_TextBoxs_Ouverts, g.ouverts, alphabet, index);
+
+            }
+
+            //if (resultat == -1)
+            //{ resultat = c.CorrigeFermes(L_TextBoxs_Fermes, g.fermes, alphabet); }
 
             AfficheCorrection(resultat);
             TBtests.Text = c.debug;

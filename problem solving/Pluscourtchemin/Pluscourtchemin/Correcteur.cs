@@ -14,7 +14,7 @@ namespace Pluscourtchemin
 
 
         // Renvoie -1 si il n'y a pas d'erreur, sinon renvoie le numéro de l'étape où l'erreur s'est produite
-        public int Corrige(List<TextBox> L_TextBoxs, string noeuds, char[]alphabet)
+        public int CorrigeOuverts(List<TextBox> L_TextBoxs, string noeuds, char[]alphabet)
         {
             int indexString = 0;
 
@@ -86,5 +86,9 @@ namespace Pluscourtchemin
             }
             return -1;
         }
+
+        //corrigefermes
+
+
     }
 }

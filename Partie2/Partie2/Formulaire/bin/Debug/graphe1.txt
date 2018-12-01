@@ -1,9 +1,0 @@
-8 : nombre de noeuds
-0 1 3 : arc1
-1 2 3 : arc1
-2 3 4 : arc2
-3 4 7 : arc3 
-4 5 2 : arc4
-5 6 3 : arc5
-4 6 9 : arc6
-1 3 9 : arc7
