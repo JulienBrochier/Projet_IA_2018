@@ -58,7 +58,6 @@ namespace Pluscourtchemin
             GenericNode N = N0;
             L_Ouverts.Add(N0);
             ouverts += N.Name;
-            fermes += ",";
 
 
             // tant que le noeud n'est pas terminal et que ouverts n'est pas vide

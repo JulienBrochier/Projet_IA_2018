@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -89,6 +89,45 @@ namespace Pluscourtchemin
 
         public int CorrigeFermes(List<TextBox> L_TextBoxs, string noeuds, char[] alphabet)
         {
+            if (L_TextBoxs[0].Text!="") //le premier ensemble de fermés doit être vide
+            {
+                return 0;
+            }
+
+            for (int indexEtape = 0; indexEtape < (noeuds.Length) /2; indexEtape++) //le nombre d'étapes correspond au nombre de fermés puisqu'il y en a un nouveau par étape. On ne compte pas les virgules
+            //pour chaque étape
+            {
+                if (L_TextBoxs[indexEtape + 1].Text == "")   //index Etape+1 car on avait traité séparemment l'étape 0.
+                {
+                    return indexEtape+1;
+                }
+
+                else
+                {
+                    for (int indexCaractere = 0; indexCaractere < indexEtape; indexCaractere++)
+                    {
+                        if (L_TextBoxs[indexEtape + 1].Text.Length > indexCaractere * 2)         
+                        {
+                            
+                        }
+
+                        else
+                        {
+                            return indexEtape;
+                        }
+                    }
+                }
+
+
+            }
+            //  A,B,C,D
+
+
+
+
+
+
+                /*
             for(int indexEtape =0; indexEtape<(noeuds.Length-1)/2; indexEtape++)    //pour chaque étape
             {
                 for (int indexCaractere = 0; indexCaractere < indexEtape+1; indexCaractere++)
@@ -108,9 +147,9 @@ namespace Pluscourtchemin
                 }
             }
             
+    */
                 return -1;
+
         }
-
-
     }
 }
