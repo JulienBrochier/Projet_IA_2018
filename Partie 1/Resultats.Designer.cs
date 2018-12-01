@@ -32,6 +32,8 @@
             this.Texte1 = new System.Windows.Forms.Label();
             this.Total = new System.Windows.Forms.Label();
             this.BtnQuitter = new System.Windows.Forms.Button();
+            this.BtnPartie2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // score
@@ -70,22 +72,48 @@
             // 
             // BtnQuitter
             // 
-            this.BtnQuitter.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnQuitter.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BtnQuitter.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnQuitter.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.BtnQuitter.Location = new System.Drawing.Point(464, 208);
+            this.BtnQuitter.ForeColor = System.Drawing.Color.LightCoral;
+            this.BtnQuitter.Location = new System.Drawing.Point(518, 12);
             this.BtnQuitter.Name = "BtnQuitter";
-            this.BtnQuitter.Size = new System.Drawing.Size(95, 37);
+            this.BtnQuitter.Size = new System.Drawing.Size(62, 26);
             this.BtnQuitter.TabIndex = 8;
             this.BtnQuitter.Text = "Quitter";
             this.BtnQuitter.UseVisualStyleBackColor = false;
             this.BtnQuitter.Click += new System.EventHandler(this.BtnQuitter_Click);
+            // 
+            // BtnPartie2
+            // 
+            this.BtnPartie2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.BtnPartie2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPartie2.ForeColor = System.Drawing.Color.Black;
+            this.BtnPartie2.Location = new System.Drawing.Point(247, 214);
+            this.BtnPartie2.Name = "BtnPartie2";
+            this.BtnPartie2.Size = new System.Drawing.Size(115, 25);
+            this.BtnPartie2.TabIndex = 9;
+            this.BtnPartie2.Text = "Cliquez-ici!";
+            this.BtnPartie2.UseVisualStyleBackColor = false;
+            this.BtnPartie2.Click += new System.EventHandler(this.BtnPartie2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(131, 178);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(375, 20);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Pour obtenir votre note sur 20, résolvez un dernier problème!";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Resultats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 273);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BtnPartie2);
             this.Controls.Add(this.BtnQuitter);
             this.Controls.Add(this.Total);
             this.Controls.Add(this.Texte1);
@@ -103,5 +131,7 @@
         private System.Windows.Forms.Label Texte1;
         private System.Windows.Forms.Button BtnQuitter;
         internal System.Windows.Forms.Label Total;
+        private System.Windows.Forms.Button BtnPartie2;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -24,7 +24,7 @@ namespace Partie_1
         Random rnd;
         ShowImgSupplementaire montrerImage;
         Resultats resultats;
-        int points;
+        double points;
 
         public Questionnaire()
         {
@@ -185,7 +185,7 @@ namespace Partie_1
                                 if (Verifier(doc, Rep4))
                                 {
                                     valide = true;
-                                    points++;
+                                    points = CalculPoint();
                                 }
                             }
                         }
@@ -254,7 +254,7 @@ namespace Partie_1
             {
                 Close();
                 resultats.Show();
-                resultats.Total.Text = "" + points + "/20";
+                resultats.Total.Text = "" + points + "/17";
             }
             else
             {
@@ -295,6 +295,21 @@ namespace Partie_1
                 c1.Checked = false;
         }
 
+        private double CalculPoint()
+        {
+            double _points = 0;
+
+            if(index<7)
+            {
+                _points = points + 0.5;
+            }
+            else
+            {
+                _points = points++;
+            }
+
+            return _points;
+        }
 
         private void Question1_Load(object sender, EventArgs e)
         {

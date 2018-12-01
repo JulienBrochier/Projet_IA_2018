@@ -141,6 +141,12 @@
     <None Include="Resources\Capture.PNG" />
     <None Include="Resources\Rotation.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\problem solving\Pluscourtchemin\Pluscourtchemin\Partie2.csproj">
+      <Project>{6f7c0e5c-624a-42b0-87cf-af86c721e2f7}</Project>
+      <Name>Partie2</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
