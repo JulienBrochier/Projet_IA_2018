@@ -19,7 +19,7 @@ namespace Pluscourtchemin
         static public int numinitial;
         static public int numfinal;
         static public int nbgraphes;
-        static public bool reussite;
+        public bool reussite;
 
         //new
         public List<TextBox> L_TextBoxs_Ouverts;

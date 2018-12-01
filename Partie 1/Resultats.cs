@@ -34,10 +34,14 @@ namespace Partie_1
 
         }
 
-        private void BtnPartie2_Click(object sender, EventArgs e)
+        internal void BtnPartie2_Click(object sender, EventArgs e)
         {
             Form1 algo = new Form1();
             algo.Show();
+            if (algo.reussite)
+            {
+                
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
