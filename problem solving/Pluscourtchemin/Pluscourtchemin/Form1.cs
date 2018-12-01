@@ -18,6 +18,7 @@ namespace Pluscourtchemin
         static public int nbnodes = 10;
         static public int numinitial;
         static public int numfinal;
+        static public int nbgraphes;
 
         //new
         public List<TextBox> L_TextBoxs_Ouverts;
@@ -48,24 +49,11 @@ namespace Pluscourtchemin
             L_TextBoxs_Fermes.Add(TBF6);
 
             alphabet = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J' };
+
+            nbgraphes = 4;
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-            matrice = new double[nbnodes, nbnodes];
-            for (int i = 0; i < nbnodes; i++)
-                for (int j = 0; j < nbnodes; j++)
-                    matrice[i, j] = -1;
-
-            matrice[0, 1] = 3;      matrice[1, 0] = 3;
-            matrice[0, 2] = 5;      matrice[2, 0] = 5;
-            matrice[0, 3] = 7;      matrice[3, 0] = 7;
-            matrice[1, 4] = 8;      matrice[4, 1] = 8;
-            matrice[2, 4] = 3;      matrice[4, 2] = 3;
-            matrice[4, 5] = 7;      matrice[5, 4] = 7;
-            matrice[5, 6] = 4;      matrice[6, 5] = 4;
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -104,17 +92,34 @@ namespace Pluscourtchemin
 
             AfficheCorrectionOuverts(resultat);
 
-            resultat = c.CorrigeFermes(L_TextBoxs_Fermes, g.fermes, alphabet);
+            //resultat = c.CorrigeFermes(L_TextBoxs_Fermes, g.fermes, alphabet);
 
             AfficheCorrectionFermes(resultat);
             TBtests.Text = c.debug;
             
         }
 
+
         private void button3_Click(object sender, EventArgs e)
         {
+            matrice = new double[nbnodes, nbnodes];
+            for (int index = 0; index < nbnodes; index++)
+                for (int j = 0; j < nbnodes; j++)
+                    matrice[index, j] = -1;
 
-            StreamReader monStreamReader = new StreamReader("graphe1.txt");
+            matrice[0, 1] = 3; matrice[1, 0] = 3;
+            matrice[0, 2] = 5; matrice[2, 0] = 5;
+            matrice[0, 3] = 7; matrice[3, 0] = 7;
+            matrice[1, 4] = 8; matrice[4, 1] = 8;
+            matrice[2, 4] = 3; matrice[4, 2] = 3;
+            matrice[4, 5] = 7; matrice[5, 4] = 7;
+            matrice[5, 6] = 4; matrice[6, 5] = 4;
+
+            //sélection d'un graph au hasard
+            Random r = new Random();
+            int numeroGraph = r.Next(1, nbgraphes + 1);
+
+            StreamReader monStreamReader = new StreamReader("graphe" + numeroGraph + ".txt");
 
             // Lecture du fichier avec un while, évidemment !
             // 1ère ligne : "nombre de noeuds du graphe
@@ -180,7 +185,8 @@ namespace Pluscourtchemin
             // Fermeture du StreamReader (obligatoire) 
             monStreamReader.Close();
 
-
+            //Affichage de l'image du graph
+            AfficheGraph(numeroGraph);
 
         }
 
@@ -203,6 +209,34 @@ namespace Pluscourtchemin
             { LcorrectionOuverts.Text = "Bravo !! Vous avez réussi tous les fermes !"; }
 
             else { LcorrectionFermes.Text = "Vous avez fait une erreur à l'étape" + resultat + " dans les fermes"; }
+        }
+
+        private void AfficheGraph(int numero)
+        //Contient les associations entre les numéros de graph et leurs images
+        {
+            if (numero == 1)
+            {
+                pictureBox.Image = ImagesGraphes.Graph1;
+                pictureBox.Show();
+            }
+
+            else if (numero == 2)
+            {
+                pictureBox.Image = ImagesGraphes.Graph2;
+                pictureBox.Show();
+            }
+
+            else if (numero == 3)
+            {
+                pictureBox.Image = ImagesGraphes.Graph3;
+                pictureBox.Show();
+            }
+
+            else if (numero == 4)
+            { }
+
+            else { }
+
         }
 
         private void TBF0_TextChanged(object sender, EventArgs e)
