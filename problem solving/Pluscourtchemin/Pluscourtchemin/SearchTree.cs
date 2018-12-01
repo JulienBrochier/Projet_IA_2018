@@ -58,6 +58,7 @@ namespace Pluscourtchemin
             GenericNode N = N0;
             L_Ouverts.Add(N0);
             ouverts += N.Name;
+            fermes += ",";
 
 
             // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
@@ -72,7 +73,13 @@ namespace Pluscourtchemin
                 // On le place dans les fermés
                 L_Ouverts.Remove(N);
                 L_Fermes.Add(N);
-                fermes += N.Name +"S";
+
+                //ajout nouvelle liste de fermes : re ajoute les anciens fermés et ajoute le nouvea
+                foreach(GenericNode Nferme in L_Fermes)
+                {
+                    fermes += Nferme.Name+"";
+                }
+                fermes += N.Name +",";
 
                 // Il faut trouver les noeuds successeurs de N
                 this.MAJSuccesseurs(N);
@@ -84,7 +91,7 @@ namespace Pluscourtchemin
                 {
                     N = L_Ouverts[0];
 
-                    ouverts += "S";
+                    ouverts += ",";
                     foreach (GenericNode G in L_Ouverts)
                     { ouverts += G.Name; }
                 }
@@ -93,6 +100,7 @@ namespace Pluscourtchemin
                     N = null;
                 }
             }
+            ouverts += ",";
 
 
             // A* terminé

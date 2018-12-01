@@ -118,7 +118,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(521, 12);
+            this.listBox1.Location = new System.Drawing.Point(533, 77);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(128, 121);
             this.listBox1.TabIndex = 6;
@@ -151,7 +151,7 @@
             // 
             // TBtests
             // 
-            this.TBtests.Location = new System.Drawing.Point(35, 113);
+            this.TBtests.Location = new System.Drawing.Point(703, 356);
             this.TBtests.Name = "TBtests";
             this.TBtests.Size = new System.Drawing.Size(128, 20);
             this.TBtests.TabIndex = 10;

@@ -90,9 +90,9 @@ namespace Pluscourtchemin
 
 
             /*
-            foreach (char c in g.fermes)
+            foreach (char ch in g.ouverts)
             {
-                TBtests.Text += c;
+                TBtests.Text += ch;
                 
             }
             */
@@ -104,15 +104,19 @@ namespace Pluscourtchemin
             }
             */
 
+            //TBtests.Text = g.ouverts;
 
             
             Correcteur c = new Correcteur();
             int resultat = c.Corrige(L_TextBoxs_Ouverts, g.ouverts, alphabet);
-            if(resultat == -1)
+
+
+            if (resultat == -1)
             { resultat = c.Corrige(L_TextBoxs_Fermes, g.fermes, alphabet); }
 
             AfficheCorrection(resultat);
-
+            TBtests.Text = c.debug;
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
