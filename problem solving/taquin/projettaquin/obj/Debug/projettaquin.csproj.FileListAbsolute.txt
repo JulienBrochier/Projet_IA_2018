@@ -1,9 +1,0 @@
-C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\problem solving\taquin\projettaquin\bin\Debug\projettaquin.exe.config
-C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\problem solving\taquin\projettaquin\bin\Debug\projettaquin.exe
-C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\problem solving\taquin\projettaquin\bin\Debug\projettaquin.pdb
-C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\problem solving\taquin\projettaquin\obj\Debug\projettaquin.csprojResolveAssemblyReference.cache
-C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\problem solving\taquin\projettaquin\obj\Debug\projettaquin.Form1.resources
-C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\problem solving\taquin\projettaquin\obj\Debug\projettaquin.Properties.Resources.resources
-C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\problem solving\taquin\projettaquin\obj\Debug\projettaquin.csproj.GenerateResource.Cache
-C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\problem solving\taquin\projettaquin\obj\Debug\projettaquin.exe
-C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\problem solving\taquin\projettaquin\obj\Debug\projettaquin.pdb
