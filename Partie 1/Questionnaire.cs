@@ -10,6 +10,7 @@ using System.Xml;
 using System.Xml.Resolvers;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Pluscourtchemin;
 
 namespace Partie_1
 {
@@ -247,7 +248,7 @@ namespace Partie_1
             Suivant();
         }
 
-        internal void Suivant ()
+        internal void Suivant()
         {
 
             if (numeroQuestion == 20)
@@ -255,7 +256,10 @@ namespace Partie_1
                 Close();
                 resultats.Show();
                 resultats.Total.Text = "" + points + "/17";
-            }
+            
+        
+        
+    }
             else
             {
 
