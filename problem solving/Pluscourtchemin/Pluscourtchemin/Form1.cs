@@ -19,6 +19,7 @@ namespace Pluscourtchemin
         static public int numinitial;
         static public int numfinal;
         static public int nbgraphes;
+        static public bool reussite;
 
         //new
         public List<TextBox> L_TextBoxs_Ouverts;
@@ -48,15 +49,18 @@ namespace Pluscourtchemin
             L_TextBoxs_Fermes.Add(TBF5);
             L_TextBoxs_Fermes.Add(TBF6);
 
-            alphabet = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J' };
+            alphabet = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K' };
 
             nbgraphes = 4;
+            reussite = true;
 
         }
 
 
         private void button2_Click(object sender, EventArgs e)
         {
+            reussite = true;
+
             numinitial = Convert.ToInt32(textBox1.Text);
             numfinal = Convert.ToInt32(textBox2.Text);
             SearchTree g = new SearchTree();
@@ -71,12 +75,15 @@ namespace Pluscourtchemin
 
 
             int resultat = c.CorrigeOuverts(L_TextBoxs_Ouverts, g.ouverts, alphabet);
-
             AfficheCorrectionOuverts(resultat);
+            if(resultat != -1)
+            { reussite = false; }
+
 
             resultat = c.CorrigeFermes(L_TextBoxs_Fermes, g.fermes, alphabet);
-
-            AfficheCorrectionFermes(resultat);            
+            AfficheCorrectionFermes(resultat);
+            if (resultat != -1)
+            { reussite = false; }
         }
 
 
