@@ -67,24 +67,6 @@ namespace Pluscourtchemin
 
             g.GetSearchTree(treeView1);
 
-
-            /*
-            foreach (char ch in g.ouverts)
-            {
-                TBtests.Text += ch;
-                
-            }
-            */
-
-            /*
-            foreach (TextBox TB in L_TextBoxs_Ouverts)
-            {
-                TBtests.Text += TB.Text;
-            }
-            */
-
-            //TBtests.Text = g.ouverts;
-
             Correcteur c = new Correcteur();
 
 
@@ -94,9 +76,7 @@ namespace Pluscourtchemin
 
             resultat = c.CorrigeFermes(L_TextBoxs_Fermes, g.fermes, alphabet);
 
-            AfficheCorrectionFermes(resultat);
-            TBtests.Text = c.debug;
-            
+            AfficheCorrectionFermes(resultat);            
         }
 
 
@@ -190,11 +170,6 @@ namespace Pluscourtchemin
 
         }
 
-        private void TBtests_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void AfficheCorrectionOuverts(int resultat)
         {
             if (resultat == -1)
@@ -242,6 +217,11 @@ namespace Pluscourtchemin
         private void TBF0_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label41_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
