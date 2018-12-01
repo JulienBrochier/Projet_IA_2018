@@ -89,7 +89,7 @@ namespace Pluscourtchemin
 
         public int CorrigeFermes(List<TextBox> L_TextBoxs, string noeuds, char[] alphabet)
         {
-            if (L_TextBoxs[0].Text!="") //le premier ensemble de fermés doit être vide
+            if (L_TextBoxs[0].Text.Length !=0  ) //le premier ensemble de fermés doit être vide
             {
                 return 0;
             }
