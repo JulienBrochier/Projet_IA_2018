@@ -76,15 +76,6 @@ namespace Pluscourtchemin
             N0.numero = numinitial;
             List<GenericNode> solution = g.RechercheSolutionAEtoile(N0);
 
-            Node2 N1 = N0;
-            for (int i=1; i < solution.Count; i++)
-            {
-                Node2 N2 = (Node2)solution[i];
-                listBox1.Items.Add(Convert.ToString(N1.numero) 
-                     + "--->"  + Convert.ToString(N2.numero)
-                     + "   : " +Convert.ToString(matrice[N1.numero,N2.numero]));
-                N1 = N2;
-            }
 
             g.GetSearchTree(treeView1);
 
@@ -105,21 +96,17 @@ namespace Pluscourtchemin
             */
 
             //TBtests.Text = g.ouverts;
-            bool continuer = true;
+
             Correcteur c = new Correcteur();
 
 
-            while (continuer)
-            {
+            int resultat = c.CorrigeOuverts(L_TextBoxs_Ouverts, g.ouverts, alphabet);
 
-                int resultat = c.CorrigeOuverts(L_TextBoxs_Ouverts, g.ouverts, alphabet, index);
+            AfficheCorrectionOuverts(resultat);
 
-            }
+            resultat = c.CorrigeFermes(L_TextBoxs_Fermes, g.fermes, alphabet);
 
-            //if (resultat == -1)
-            //{ resultat = c.CorrigeFermes(L_TextBoxs_Fermes, g.fermes, alphabet); }
-
-            AfficheCorrection(resultat);
+            AfficheCorrectionFermes(resultat);
             TBtests.Text = c.debug;
             
         }
@@ -186,10 +173,7 @@ namespace Pluscourtchemin
                 double val = Convert.ToDouble(strVal);
 
                 matrice[N1, N2] = val;
-                matrice[N2, N1] = val;
-                listBoxgraphe.Items.Add(Convert.ToString(N1)
-                   + "--->" + Convert.ToString(N2)
-                   + "   : " + Convert.ToString(matrice[N1, N2]));            
+                matrice[N2, N1] = val;        
 
                 ligne = monStreamReader.ReadLine();
             }
@@ -205,12 +189,20 @@ namespace Pluscourtchemin
 
         }
 
-        private void AfficheCorrection(int resultat)
+        private void AfficheCorrectionOuverts(int resultat)
         {
             if (resultat == -1)
-            { Lcorrection.Text = "Bravo !! Vous avez réussi !"; }
+            { LcorrectionOuverts.Text = "Bravo !! Vous avez réussi tous les ouverts !"; }
 
-            else { Lcorrection.Text = "Vous avez fait une erreur à l'étape"+resultat; }
+            else { LcorrectionOuverts.Text = "Vous avez fait une erreur à l'étape"+resultat +" dans les ouverts"; }
+        }
+
+        private void AfficheCorrectionFermes(int resultat)
+        {
+            if (resultat == -1)
+            { LcorrectionOuverts.Text = "Bravo !! Vous avez réussi tous les fermes !"; }
+
+            else { LcorrectionFermes.Text = "Vous avez fait une erreur à l'étape" + resultat + " dans les fermes"; }
         }
 
         private void TBF0_TextChanged(object sender, EventArgs e)
