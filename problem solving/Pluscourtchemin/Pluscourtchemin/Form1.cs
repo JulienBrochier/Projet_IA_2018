@@ -181,9 +181,9 @@ namespace Pluscourtchemin
         private void AfficheCorrectionFermes(int resultat)
         {
             if (resultat == -1)
-            { LcorrectionFermes.Text = "Bravo !! Vous avez réussi tous les fermes !"; }
+            { LcorrectionFermes.Text = "Bravo !! Vous avez réussi tous les fermés !"; }
 
-            else { LcorrectionFermes.Text = "Vous avez fait une erreur à l'étape" + resultat + " dans les fermes"; }
+            else { LcorrectionFermes.Text = "Vous avez fait une erreur à l'étape" + resultat + " dans les fermés"; }
         }
 
         private void AfficheGraph(int numero)
