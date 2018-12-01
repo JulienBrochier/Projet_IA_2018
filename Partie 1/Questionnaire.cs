@@ -309,7 +309,7 @@ namespace Partie_1
             }
             else
             {
-                _points = points++;
+                _points = points+1;
             }
 
             return _points;

@@ -144,7 +144,7 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(872, 169);
+            this.treeView1.Location = new System.Drawing.Point(884, 169);
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(152, 180);
             this.treeView1.TabIndex = 7;
