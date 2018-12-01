@@ -87,7 +87,29 @@ namespace Pluscourtchemin
             return -1;
         }
 
-        //corrigefermes
+        public int CorrigeFermes(List<TextBox> L_TextBoxs, string noeuds, char[] alphabet)
+        {
+            for(int indexEtape =0; indexEtape<(noeuds.Length-1)/2; indexEtape++)    //pour chaque étape
+            {
+                for (int indexCaractere = 0; indexCaractere < indexEtape+1; indexCaractere++)
+                {
+                    if (L_TextBoxs[indexEtape].Text.Length < indexCaractere*2)
+                    {
+                        return indexEtape;
+                    }
+
+                    else
+                    {
+                        if (L_TextBoxs[indexEtape].Text[indexCaractere * 2] == alphabet[Convert.ToInt32(noeuds[indexCaractere * 2]) - 48])
+                        {
+
+                        }
+                    }
+                }
+            }
+            
+                return -1;
+        }
 
 
     }

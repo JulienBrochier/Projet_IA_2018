@@ -75,7 +75,6 @@ namespace Pluscourtchemin
                 L_Fermes.Add(N);
 
                 //ajout nouvelle liste de fermes : re ajoute les anciens fermés et ajoute le nouvea
-
                 fermes += N.Name +",";
 
                 // Il faut trouver les noeuds successeurs de N
