@@ -256,7 +256,7 @@ namespace Partie_1
                 Close();
                 resultats.Show();
                 resultats.Total.Text = "" + points + "/17";
-            
+                resultats.points = points;
         
         
     }

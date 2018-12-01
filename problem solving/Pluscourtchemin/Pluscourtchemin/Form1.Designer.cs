@@ -95,6 +95,8 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
+            this.Lscore = new System.Windows.Forms.Label();
+            this.Bscore = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -308,7 +310,7 @@
             // LcorrectionOuverts
             // 
             this.LcorrectionOuverts.AutoSize = true;
-            this.LcorrectionOuverts.Location = new System.Drawing.Point(787, 317);
+            this.LcorrectionOuverts.Location = new System.Drawing.Point(438, 500);
             this.LcorrectionOuverts.Name = "LcorrectionOuverts";
             this.LcorrectionOuverts.Size = new System.Drawing.Size(0, 13);
             this.LcorrectionOuverts.TabIndex = 100;
@@ -316,7 +318,7 @@
             // LcorrectionFermes
             // 
             this.LcorrectionFermes.AutoSize = true;
-            this.LcorrectionFermes.Location = new System.Drawing.Point(787, 369);
+            this.LcorrectionFermes.Location = new System.Drawing.Point(438, 558);
             this.LcorrectionFermes.Name = "LcorrectionFermes";
             this.LcorrectionFermes.Size = new System.Drawing.Size(0, 13);
             this.LcorrectionFermes.TabIndex = 101;
@@ -666,11 +668,31 @@
             this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label41.Click += new System.EventHandler(this.label41_Click);
             // 
+            // Lscore
+            // 
+            this.Lscore.AutoSize = true;
+            this.Lscore.Location = new System.Drawing.Point(566, 522);
+            this.Lscore.Name = "Lscore";
+            this.Lscore.Size = new System.Drawing.Size(0, 13);
+            this.Lscore.TabIndex = 141;
+            // 
+            // Bscore
+            // 
+            this.Bscore.Location = new System.Drawing.Point(775, 512);
+            this.Bscore.Name = "Bscore";
+            this.Bscore.Size = new System.Drawing.Size(163, 23);
+            this.Bscore.TabIndex = 142;
+            this.Bscore.Text = "Accéder au score final";
+            this.Bscore.UseVisualStyleBackColor = true;
+            this.Bscore.Click += new System.EventHandler(this.Bscore_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1183, 600);
+            this.Controls.Add(this.Bscore);
+            this.Controls.Add(this.Lscore);
             this.Controls.Add(this.label41);
             this.Controls.Add(this.label40);
             this.Controls.Add(this.pictureBox);
@@ -814,6 +836,8 @@
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label Lscore;
+        private System.Windows.Forms.Button Bscore;
     }
 }
 

@@ -13,7 +13,7 @@ namespace Partie_1
 {
     public partial class Resultats : Form
     {
-      
+        public double points;
         public Resultats()
         {
             InitializeComponent();
@@ -38,10 +38,8 @@ namespace Partie_1
         {
             Form1 algo = new Form1();
             algo.Show();
-            if (algo.reussite)
-            {
-                
-            }
+
+            Total.Text = "" + (points+algo.reussite) + "/20";
         }
 
         private void label1_Click(object sender, EventArgs e)
