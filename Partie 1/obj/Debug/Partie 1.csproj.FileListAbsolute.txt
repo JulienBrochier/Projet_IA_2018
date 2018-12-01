@@ -114,3 +114,15 @@ C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.exe
 C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.pdb
 C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\bin\Debug\Pluscourtchemin.exe
 C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\bin\Debug\Pluscourtchemin.pdb
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.exe
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.pdb
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\bin\Debug\Pluscourtchemin.exe
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\bin\Debug\Pluscourtchemin.pdb
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.csprojResolveAssemblyReference.cache
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Accueil.resources
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Images.resources
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Properties.Resources.resources
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Questionnaire.resources
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Resultats.resources
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.ShowImgSupplementaire.resources
+C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.csproj.GenerateResource.Cache

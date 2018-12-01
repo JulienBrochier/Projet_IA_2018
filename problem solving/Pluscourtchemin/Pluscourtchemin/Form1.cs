@@ -19,7 +19,7 @@ namespace Pluscourtchemin
         static public int numinitial;
         static public int numfinal;
         static public int nbgraphes;
-        public bool reussite;
+        public double reussite;
 
         //new
         public List<TextBox> L_TextBoxs_Ouverts;
@@ -52,14 +52,14 @@ namespace Pluscourtchemin
             alphabet = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K' };
 
             nbgraphes = 4;
-            reussite = true;
+            reussite = 0;
 
         }
 
 
         private void button2_Click(object sender, EventArgs e)
         {
-            reussite = true;
+            reussite = 3;
 
             numinitial = Convert.ToInt32(textBox1.Text);
             numfinal = Convert.ToInt32(textBox2.Text);
@@ -77,13 +77,14 @@ namespace Pluscourtchemin
             int resultat = c.CorrigeOuverts(L_TextBoxs_Ouverts, g.ouverts, alphabet);
             AfficheCorrectionOuverts(resultat);
             if(resultat != -1)
-            { reussite = false; }
+            { reussite = 0; }
 
 
             resultat = c.CorrigeFermes(L_TextBoxs_Fermes, g.fermes, alphabet);
             AfficheCorrectionFermes(resultat);
             if (resultat != -1)
-            { reussite = false; }
+            { reussite = 0; }
+            //else {Bscore.Show() ; }
         }
 
 
@@ -229,6 +230,11 @@ namespace Pluscourtchemin
         private void label41_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void Bscore_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
