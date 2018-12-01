@@ -54,22 +54,6 @@ namespace Pluscourtchemin
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-            matrice = new double[nbnodes, nbnodes];
-            for (int i = 0; i < nbnodes; i++)
-                for (int j = 0; j < nbnodes; j++)
-                    matrice[i, j] = -1;
-
-            matrice[0, 1] = 3;      matrice[1, 0] = 3;
-            matrice[0, 2] = 5;      matrice[2, 0] = 5;
-            matrice[0, 3] = 7;      matrice[3, 0] = 7;
-            matrice[1, 4] = 8;      matrice[4, 1] = 8;
-            matrice[2, 4] = 3;      matrice[4, 2] = 3;
-            matrice[4, 5] = 7;      matrice[5, 4] = 7;
-            matrice[5, 6] = 4;      matrice[6, 5] = 4;
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -110,13 +94,27 @@ namespace Pluscourtchemin
 
             //resultat = c.CorrigeFermes(L_TextBoxs_Fermes, g.fermes, alphabet);
 
-            //AfficheCorrectionFermes(resultat);
+            AfficheCorrectionFermes(resultat);
             TBtests.Text = c.debug;
             
         }
 
+
         private void button3_Click(object sender, EventArgs e)
         {
+            matrice = new double[nbnodes, nbnodes];
+            for (int index = 0; index < nbnodes; index++)
+                for (int j = 0; j < nbnodes; j++)
+                    matrice[index, j] = -1;
+
+            matrice[0, 1] = 3; matrice[1, 0] = 3;
+            matrice[0, 2] = 5; matrice[2, 0] = 5;
+            matrice[0, 3] = 7; matrice[3, 0] = 7;
+            matrice[1, 4] = 8; matrice[4, 1] = 8;
+            matrice[2, 4] = 3; matrice[4, 2] = 3;
+            matrice[4, 5] = 7; matrice[5, 4] = 7;
+            matrice[5, 6] = 4; matrice[6, 5] = 4;
+
             //sélection d'un graph au hasard
             Random r = new Random();
             int numeroGraph = r.Next(1, nbgraphes + 1);
