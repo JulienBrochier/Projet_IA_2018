@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pluscourtchemin;
 
 namespace Partie_1
 {
@@ -26,6 +27,11 @@ namespace Partie_1
         private void BtnQuitter_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Total_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

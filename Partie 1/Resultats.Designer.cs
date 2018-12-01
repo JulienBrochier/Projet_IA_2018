@@ -66,6 +66,7 @@
             this.Total.Size = new System.Drawing.Size(52, 17);
             this.Total.TabIndex = 7;
             this.Total.Text = "points";
+            this.Total.Click += new System.EventHandler(this.Total_Click);
             // 
             // BtnQuitter
             // 

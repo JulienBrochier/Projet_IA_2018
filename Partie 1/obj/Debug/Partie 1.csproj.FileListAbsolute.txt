@@ -98,3 +98,6 @@ C:\Users\egrevet\Documents\GitHub\Partie 1\obj\Debug\Partie_1.Questionnaire.reso
 C:\Users\egrevet\Documents\GitHub\Partie 1\obj\Debug\Partie_1.Resultats.resources
 C:\Users\egrevet\Documents\GitHub\Partie 1\obj\Debug\Partie_1.ShowImgSupplementaire.resources
 C:\Users\egrevet\Documents\GitHub\Partie 1\obj\Debug\Partie 1.csproj.GenerateResource.Cache
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.exe.config
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.exe
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.pdb
