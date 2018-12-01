@@ -88,7 +88,7 @@
             this.BtnPartie2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.BtnPartie2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPartie2.ForeColor = System.Drawing.Color.Black;
-            this.BtnPartie2.Location = new System.Drawing.Point(247, 214);
+            this.BtnPartie2.Location = new System.Drawing.Point(247, 236);
             this.BtnPartie2.Name = "BtnPartie2";
             this.BtnPartie2.Size = new System.Drawing.Size(115, 25);
             this.BtnPartie2.TabIndex = 9;
@@ -101,6 +101,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(129, 181);
+            this.label1.MaximumSize = new System.Drawing.Size(375, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(375, 20);
             this.label1.TabIndex = 10;
