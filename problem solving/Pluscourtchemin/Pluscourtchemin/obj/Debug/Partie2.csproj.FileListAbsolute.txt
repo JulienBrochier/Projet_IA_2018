@@ -1,0 +1,7 @@
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Partie2.csprojResolveAssemblyReference.cache
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Form1.resources
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Properties.Resources.resources
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Partie2.csproj.GenerateResource.Cache
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.exe
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.pdb
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.exe.config

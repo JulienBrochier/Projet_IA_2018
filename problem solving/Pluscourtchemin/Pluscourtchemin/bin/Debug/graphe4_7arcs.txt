@@ -1,0 +1,8 @@
+nombre de noeuds : 6
+arc1 :0 1 3
+arc2 :0 2 1
+arc3 : 0 3 4
+arc4 :1 6 5
+arc5 : 2 5 2
+arc6 : 3 5 3
+arc7 : 4 5 4

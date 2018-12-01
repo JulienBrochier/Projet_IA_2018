@@ -17,3 +17,6 @@ C:\Users\Julien\Documents\GitHub\Projet_IA_2018\problem solving\Pluscourtchemin\
 C:\Users\Julien\Documents\GitHub\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.csproj.CoreCompileInputs.cache
 C:\Users\Julien\Documents\GitHub\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.exe
 C:\Users\Julien\Documents\GitHub\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.pdb
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.exe.config
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.exe
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.pdb
