@@ -15,3 +15,6 @@ C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\problem solving\Pluscourtchem
 C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.ImagesGraphes.resources
 C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Properties.Resources.resources
 C:\Users\jbrochier\Documents\GitHub\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Partie2.csproj.GenerateResource.Cache
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.exe
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.pdb
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.ImagesGraphes.resources

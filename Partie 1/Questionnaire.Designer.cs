@@ -74,7 +74,7 @@
             // 
             this.Bvalidate.BackColor = System.Drawing.Color.PaleTurquoise;
             this.Bvalidate.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bvalidate.Location = new System.Drawing.Point(388, 381);
+            this.Bvalidate.Location = new System.Drawing.Point(388, 380);
             this.Bvalidate.Name = "Bvalidate";
             this.Bvalidate.Size = new System.Drawing.Size(114, 39);
             this.Bvalidate.TabIndex = 6;
@@ -110,7 +110,7 @@
             // Rep1
             // 
             this.Rep1.AutoSize = true;
-            this.Rep1.Location = new System.Drawing.Point(26, 106);
+            this.Rep1.Location = new System.Drawing.Point(26, 141);
             this.Rep1.MaximumSize = new System.Drawing.Size(500, 0);
             this.Rep1.Name = "Rep1";
             this.Rep1.Size = new System.Drawing.Size(80, 17);
@@ -145,7 +145,7 @@
             // Rep2
             // 
             this.Rep2.AutoSize = true;
-            this.Rep2.Location = new System.Drawing.Point(26, 158);
+            this.Rep2.Location = new System.Drawing.Point(26, 193);
             this.Rep2.MaximumSize = new System.Drawing.Size(500, 0);
             this.Rep2.Name = "Rep2";
             this.Rep2.Size = new System.Drawing.Size(80, 17);
@@ -157,7 +157,7 @@
             // Rep3
             // 
             this.Rep3.AutoSize = true;
-            this.Rep3.Location = new System.Drawing.Point(26, 213);
+            this.Rep3.Location = new System.Drawing.Point(26, 248);
             this.Rep3.MaximumSize = new System.Drawing.Size(500, 0);
             this.Rep3.Name = "Rep3";
             this.Rep3.Size = new System.Drawing.Size(80, 17);
@@ -168,8 +168,8 @@
             // Rep4
             // 
             this.Rep4.AutoSize = true;
-            this.Rep4.Location = new System.Drawing.Point(26, 277);
-            this.Rep4.MaximumSize = new System.Drawing.Size(500, 0);
+            this.Rep4.Location = new System.Drawing.Point(26, 312);
+            this.Rep4.MaximumSize = new System.Drawing.Size(600, 0);
             this.Rep4.Name = "Rep4";
             this.Rep4.Size = new System.Drawing.Size(80, 17);
             this.Rep4.TabIndex = 17;
@@ -205,9 +205,9 @@
             // 
             // PictureBox
             // 
-            this.PictureBox.Location = new System.Drawing.Point(614, 78);
+            this.PictureBox.Location = new System.Drawing.Point(623, 58);
             this.PictureBox.Name = "PictureBox";
-            this.PictureBox.Size = new System.Drawing.Size(450, 303);
+            this.PictureBox.Size = new System.Drawing.Size(430, 303);
             this.PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.PictureBox.TabIndex = 14;
             this.PictureBox.TabStop = false;

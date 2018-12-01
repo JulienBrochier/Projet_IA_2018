@@ -101,3 +101,16 @@ C:\Users\egrevet\Documents\GitHub\Partie 1\obj\Debug\Partie 1.csproj.GenerateRes
 C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.exe.config
 C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.exe
 C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.pdb
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.csprojResolveAssemblyReference.cache
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Accueil.resources
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Images.resources
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Partie_2.resources
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Properties.Resources.resources
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Questionnaire.resources
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.Resultats.resources
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\obj\Debug\Partie_1.ShowImgSupplementaire.resources
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\obj\Debug\Partie 1.csproj.GenerateResource.Cache
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.exe
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\bin\Debug\Partie 1.pdb
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\bin\Debug\Pluscourtchemin.exe
+C:\Users\egrevet\Source\Repos\Projet_IA_2018\Partie 1\bin\Debug\Pluscourtchemin.pdb
